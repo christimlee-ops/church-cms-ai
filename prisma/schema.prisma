@@ -1,0 +1,206 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+  EDITOR
+  VIEWER
+}
+
+enum PageStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+enum PostStatus {
+  DRAFT
+  PUBLISHED
+  SCHEDULED
+  ARCHIVED
+}
+
+enum EventStatus {
+  UPCOMING
+  ONGOING
+  COMPLETED
+  CANCELLED
+  ARCHIVED
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String
+  email         String    @unique
+  password      String
+  role          Role      @default(VIEWER)
+  image         String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  pages         Page[]
+  blogPosts     BlogPost[]
+  events        Event[]
+
+  @@map("users")
+}
+
+model Page {
+  id            String     @id @default(cuid())
+  title         String
+  slug          String     @unique
+  content       String     @db.Text
+  excerpt       String?
+  featuredImage String?
+  status        PageStatus @default(DRAFT)
+  sortOrder     Int        @default(0)
+  showInNav     Boolean    @default(false)
+  parentId      String?
+  parent        Page?      @relation("PageChildren", fields: [parentId], references: [id])
+  children      Page[]     @relation("PageChildren")
+  authorId      String
+  author        User       @relation(fields: [authorId], references: [id])
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
+
+  @@map("pages")
+}
+
+model BlogPost {
+  id            String     @id @default(cuid())
+  title         String
+  slug          String     @unique
+  content       String     @db.Text
+  excerpt       String?
+  featuredImage String?
+  status        PostStatus @default(DRAFT)
+  publishedAt   DateTime?
+  scheduledAt   DateTime?
+  tags          Json       @default("[]")
+  authorId      String
+  author        User       @relation(fields: [authorId], references: [id])
+  socialPosts   SocialPost[]
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
+
+  @@map("blog_posts")
+}
+
+model Event {
+  id            String      @id @default(cuid())
+  title         String
+  slug          String      @unique
+  description   String      @db.Text
+  location      String?
+  address       String?
+  startDate     DateTime
+  endDate       DateTime?
+  allDay        Boolean     @default(false)
+  recurring       String?
+  recurringDays   String?
+  recurringTime   String?
+  recurringEndTime String?
+  featuredImage   String?
+  status        EventStatus @default(UPCOMING)
+  category      String?
+  authorId      String
+  author        User        @relation(fields: [authorId], references: [id])
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+
+  @@map("events")
+}
+
+model ContactSubmission {
+  id          String   @id @default(cuid())
+  name        String
+  email       String
+  phone       String?
+  subject     String
+  message     String   @db.Text
+  read        Boolean  @default(false)
+  replied     Boolean  @default(false)
+  createdAt   DateTime @default(now())
+
+  @@map("contact_submissions")
+}
+
+model VimeoVideo {
+  id          String   @id @default(cuid())
+  vimeoId     String   @unique
+  title       String
+  description String?  @db.Text
+  thumbnail   String?
+  publishedAt DateTime
+  channelId   String
+  featured    Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("vimeo_videos")
+}
+
+model SocialPost {
+  id          String    @id @default(cuid())
+  platform    String
+  content     String    @db.Text
+  postUrl     String?
+  postedAt    DateTime?
+  status      String    @default("pending")
+  blogPostId  String?
+  blogPost    BlogPost? @relation(fields: [blogPostId], references: [id])
+  createdAt   DateTime  @default(now())
+
+  @@map("social_posts")
+}
+
+model Media {
+  id          String   @id @default(cuid())
+  filename    String
+  url         String
+  mimeType    String
+  size        Int
+  alt         String?
+  caption     String?
+  aiGenerated Boolean  @default(false)
+  createdAt   DateTime @default(now())
+
+  @@map("media")
+}
+
+model SiteSettings {
+  id          String @id @default("default")
+  churchName  String @default("St. Mark Evangelical Lutheran Church")
+  tagline     String @default("Saved by the Cross. Standing on the Word. Serving to the glory of God.")
+  email       String @default("")
+  phone       String @default("")
+  address     String @default("")
+  logoUrl     String @default("")
+  heroImageUrl String @default("")
+  vimeoUserId String @default("")
+  facebookUrl String @default("")
+  instagramUrl String @default("")
+  gaTrackingId String @default("")
+  gaPropertyId String @default("")
+  updatedAt   DateTime @updatedAt
+
+  @@map("site_settings")
+}
+
+model HomepageContent {
+  id               String   @id @default("default")
+  heroSection      Json     @default("{}")
+  serviceSection   Json     @default("{}")
+  highlightSection Json     @default("{}")
+  sermonSection    Json     @default("{}")
+  ctaSection       Json     @default("{}")
+  updatedAt        DateTime @updatedAt
+
+  @@map("homepage_content")
+}
