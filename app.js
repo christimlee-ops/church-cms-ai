@@ -30,4 +30,7 @@ if (needsRebuild()) {
 
 process.env.HOSTNAME = '0.0.0.0';
 process.env.PORT = process.env.PORT || '3000';
+
+// Change working directory to standalone so server.js can find .next/static/ and public/
+process.chdir(path.join(__dirname, '.next', 'standalone'));
 require(standaloneServer);
