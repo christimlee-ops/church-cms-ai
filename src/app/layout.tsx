@@ -52,9 +52,9 @@ export const metadata: Metadata = {
       "A WELS congregation in Salina, Kansas. Worship Sundays at 9 AM. Come as you are.",
   },
   robots: {
-    index: true,
-    follow: true,
-    googleBot: { index: true, follow: true },
+    index: false,
+    follow: false,
+    googleBot: { index: false, follow: false },
   },
   alternates: {
     canonical: "https://stmarksalina.org",
