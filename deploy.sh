@@ -18,8 +18,9 @@ npx prisma db push --accept-data-loss || echo "Warning: db push had issues, cont
 echo "Building Next.js..."
 npm run build
 
-# Copy static assets into standalone output
+# Copy static assets into standalone output (clean first to prevent nesting)
 echo "Copying static assets..."
+rm -rf .next/standalone/public .next/standalone/.next/static
 cp -r public .next/standalone/public
 mkdir -p .next/standalone/.next
 cp -r .next/static .next/standalone/.next/

@@ -5,9 +5,21 @@ const fs = require('fs');
 
 const standaloneServer = path.join(__dirname, '.next', 'standalone', 'server.js');
 
-// If standalone build doesn't exist, run the build
-if (!fs.existsSync(standaloneServer)) {
-  console.log('No build found. Running deploy script...');
+// Check if rebuild is needed: no build exists, or source is newer than build
+function needsRebuild() {
+  if (!fs.existsSync(standaloneServer)) return true;
+  try {
+    const buildTime = fs.statSync(standaloneServer).mtimeMs;
+    const srcFiles = ['package.json', 'next.config.mjs', 'deploy.sh'];
+    return srcFiles.some(f => {
+      const full = path.join(__dirname, f);
+      return fs.existsSync(full) && fs.statSync(full).mtimeMs > buildTime;
+    });
+  } catch { return true; }
+}
+
+if (needsRebuild()) {
+  console.log('Build missing or outdated. Running deploy script...');
   try {
     execSync('bash deploy.sh', { cwd: __dirname, stdio: 'inherit' });
   } catch (err) {
