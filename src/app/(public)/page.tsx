@@ -155,7 +155,7 @@ export default async function HomePage() {
           <div className="absolute inset-0 bg-navy-900/30" />
         </div>
 
-        <div className="relative container-wide mx-auto px-4 py-28 md:py-40">
+        <div className="relative container-wide mx-auto px-4 pt-14 pb-28 md:pt-20 md:pb-40">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-gold-500/20 text-gold-400 text-sm font-semibold px-4 py-1.5 rounded-full mb-6 border border-gold-500/30">
               <span className="w-2 h-2 bg-gold-400 rounded-full animate-pulse" />
@@ -195,29 +195,51 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ── Service Times ── */}
-      <section className="section-padding bg-church-cream" aria-label="Service times and schedule">
-        <div className="container-wide mx-auto text-center">
-          <span className="text-gold-500 font-semibold text-sm uppercase tracking-widest">{service.label}</span>
-          <h2 className="mt-3 mb-4">{service.title}</h2>
-          <p className="text-secondary-500 text-lg mb-12 max-w-2xl mx-auto">
-            {service.description}
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {service.times.map((st: { name: string; time: string; subtitle: string }, i: number) => (
-              <article key={i} className="card p-8 text-center border-t-4 border-gold-500">
-                <FiClock className="w-8 h-8 text-gold-500 mx-auto mb-3" />
-                <h3 className="text-xl mb-2">{st.name}</h3>
-                <p className="text-3xl font-heading font-bold text-navy-500">{st.time}</p>
-                <p className="text-secondary-400 mt-2">{st.subtitle}</p>
-              </article>
-            ))}
+      {/* ── Service Times + Map ── */}
+      <section className="py-8 md:py-12 px-4 bg-church-cream" aria-label="Service times and location">
+        <div className="container-wide mx-auto">
+          <div className="text-center mb-12">
+            <span className="text-gold-500 font-semibold text-sm uppercase tracking-widest">{service.label}</span>
+            <h2 className="mt-3 mb-4">{service.title}</h2>
+            <p className="text-secondary-500 text-lg max-w-2xl mx-auto">
+              {service.description}
+            </p>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            <div className="grid grid-cols-1 gap-6">
+              {service.times.map((st: { name: string; time: string; subtitle: string }, i: number) => (
+                <article key={i} className="card p-6 flex items-center gap-5 border-l-4 border-gold-500">
+                  <FiClock className="w-8 h-8 text-gold-500 shrink-0" />
+                  <div>
+                    <h3 className="text-lg mb-0.5">{st.name}</h3>
+                    <p className="text-2xl font-heading font-bold text-navy-500">{st.time}</p>
+                    <p className="text-secondary-400 text-sm mt-0.5">{st.subtitle}</p>
+                  </div>
+                </article>
+              ))}
+              <div className="flex items-center gap-2 text-secondary-500 text-sm px-2">
+                <FiMapPin className="w-4 h-4 text-gold-500" />
+                2349 S. Ohio St., Salina, KS 67401
+              </div>
+            </div>
+            <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-lg border border-gray-100">
+              <iframe
+                src="https://maps.google.com/maps?q=2349+S+Ohio+St,+Salina,+KS+67401&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="St. Mark Lutheran Church location"
+              />
+            </div>
           </div>
         </div>
       </section>
 
       {/* ── Ministry Highlights ── */}
-      <section className="section-padding bg-church-light" aria-label="Ministries and programs at St. Mark">
+      <section className="py-8 md:py-12 px-4 bg-church-light" aria-label="Ministries and programs at St. Mark">
         <div className="container-wide mx-auto">
           <div className="text-center mb-14">
             <span className="text-gold-500 font-semibold text-sm uppercase tracking-widest">{hl.label}</span>
@@ -244,7 +266,7 @@ export default async function HomePage() {
       </section>
 
       {/* ── Featured Events ── */}
-      <section className="section-padding bg-church-cream" aria-label="Upcoming church events in Salina KS">
+      <section className="py-8 md:py-12 px-4 bg-church-cream" aria-label="Upcoming church events in Salina KS">
         <div className="container-wide mx-auto">
           <div className="flex items-end justify-between mb-12">
             <div>
@@ -319,7 +341,7 @@ export default async function HomePage() {
       </section>
 
       {/* ── Latest Blog Posts ── */}
-      <section className="section-padding bg-white" aria-label="Latest blog posts from St. Mark Lutheran Church">
+      <section className="py-8 md:py-12 px-4 bg-white" aria-label="Latest blog posts from St. Mark Lutheran Church">
         <div className="container-wide mx-auto">
           <div className="flex items-end justify-between mb-12">
             <div>
@@ -381,7 +403,7 @@ export default async function HomePage() {
       </section>
 
       {/* ── Sermon / Video ── */}
-      <section className="section-padding bg-church-light" aria-label="Watch recent sermons from St. Mark Salina">
+      <section className="py-8 md:py-12 px-4 bg-church-light" aria-label="Watch recent sermons from St. Mark Salina">
         <div className="container-wide mx-auto">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="flex-1">
@@ -403,33 +425,8 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ── Google Map ── */}
-      <section className="section-padding bg-white" aria-label="Find St. Mark Lutheran Church on the map">
-        <div className="container-wide mx-auto">
-          <div className="text-center mb-10">
-            <span className="text-gold-500 font-semibold text-sm uppercase tracking-widest">Find Us</span>
-            <h2 className="mt-3 mb-4">Visit St. Mark</h2>
-            <p className="text-secondary-500 text-lg max-w-2xl mx-auto">
-              2349 S. Ohio St., Salina, KS 67401
-            </p>
-          </div>
-          <div className="aspect-[16/7] rounded-xl overflow-hidden shadow-lg border border-gray-100">
-            <iframe
-              src="https://maps.google.com/maps?q=2349+S+Ohio+St,+Salina,+KS+67401&t=&z=15&ie=UTF8&iwloc=&output=embed"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="St. Mark Lutheran Church location"
-            />
-          </div>
-        </div>
-      </section>
-
       {/* ── CTA ── */}
-      <section className="relative bg-navy-500 text-white section-padding overflow-hidden" aria-label="Visit St. Mark Lutheran Church in Salina Kansas">
+      <section className="relative bg-navy-500 text-white py-8 md:py-12 px-4 overflow-hidden" aria-label="Visit St. Mark Lutheran Church in Salina Kansas">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-1/2 left-1/2 w-[600px] h-[600px] bg-gold-500 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
         </div>
