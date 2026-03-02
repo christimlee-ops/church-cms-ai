@@ -21,7 +21,7 @@ npm run build
 # Copy static assets into standalone output
 echo "Copying static assets..."
 cp -r public .next/standalone/public
-mkdir -p .next/standalone/.next/static
-cp -r .next/static .next/standalone/.next/static
+mkdir -p .next/standalone/.next
+cp -r .next/static .next/standalone/.next/
 
 echo "=== Deployment complete ==="
