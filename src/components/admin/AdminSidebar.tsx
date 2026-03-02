@@ -13,6 +13,7 @@ import {
   FiImage,
   FiBarChart2,
   FiSettings,
+  FiUsers,
   FiLogOut,
   FiArrowLeft,
 } from "react-icons/fi";
@@ -28,6 +29,7 @@ const navItems = [
   { name: "Vimeo", href: "/admin/vimeo", icon: FiVideo },
   { name: "Media Library", href: "/admin/media", icon: FiImage },
   { name: "Analytics", href: "/admin/analytics", icon: FiBarChart2 },
+  { name: "Users", href: "/admin/users", icon: FiUsers },
   { name: "Settings", href: "/admin/settings", icon: FiSettings },
 ];
 

@@ -2,6 +2,7 @@ import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 import { authOptions } from "@/lib/auth";
 import AdminSidebar from "@/components/admin/AdminSidebar";
+import InactivityLogout from "@/components/admin/InactivityLogout";
 import SessionProvider from "@/components/providers/SessionProvider";
 
 export default async function DashboardLayout({
@@ -17,6 +18,7 @@ export default async function DashboardLayout({
 
   return (
     <SessionProvider>
+      <InactivityLogout />
       <div className="flex min-h-screen bg-gray-50">
         <AdminSidebar />
         <div className="flex-1 flex flex-col">

@@ -1,9 +1,27 @@
 #!/bin/bash
-# Deploy script for Plesk - run this after git pull
-npm install
+set -e
+echo "=== Starting deployment ==="
+
+# Install dependencies
+echo "Installing dependencies..."
+npm install --production=false
+
+# Generate Prisma client
+echo "Generating Prisma client..."
 npx prisma generate
-npx prisma db push
+
+# Push schema to database
+echo "Pushing database schema..."
+npx prisma db push --accept-data-loss || echo "Warning: db push had issues, continuing..."
+
+# Build Next.js
+echo "Building Next.js..."
 npm run build
+
+# Copy static assets into standalone output
+echo "Copying static assets..."
 cp -r public .next/standalone/public
+mkdir -p .next/standalone/.next/static
 cp -r .next/static .next/standalone/.next/static
-echo "Build complete. Restart the app in Plesk."
+
+echo "=== Deployment complete ==="

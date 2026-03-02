@@ -192,6 +192,172 @@ const seedBlogPosts = [
 <p>Join us at St. Mark as we continue to stand on the Word together.</p>`,
     tags: ["faith", "scripture", "lutheran"],
   },
+  {
+    title: "Why Families Choose St. Mark Lutheran Church in Salina, KS",
+    slug: "why-families-choose-st-mark-lutheran-church-salina-ks",
+    excerpt: "Looking for a family church in Salina, KS? Discover why families throughout the community call St. Mark Lutheran Church their church home.",
+    content: `<p>Finding the right church for your family is one of the most important decisions you can make. If you're searching for a <strong>family church in Salina, KS</strong>, St. Mark Lutheran Church offers a welcoming, Christ-centered community where every member of your family can grow in faith.</p>
+
+<h2>A Church That Welcomes Every Generation</h2>
+<p>At St. Mark, you'll find families of all sizes and stages worshiping together every Sunday at 9:00 AM. We believe that faith is built in the home and nurtured in the church, so we've designed our ministries to serve the whole family — from toddlers to grandparents.</p>
+<p>Our Sunday worship is reverent yet approachable. Busy bags are available for young children, and a mother's room provides a comfortable space for families with infants. We want you to feel at home, not stressed about keeping little ones quiet.</p>
+
+<h3>Education for Every Age</h3>
+<p>Following worship, our Sunday School and Bible study programs begin at 10:15 AM. Children ages 2–18 engage in Bible lessons, Scripture memorization, singing, and art projects. Adults gather for in-depth Bible study led by Pastor Jim Winterstein. Wednesday evening classes at 6:00 PM offer even more opportunities to grow together.</p>
+
+<h3>Little Lions Preschool</h3>
+<p>Since 2006, our <strong>Little Lions Preschool</strong> has provided Christ-centered early education to families across Salina. Directed by Ms. Laurel Coates, a veteran educator with over 20 years of experience and a degree from Dr. Martin Luther College, Little Lions combines quality academics with the love of Jesus.</p>
+
+<h2>Rooted in the Salina Community</h2>
+<p>Located at <strong>2349 S. Ohio St.</strong> on the northeast corner of Ohio and Magnolia, St. Mark has been part of the Salina community since 1974. We're not just one of the <strong>churches in Salina, KS</strong> — we're a family that invites you to belong.</p>
+<p>Whether you're new to the area or have lived in Salina your whole life, we'd love to meet you. Join us for worship this Sunday at 9:00 AM, or call us at <strong>(785) 825-7455</strong> to learn more.</p>`,
+    tags: ["family", "community", "salina", "church"],
+  },
+  {
+    title: "What to Expect at Sunday Worship at St. Mark in Salina",
+    slug: "what-to-expect-sunday-worship-st-mark-salina",
+    excerpt: "Visiting a new church can feel uncertain. Here's everything you need to know about Sunday worship at St. Mark Lutheran Church in Salina, Kansas.",
+    content: `<p>If you're looking for a <strong>Sunday worship</strong> experience in <strong>Salina, KS</strong> that is welcoming, meaningful, and centered on God's Word, St. Mark Lutheran Church is the place for you. Whether you've been a Lutheran your whole life or you're stepping into a church for the first time, here's what you can expect.</p>
+
+<h2>Our Worship Service</h2>
+<p>We gather every Sunday at <strong>9:00 AM</strong> for worship. Our service typically lasts about an hour and includes:</p>
+<ul>
+<li><strong>Scripture Readings</strong> — Passages from the Old Testament, Epistles, and Gospels</li>
+<li><strong>Hymns and Music</strong> — A blend of traditional hymns and contemporary Christian songs</li>
+<li><strong>Sermon</strong> — A pastoral message from Pastor Jim Winterstein rooted in God's Word</li>
+<li><strong>The Sacraments</strong> — Regular celebration of Baptism and Holy Communion</li>
+<li><strong>Prayers</strong> — Congregational prayers for the church, community, and world</li>
+</ul>
+
+<h3>Come As You Are</h3>
+<p>There's no dress code at St. Mark. Some members wear suits and dresses, others wear jeans and casual attire. What matters is that you're here to receive God's gifts of grace. You'll find a warm congregation ready to greet you.</p>
+
+<h3>A Note for Visitors</h3>
+<p>We want our guests to feel completely at ease. You will not be singled out or put on the spot. If you'd like, our members are happy to help you follow along during the service. And please don't feel compelled to give an offering — we simply want you to come, worship, and experience God's grace.</p>
+
+<h2>After the Service</h2>
+<p>At <strong>10:15 AM</strong>, we offer Bible Study for adults and Sunday School for children and youth. It's a wonderful time to ask questions, meet other members, and grow in faith. Coffee and fellowship are always part of the morning!</p>
+
+<h2>How to Find Us</h2>
+<p>St. Mark <strong>Lutheran Church in Salina, Kansas</strong> is located at <strong>2349 S. Ohio St., Salina, KS 67401</strong>, on the northeast corner of Ohio and Magnolia. Parking is available from both streets.</p>
+<p>Have questions before your visit? Call us at <strong>(785) 825-7455</strong> or reach out through our contact page. We look forward to welcoming you this Sunday!</p>`,
+    tags: ["worship", "visitors", "salina", "sunday"],
+  },
+  {
+    title: "Bible Study in Salina, Kansas: Grow in God's Word at St. Mark",
+    slug: "bible-study-salina-kansas-grow-gods-word-st-mark",
+    excerpt: "Looking for Bible study in Salina, Kansas? St. Mark Lutheran Church offers multiple opportunities each week for adults and children to grow in God's Word.",
+    content: `<p>Whether you're a lifelong student of the Bible or just beginning to explore the Christian faith, <strong>Bible study in Salina, Kansas</strong> is alive and well at St. Mark Lutheran Church. We believe that growing in God's Word is a lifelong journey, and we offer multiple opportunities each week to help you along the way.</p>
+
+<h2>Sunday Morning Bible Study — 10:15 AM</h2>
+<p>Right after our 9:00 AM worship service, adults gather for a 60-minute study led by Pastor Jim Winterstein. Our topics rotate between in-depth book studies of Scripture and explorations of the Lutheran Confessions. Whether we're walking through the book of Romans or examining the Augsburg Confession, every session is designed to deepen your understanding of God's grace.</p>
+<p>No prior Bible knowledge is required. Questions are always welcome, and our atmosphere is warm and encouraging. Grab a cup of coffee and join the conversation!</p>
+
+<h3>Sunday School — 10:15 AM</h3>
+<p>While adults study, children ages 2–18 gather for Sunday School. Our dedicated teachers lead age-appropriate Bible lessons that include Scripture memorization, singing, and creative activities. We take to heart Peter's encouragement to "grow in the grace and knowledge of our Lord and Savior Jesus Christ" (2 Peter 3:18).</p>
+
+<h2>Wednesday Evening Bible Classes — 6:00 PM</h2>
+<p>During the school year, we offer separate Wednesday evening classes for children and adults at 6:00 PM. These midweek gatherings are a great way to stay connected and continue growing in faith between Sundays. During Advent and Lent, our Wednesday classes transition into special midweek worship services.</p>
+
+<h2>Bible Information Class</h2>
+<p>New to the faith or considering membership? Our Bible Information Class is an introductory course that covers the basic teachings of Scripture and the Lutheran Church. It's perfect for anyone who wants to understand what we believe and why. Sessions are scheduled individually with Pastor Winterstein at your convenience.</p>
+
+<h2>Join Our Christian Community in Salina</h2>
+<p>At St. Mark, Bible study is more than just learning — it's fellowship. It's the <strong>Christian community in Salina</strong> that gathers around God's Word and supports one another in faith and life. We'd love to have you join us.</p>
+<p>St. Mark Lutheran Church is located at <strong>2349 S. Ohio St., Salina, KS 67401</strong>. Call <strong>(785) 825-7455</strong> for more information or to schedule a Bible Information Class with Pastor Winterstein.</p>`,
+    tags: ["bible-study", "education", "salina", "faith"],
+  },
+  {
+    title: "Community Events and Fellowship at St. Mark Lutheran Church",
+    slug: "community-events-fellowship-st-mark-lutheran-church",
+    excerpt: "From worship services to fellowship gatherings, discover the community events that make St. Mark Lutheran Church a vibrant part of Salina, Kansas.",
+    content: `<p>Church is about more than Sunday mornings. At St. Mark Lutheran Church, we believe that Christian fellowship strengthens our faith and builds lasting relationships. If you're looking for <strong>church events in Salina, KS</strong>, you'll find a vibrant, active congregation here.</p>
+
+<h2>Weekly Gatherings</h2>
+<p>Our regular schedule provides a rhythm of worship, learning, and community:</p>
+<ul>
+<li><strong>Sunday Worship</strong> — 9:00 AM every Sunday</li>
+<li><strong>Bible Study &amp; Sunday School</strong> — 10:15 AM every Sunday</li>
+<li><strong>Wednesday Evening Bible Classes</strong> — 6:00 PM during the school year</li>
+</ul>
+<p>These weekly touchpoints keep our congregation connected to God's Word and to one another. Coffee and conversation before and after services are always part of the experience.</p>
+
+<h3>Seasonal Worship and Celebrations</h3>
+<p>Throughout the church year, we celebrate special services that draw our congregation and community together:</p>
+<ul>
+<li><strong>Advent and Christmas Services</strong> — Midweek Advent worship and a Christmas Eve candlelight service</li>
+<li><strong>Lenten and Easter Services</strong> — Midweek Lenten meditations, Maundy Thursday, Good Friday, and Easter sunrise worship</li>
+<li><strong>Reformation Sunday</strong> — Celebrating the heritage of the Lutheran Reformation</li>
+<li><strong>Vacation Bible School</strong> — A summer favorite for kids featuring Bible lessons, crafts, songs, and games</li>
+</ul>
+
+<h2>Fellowship and Outreach</h2>
+<p>St. Mark isn't just a <strong>community church in Salina, Kansas</strong> — it's a family. Our members regularly gather for potluck dinners, fellowship meals, and special events that build friendships and strengthen our bond as a congregation.</p>
+<p>We also reach out to the Salina community through service projects, food drives, and our Little Lions Preschool, which has been serving families with Christ-centered education since 2006.</p>
+
+<h2>Get Involved</h2>
+<p>There's a place for you at St. Mark — whether you want to sing in the choir, help in Sunday School, volunteer for church events, or simply come to worship and fellowship. No matter where you are in your faith journey, you're welcome here.</p>
+<p>Visit us at <strong>2349 S. Ohio St., Salina, KS 67401</strong>, or call <strong>(785) 825-7455</strong> to learn about upcoming events. We'd love to see you!</p>`,
+    tags: ["events", "community", "fellowship", "salina"],
+  },
+  {
+    title: "Little Lions Preschool: Christ-Centered Early Education in Salina",
+    slug: "little-lions-preschool-christ-centered-early-education-salina",
+    excerpt: "Since 2006, Little Lions Preschool at St. Mark Lutheran Church has offered quality, Christ-centered early education to families in Salina, Kansas.",
+    content: `<p>When it comes to finding the right preschool, Salina families want quality academics, a safe environment, and values they can trust. Since 2006, <strong>Little Lions Preschool</strong> at St. Mark Lutheran Church has delivered all three — providing Christ-centered early education that prepares children for school and for life.</p>
+
+<h2>A Foundation of Faith and Learning</h2>
+<p>Little Lions Preschool isn't just daycare with a Bible verse on the wall. Our curriculum integrates academic excellence with the love of Jesus in every lesson. Children learn letters, numbers, colors, shapes, and early reading skills alongside daily Bible stories, prayers, and songs of faith. We believe the best education nurtures the whole child — mind, body, and spirit.</p>
+
+<h3>Experienced, Caring Leadership</h3>
+<p>Our director and lead teacher, <strong>Ms. Laurel Coates</strong>, holds a Bachelor of Science in Elementary Education from Dr. Martin Luther College in New Ulm, Minnesota. With over 20 years of classroom experience, Ms. Coates brings a passion for teaching and a deep love for sharing God's Word with young learners.</p>
+
+<h2>What Makes Little Lions Special</h2>
+<ul>
+<li><strong>Christ-centered curriculum</strong> — Bible stories and Christian values woven into daily activities</li>
+<li><strong>Small class sizes</strong> — Individual attention for each student</li>
+<li><strong>Experienced teacher</strong> — Over 20 years of dedicated early education experience</li>
+<li><strong>Established program</strong> — Serving Salina families since 2006</li>
+<li><strong>Safe, nurturing environment</strong> — A place where children are loved and encouraged</li>
+</ul>
+
+<h3>Preparing Children for the Future</h3>
+<p>Little Lions alumni enter kindergarten well-prepared — not only academically but socially and spiritually. Our <strong>youth programs in Salina, KS</strong> are designed to give children a strong start. As they grow, St. Mark's Sunday School and Wednesday classes continue to build on that foundation throughout their school years.</p>
+
+<h2>Enrollment Information</h2>
+<p>Little Lions Preschool is open to all families in the Salina area, regardless of church membership. We welcome you to schedule a tour, visit a classroom, and see firsthand what makes our program special.</p>
+<p>St. Mark Lutheran Church is located at <strong>2349 S. Ohio St., Salina, KS 67401</strong>. For enrollment information, call <strong>(785) 825-7455</strong> or visit <strong>littlelionspreschool.org</strong>. We'd love to welcome your little lion!</p>`,
+    tags: ["preschool", "education", "family", "salina"],
+  },
+  {
+    title: "What Makes St. Mark a Confessional Lutheran Church in Salina",
+    slug: "what-makes-st-mark-confessional-lutheran-church-salina",
+    excerpt: "What does it mean to be a confessional Lutheran church? Learn what sets St. Mark apart as a WELS congregation in Salina, Kansas.",
+    content: `<p>If you've been searching for a <strong>Lutheran church in Salina, Kansas</strong>, you may have noticed that not all Lutheran churches are the same. At St. Mark, we proudly identify as a <em>confessional</em> Lutheran congregation — but what does that mean, and why does it matter?</p>
+
+<h2>Confessional Means Faithful to Scripture</h2>
+<p>The word "confessional" comes from the Lutheran Confessions — a collection of statements of faith written during and after the Reformation that explain what the Bible teaches. At St. Mark, we believe these Confessions are a faithful and accurate summary of God's Word. We don't add to Scripture, and we don't take away from it. We teach the Bible as the inspired, inerrant Word of God — completely flawless and without errors.</p>
+<p>This means that when you worship at St. Mark, you can trust that what you hear from the pulpit is rooted in Scripture alone.</p>
+
+<h3>Part of the Wisconsin Evangelical Lutheran Synod</h3>
+<p>St. Mark is a member of the <strong>Wisconsin Evangelical Lutheran Synod (WELS)</strong>, one of the most conservative Lutheran bodies in America. WELS congregations are united by a shared commitment to the authority of Scripture and the Lutheran Confessions. We are also part of the <strong>Confessional Evangelical Lutheran Conference (CELC)</strong>, a worldwide fellowship of confessional Lutheran churches.</p>
+
+<h2>What You'll Experience at St. Mark</h2>
+<p>Our worship is centered on Christ and Him crucified. Every service is built around the Means of Grace — God's Word and the Sacraments of Baptism and Holy Communion. Through these means, the Holy Spirit creates and strengthens faith. As Jesus Himself said, "Man does not live on bread alone, but on every word that comes from the mouth of God" (Matthew 4:4).</p>
+
+<h3>The Three "Solas"</h3>
+<p>Our teaching rests on the great Reformation principles:</p>
+<ul>
+<li><strong>Scripture Alone (Sola Scriptura)</strong> — The Bible is the only perfect guide for faith and life</li>
+<li><strong>Grace Alone (Sola Gratia)</strong> — Salvation is a free gift from God, not earned by works</li>
+<li><strong>Faith Alone (Sola Fide)</strong> — We receive salvation through faith in Jesus Christ</li>
+</ul>
+
+<h2>Come and See</h2>
+<p>Among the <strong>churches in Salina, KS</strong>, St. Mark stands on the unchanging truths of God's Word. Whether you're a lifelong Lutheran or exploring the faith for the first time, we invite you to come and see what confessional Lutheranism looks like in practice.</p>
+<p>Join us for worship any Sunday at 9:00 AM at <strong>2349 S. Ohio St., Salina, KS 67401</strong>, or call Pastor Winterstein at <strong>(785) 825-7455</strong>. We'd love to welcome you.</p>`,
+    tags: ["lutheran", "faith", "wels", "salina"],
+  },
 ];
 
 const seedEvents = [

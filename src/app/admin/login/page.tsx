@@ -65,7 +65,7 @@ export default function LoginPage() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="input-field"
-              placeholder="admin@stmarksalina.org"
+              placeholder="Email address"
               required
             />
           </div>
