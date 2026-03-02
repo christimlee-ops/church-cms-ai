@@ -151,8 +151,8 @@ export default async function HomePage() {
       {/* ── Hero Section ── */}
       <section className="relative bg-navy-500 text-white overflow-hidden" aria-label="Welcome to St. Mark Lutheran Church">
         <div className="absolute inset-0">
-          <img src="/Chruch.webp" alt="St. Mark Lutheran Church" className="w-full h-full object-cover object-[center_30%]" />
-          <div className="absolute inset-0 bg-navy-900/70" />
+          <img src="/Chruch.webp" alt="St. Mark Lutheran Church" className="w-full h-full object-cover object-[center_25%]" />
+          <div className="absolute inset-0 bg-navy-900/30" />
         </div>
 
         <div className="relative container-wide mx-auto px-4 py-28 md:py-40">

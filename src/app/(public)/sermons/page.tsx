@@ -23,7 +23,7 @@ export default async function SermonsPage() {
       <section className="relative bg-navy-500 text-white overflow-hidden">
         <div className="absolute inset-0">
           <img src="/church-service.webp" alt="Worship service at St. Mark" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-navy-900/70" />
+          <div className="absolute inset-0 bg-navy-900/30" />
         </div>
         <div className="relative section-padding">
           <div className="container-wide mx-auto text-center">
