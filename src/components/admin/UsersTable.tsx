@@ -8,11 +8,11 @@ interface User {
   id: string;
   name: string;
   email: string;
-  role: "ADMIN" | "EDITOR" | "VIEWER";
+  role: "ADMIN" | "EDITOR" | "VIEWER" | "MEMBER";
   createdAt: string;
 }
 
-const ROLES = ["ADMIN", "EDITOR", "VIEWER"] as const;
+const ROLES = ["ADMIN", "EDITOR", "VIEWER", "MEMBER"] as const;
 
 export default function UsersTable({ initialUsers }: { initialUsers: User[] }) {
   const { data: session } = useSession();

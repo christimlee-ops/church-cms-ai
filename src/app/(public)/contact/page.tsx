@@ -31,7 +31,7 @@ export default function ContactPage() {
     <>
       <section className="relative bg-navy-500 text-white overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/Chruch.webp" alt="St. Mark Lutheran Church" className="w-full h-full object-cover" />
+          <img src="/images/cross-front.jpg" alt="Calvary Lutheran Church" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-navy-900/30" />
         </div>
         <div className="relative section-padding">
@@ -94,21 +94,28 @@ export default function ContactPage() {
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
                     <FiMapPin className="w-5 h-5 text-primary-500 mt-0.5 shrink-0" />
-                    <span className="text-secondary-500 text-sm">2349 S. Ohio St., Salina, KS 67401</span>
+                    <span className="text-secondary-500 text-sm">1270 N Dobson Rd, Chandler, AZ 85224</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <FiPhone className="w-5 h-5 text-primary-500 shrink-0" />
-                    <span className="text-secondary-500 text-sm">(785) 825-7455</span>
+                    <span className="text-secondary-500 text-sm">(480) 963-9397</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <FiMail className="w-5 h-5 text-primary-500 shrink-0" />
-                    <span className="text-secondary-500 text-sm">stmarksalina@gmail.com</span>
+                    <span className="text-secondary-500 text-sm">pastor@calvarychandler.net</span>
                   </li>
                 </ul>
               </div>
               <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
                 <h3 className="text-lg mb-4">Service Times</h3>
                 <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <FiClock className="w-5 h-5 text-primary-500 mt-0.5 shrink-0" />
+                    <div>
+                      <p className="font-medium text-secondary-700 text-sm">Saturday Worship</p>
+                      <p className="text-secondary-400 text-sm">6:00 PM</p>
+                    </div>
+                  </li>
                   <li className="flex items-start gap-3">
                     <FiClock className="w-5 h-5 text-primary-500 mt-0.5 shrink-0" />
                     <div>
@@ -120,14 +127,7 @@ export default function ContactPage() {
                     <FiClock className="w-5 h-5 text-primary-500 mt-0.5 shrink-0" />
                     <div>
                       <p className="font-medium text-secondary-700 text-sm">Bible Study & Sunday School</p>
-                      <p className="text-secondary-400 text-sm">10:15 AM</p>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <FiClock className="w-5 h-5 text-primary-500 mt-0.5 shrink-0" />
-                    <div>
-                      <p className="font-medium text-secondary-700 text-sm">Wednesday Classes</p>
-                      <p className="text-secondary-400 text-sm">6:00 PM</p>
+                      <p className="text-secondary-400 text-sm">10:30 AM</p>
                     </div>
                   </li>
                 </ul>
@@ -142,14 +142,14 @@ export default function ContactPage() {
           <h2 className="text-center mb-8">Find Us</h2>
           <div className="aspect-[16/7] rounded-xl overflow-hidden shadow-lg border border-gray-100">
             <iframe
-              src="https://maps.google.com/maps?q=2349+S+Ohio+St,+Salina,+KS+67401&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=1270+N+Dobson+Rd,+Chandler,+AZ+85224&t=&z=15&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="St. Mark Lutheran Church location"
+              title="Calvary Lutheran Church location"
             />
           </div>
         </div>

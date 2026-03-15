@@ -53,7 +53,7 @@ export default async function EventsPage() {
         <div className="container-wide mx-auto text-center">
           <h1 className="mb-4">Upcoming Events</h1>
           <p className="text-lg text-secondary-500 max-w-2xl mx-auto">
-            Stay connected with what&apos;s happening at St. Mark Lutheran Church.
+            Stay connected with what&apos;s happening at Calvary Lutheran Church.
           </p>
         </div>
       </section>

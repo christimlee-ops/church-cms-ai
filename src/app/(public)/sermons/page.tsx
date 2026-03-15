@@ -22,14 +22,14 @@ export default async function SermonsPage() {
     <>
       <section className="relative bg-navy-500 text-white overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/church-service.webp" alt="Worship service at St. Mark" className="w-full h-full object-cover" />
+          <img src="/images/Sunday-Worship-Service-2.webp" alt="Worship service at Calvary Lutheran Church" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-navy-900/30" />
         </div>
         <div className="relative section-padding">
           <div className="container-wide mx-auto text-center">
             <h1 className="text-white mb-4">Sermons</h1>
             <p className="text-lg text-navy-100 max-w-2xl mx-auto">
-              Watch or re-watch our latest messages from St. Mark Lutheran Church. Growing in God&apos;s Word together.
+              Watch or re-watch our latest messages from Calvary Lutheran Church. Growing in God&apos;s Word together.
             </p>
           </div>
         </div>

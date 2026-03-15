@@ -16,12 +16,13 @@ const navigation = [
     ],
   },
   {
-    name: "Education",
+    name: "Ministries",
     href: "/education",
     children: [
+      { name: "Bible Classes", href: "/education/bible-classes" },
       { name: "Sunday School", href: "/education/sunday-school" },
-      { name: "Bible Study", href: "/education/bible-study" },
-      { name: "Little Lions Preschool", href: "/education/little-lions" },
+      { name: "Confirmation", href: "/education/confirmation" },
+      { name: "Mornings with Mommy", href: "/education/mornings-with-mommy" },
     ],
   },
   { name: "Worship", href: "/sermons" },
@@ -42,13 +43,13 @@ export default function Header() {
       <div className="container-wide mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group" aria-label="St. Mark Lutheran Church — Home">
+          <Link href="/" className="flex items-center gap-3 group" aria-label="Calvary Lutheran Church — Home">
             <div className="w-11 h-11 bg-gold-500 rounded-lg flex items-center justify-center shadow-md group-hover:bg-gold-400 transition-colors">
-              <span className="text-navy-900 font-heading font-bold text-lg">SM</span>
+              <span className="text-navy-900 font-heading font-bold text-lg">CLC</span>
             </div>
             <div>
               <span className="font-heading font-bold text-xl text-white">
-                St. Mark
+                Calvary
               </span>
               <span className="block text-xs text-gold-400 -mt-0.5 tracking-wider uppercase">
                 Lutheran Church
@@ -91,8 +92,11 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* CTA Button */}
+          {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-3">
+            <Link href="/members/login" className="text-sm text-navy-100 hover:text-gold-400 font-medium transition-colors">
+              Members Login
+            </Link>
             <Link href="/visit" className="btn-primary text-sm">
               Plan Your Visit
             </Link>
@@ -133,7 +137,14 @@ export default function Header() {
                 ))}
               </div>
             ))}
-            <div className="px-4 pt-4">
+            <div className="px-4 pt-4 space-y-3">
+              <Link
+                href="/members/login"
+                className="block text-sm text-navy-100 hover:text-gold-400 font-medium"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Members Login
+              </Link>
               <Link
                 href="/visit"
                 className="btn-primary text-sm w-full justify-center"

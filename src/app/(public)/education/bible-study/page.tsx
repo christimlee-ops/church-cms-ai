@@ -1,17 +1,17 @@
 import Link from "next/link";
 import { FiArrowLeft, FiClock, FiMapPin, FiBookOpen } from "react-icons/fi";
 
-export const metadata = { title: "Bible Study" };
+export const metadata = { title: "Bible Classes" };
 
 const studies = [
   {
-    name: "Sunday Morning Bible Study",
-    time: "Sundays at 10:15 AM",
+    name: "Sunday Morning Bible Class",
+    time: "Sundays at 10:30 AM",
     description: "Join us after worship for an in-depth look at books of the Bible, doctrinal topics, and practical application of God's Word to daily life.",
   },
   {
     name: "Wednesday Evening Bible Class",
-    time: "Wednesdays at 6:00 PM",
+    time: "Wednesday evenings",
     description: "A midweek opportunity to study Scripture in a smaller group setting. Topics rotate throughout the year and all are welcome to attend.",
   },
 ];
@@ -22,11 +22,11 @@ export default function BibleStudyPage() {
       <section className="bg-gradient-to-b from-church-light to-church-cream section-padding">
         <div className="container-wide mx-auto text-center">
           <Link href="/education" className="inline-flex items-center gap-2 text-gold-600 hover:text-gold-700 font-semibold text-sm mb-6 transition-colors">
-            <FiArrowLeft className="w-4 h-4" /> Back to Education
+            <FiArrowLeft className="w-4 h-4" /> Back to Ministries
           </Link>
-          <h1 className="mb-6">Bible Study</h1>
+          <h1 className="mb-6">Bible Classes</h1>
           <p className="text-lg text-secondary-500 leading-relaxed max-w-2xl mx-auto">
-            Grow in the grace and knowledge of our Lord through weekly Bible study at St. Mark.
+            Grow in the grace and knowledge of our Lord through weekly Bible classes at Calvary.
             Whether you&apos;re new to the faith or a lifelong student of Scripture, you&apos;re welcome here.
           </p>
         </div>
@@ -38,21 +38,21 @@ export default function BibleStudyPage() {
             <div className="card p-6 text-center border-t-4 border-gold-500">
               <FiClock className="w-8 h-8 text-gold-500 mx-auto mb-3" />
               <h3 className="text-lg mb-1">Sunday</h3>
-              <p className="text-secondary-500">10:15 AM</p>
+              <p className="text-secondary-500">10:30 AM</p>
             </div>
             <div className="card p-6 text-center border-t-4 border-gold-500">
               <FiClock className="w-8 h-8 text-gold-500 mx-auto mb-3" />
               <h3 className="text-lg mb-1">Wednesday</h3>
-              <p className="text-secondary-500">6:00 PM</p>
+              <p className="text-secondary-500">Evening</p>
             </div>
             <div className="card p-6 text-center border-t-4 border-gold-500">
               <FiMapPin className="w-8 h-8 text-gold-500 mx-auto mb-3" />
               <h3 className="text-lg mb-1">Where</h3>
-              <p className="text-secondary-500">St. Mark Lutheran Church</p>
+              <p className="text-secondary-500">Calvary Lutheran Church</p>
             </div>
           </div>
 
-          <h2 className="text-center mb-8">Our Bible Studies</h2>
+          <h2 className="text-center mb-8">Our Bible Classes</h2>
           <div className="space-y-6">
             {studies.map((study) => (
               <div key={study.name} className="card p-8">

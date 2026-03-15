@@ -3,7 +3,7 @@ import { FiHeart, FiBookOpen, FiUsers, FiBook } from "react-icons/fi";
 const values = [
   { icon: FiBookOpen, title: "God's Word", description: "We believe Scripture is the inspired, inerrant Word of God -- 100% flawless and the sole authority for faith and life." },
   { icon: FiHeart, title: "Worship", description: "Christ crucified is at the center of all we do. Our worship proclaims the saving grace of Jesus for all people." },
-  { icon: FiBook, title: "Education", description: "From Little Lions Preschool to Sunday School and adult Bible Study, we nurture faith at every age." },
+  { icon: FiBook, title: "Education", description: "From Mornings with Mommy and Sunday School to adult Bible Classes, we nurture faith at every age." },
   { icon: FiUsers, title: "Community", description: "We are a caring congregation united in fellowship, supporting one another through every season of life." },
 ];
 
@@ -14,15 +14,15 @@ export default function AboutPage() {
     <>
       <section className="relative bg-navy-500 text-white overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/candle-light-service.webp" alt="Candle light service at St. Mark" className="w-full h-full object-cover" />
+          <img src="/images/Chruch-Empty-Photo.jpg" alt="Inside Calvary Lutheran Church" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-navy-900/30" />
         </div>
         <div className="relative section-padding">
           <div className="container-wide mx-auto text-center">
-            <h1 className="text-white mb-6">About St. Mark Evangelical Lutheran Church</h1>
+            <h1 className="text-white mb-6">About Calvary Lutheran Church</h1>
             <p className="text-lg text-navy-100 leading-relaxed max-w-2xl mx-auto">
-              St. Mark Evangelical Lutheran Church is a congregation of the Wisconsin Evangelical
-              Lutheran Synod (WELS), founded in 1974 in Salina, Kansas. We are a community of
+              Calvary Lutheran Church is a congregation of the Wisconsin Evangelical
+              Lutheran Synod (WELS), founded in 1977 in Chandler, Arizona. We are a community of
               believers grounded in God&apos;s Word, united in worship, and dedicated to sharing
               the saving message of Jesus Christ.
             </p>
@@ -50,12 +50,12 @@ export default function AboutPage() {
           <h2 className="text-center mb-8">Our Story</h2>
           <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="flex-1">
-            <img src="/Chruch.webp" alt="St. Mark Lutheran Church building" className="rounded-xl shadow-lg w-full object-cover" />
+            <img src="/images/Calvary-Front-Yard-scaled.jpg" alt="Calvary Lutheran Church building" className="rounded-xl shadow-lg w-full object-cover" />
           </div>
           <div className="flex-1 prose-church">
             <p>
-              St. Mark Evangelical Lutheran Church was founded in 1974 as a mission congregation
-              of the Wisconsin Evangelical Lutheran Synod (WELS) in Salina, Kansas. From humble
+              Calvary Lutheran Church was founded in 1977 as a mission congregation
+              of the Wisconsin Evangelical Lutheran Synod (WELS) in Chandler, Arizona. From humble
               beginnings, God has blessed our congregation with steady growth and a deep commitment
               to His Word and Sacraments.
             </p>
@@ -65,11 +65,11 @@ export default function AboutPage() {
               faith alone, in Christ alone -- and we joyfully share this message with our community.
             </p>
             <p>
-              In 2006, we established Little Lions Preschool to serve families in the Salina area
-              with quality early childhood education rooted in Christian values. In 2023, Pastor Jim
-              Winterstein arrived to shepherd our congregation. Today, St. Mark continues to be a
-              place where people of all ages can hear the Gospel, grow in faith, and experience
-              the love of Christ in a caring congregation.
+              Today, under the faithful leadership of Pastor Martin Spaude, Calvary continues to
+              be a place where people of all ages can hear the Gospel, grow in faith, and experience
+              the love of Christ in a caring congregation. Our Mornings with Mommy program serves
+              young families in the Chandler area, and our Bible Classes, Sunday School, and
+              Confirmation instruction nurture believers at every stage of life.
             </p>
           </div>
           </div>

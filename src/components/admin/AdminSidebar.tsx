@@ -16,6 +16,7 @@ import {
   FiUsers,
   FiLogOut,
   FiArrowLeft,
+  FiFile,
 } from "react-icons/fi";
 import { signOut } from "next-auth/react";
 
@@ -29,6 +30,8 @@ const navItems = [
   { name: "Vimeo", href: "/admin/vimeo", icon: FiVideo },
   { name: "Media Library", href: "/admin/media", icon: FiImage },
   { name: "Analytics", href: "/admin/analytics", icon: FiBarChart2 },
+  { name: "Documents", href: "/admin/documents", icon: FiFile },
+  { name: "Members", href: "/admin/members", icon: FiUsers },
   { name: "Users", href: "/admin/users", icon: FiUsers },
   { name: "Settings", href: "/admin/settings", icon: FiSettings },
 ];
@@ -45,10 +48,10 @@ export default function AdminSidebar() {
       <div className="p-6 border-b border-navy-800">
         <div className="flex items-center gap-3">
           <div className="w-9 h-9 bg-gold-500 rounded-lg flex items-center justify-center">
-            <span className="text-navy-900 font-heading font-bold text-xs">SM</span>
+            <span className="text-navy-900 font-heading font-bold text-xs">CLC</span>
           </div>
           <div>
-            <span className="font-heading font-semibold text-sm text-white">St. Mark CMS</span>
+            <span className="font-heading font-semibold text-sm text-white">Calvary CMS</span>
             <span className="block text-xs text-gold-400">Admin Dashboard</span>
           </div>
         </div>

@@ -36,9 +36,9 @@ const iconMap: Record<string, IconType> = {
 };
 
 const defaultHero = {
-  welcomeLabel: "Welcome to St. Mark",
-  title: "Saved by the Cross.",
-  titleAccent: "Standing on the Word.",
+  welcomeLabel: "Welcome to Calvary",
+  title: "Grow in Grace.",
+  titleAccent: "Know Your Savior.",
   description:
     "God's love for the world is a gift for all people — shown through Jesus Christ's life, death, and resurrection. You're welcome here.",
   primaryBtnText: "Plan Your Visit",
@@ -53,21 +53,22 @@ const defaultService = {
   description:
     "All are welcome — whether you've been a Lutheran your whole life or are stepping into a church for the first time.",
   times: [
+    { name: "Saturday Worship", time: "6:00 PM", subtitle: "Scripture, music & proclamation" },
     { name: "Sunday Worship", time: "9:00 AM", subtitle: "Scripture, music & proclamation" },
-    { name: "Bible Study & Sunday School", time: "10:15 AM", subtitle: "All ages — toddlers to adults" },
-    { name: "Wednesday Classes", time: "6:00 PM", subtitle: "Children & adult Bible classes" },
+    { name: "Bible Study & Sunday School", time: "10:30 AM", subtitle: "All ages — toddlers to adults" },
+    { name: "Confirmation", time: "11:30 AM", subtitle: "7th & 8th grade instruction" },
   ],
 };
 
 const defaultHighlight = {
   label: "Get Connected",
-  title: "Life at St. Mark",
+  title: "Life at Calvary",
   description:
-    "From Sunday worship to weekday Bible studies and our Little Lions Preschool, there are many ways to grow in faith and community.",
+    "From Saturday and Sunday worship to Bible Classes, Sunday School, and Mornings with Mommy, there are many ways to grow in faith and community.",
   items: [
-    { title: "Sunday Worship", description: "Christ and Him crucified are at the center of our worship every Sunday at 9:00 AM with Scripture readings, music, and pastoral proclamation of God's Word.", link: "/sermons", icon: "FiBookOpen" },
-    { title: "Bible Study & Sunday School", description: "Grow in the grace and knowledge of our Lord at 10:15 AM. Classes for all ages, from toddlers through adults.", link: "/education", icon: "FiBook" },
-    { title: "Little Lions Preschool", description: "Quality, academic, and Christ-centered preschool education serving Salina families since 2006.", link: "/education", icon: "FiUsers" },
+    { title: "Saturday & Sunday Worship", description: "Christ and Him crucified are at the center of our worship every Saturday at 6:00 PM and Sunday at 9:00 AM with Scripture readings, music, and pastoral proclamation of God's Word.", link: "/sermons", icon: "FiBookOpen" },
+    { title: "Bible Classes", description: "Grow in the grace and knowledge of our Lord at 10:30 AM on Sundays and Wednesday evenings. Classes for all ages.", link: "/education", icon: "FiBook" },
+    { title: "Sunday School", description: "Children learn Bible stories, sing songs, and grow in their faith every Sunday at 10:30 AM.", link: "/education/sunday-school", icon: "FiUsers" },
     { title: "Community & Fellowship", description: "Connect with a caring congregation rooted in God's Word. We welcome visitors and new members warmly.", link: "/contact", icon: "FiHeart" },
   ],
 };
@@ -76,18 +77,18 @@ const defaultSermon = {
   label: "This Week's Message",
   title: "Watch Our Latest Sermon",
   description:
-    "Missed a Sunday? Our sermons are available online so you can stay connected with God's Word throughout the week.",
+    "Missed a service? Our sermons are available online so you can stay connected with God's Word throughout the week.",
   buttonText: "View All Sermons",
   buttonLink: "/sermons",
 };
 
 const defaultCta = {
-  title: "New to Salina? Visiting for the First Time?",
+  title: "New to Chandler? Visiting for the First Time?",
   description:
     "Whether you've been a Lutheran your whole life or are just beginning to explore the Christian faith, we'd love to welcome you. Our guests should not feel compelled to give — just come and receive God's grace.",
   primaryBtnText: "Plan Your Visit",
   primaryBtnLink: "/visit",
-  secondaryBtnText: "Contact Pastor Winterstein",
+  secondaryBtnText: "Contact Pastor Spaude",
   secondaryBtnLink: "/contact",
 };
 
@@ -149,9 +150,9 @@ export default async function HomePage() {
   return (
     <>
       {/* ── Hero Section ── */}
-      <section className="relative bg-navy-500 text-white overflow-hidden" aria-label="Welcome to St. Mark Lutheran Church">
+      <section className="relative bg-navy-500 text-white overflow-hidden" aria-label="Welcome to Calvary Lutheran Church">
         <div className="absolute inset-0">
-          <img src="/Chruch.webp" alt="St. Mark Lutheran Church" className="w-full h-full object-cover object-[center_25%]" />
+          <img src="/images/Calvary-Front-Yard-scaled.jpg" alt="Calvary Lutheran Church" className="w-full h-full object-cover object-[center_25%]" />
           <div className="absolute inset-0 bg-navy-900/30" />
         </div>
 
@@ -219,19 +220,19 @@ export default async function HomePage() {
               ))}
               <div className="flex items-center gap-2 text-secondary-500 text-sm px-2">
                 <FiMapPin className="w-4 h-4 text-gold-500" />
-                2349 S. Ohio St., Salina, KS 67401
+                1270 N Dobson Rd, Chandler, AZ 85224
               </div>
             </div>
             <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-lg border border-gray-100">
               <iframe
-                src="https://maps.google.com/maps?q=2349+S+Ohio+St,+Salina,+KS+67401&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                src="https://maps.google.com/maps?q=1270+N+Dobson+Rd,+Chandler,+AZ+85224&t=&z=15&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="St. Mark Lutheran Church location"
+                title="Calvary Lutheran Church location"
               />
             </div>
           </div>
@@ -239,7 +240,7 @@ export default async function HomePage() {
       </section>
 
       {/* ── Ministry Highlights ── */}
-      <section className="py-8 md:py-12 px-4 bg-church-light" aria-label="Ministries and programs at St. Mark">
+      <section className="py-8 md:py-12 px-4 bg-church-light" aria-label="Ministries and programs at Calvary">
         <div className="container-wide mx-auto">
           <div className="text-center mb-14">
             <span className="text-gold-500 font-semibold text-sm uppercase tracking-widest">{hl.label}</span>
@@ -266,7 +267,7 @@ export default async function HomePage() {
       </section>
 
       {/* ── Featured Events ── */}
-      <section className="py-8 md:py-12 px-4 bg-church-cream" aria-label="Upcoming church events in Salina KS">
+      <section className="py-8 md:py-12 px-4 bg-church-cream" aria-label="Upcoming church events in Chandler AZ">
         <div className="container-wide mx-auto">
           <div className="flex items-end justify-between mb-12">
             <div>
@@ -341,7 +342,7 @@ export default async function HomePage() {
       </section>
 
       {/* ── Latest Blog Posts ── */}
-      <section className="py-8 md:py-12 px-4 bg-white" aria-label="Latest blog posts from St. Mark Lutheran Church">
+      <section className="py-8 md:py-12 px-4 bg-white" aria-label="Latest blog posts from Calvary Lutheran Church">
         <div className="container-wide mx-auto">
           <div className="flex items-end justify-between mb-12">
             <div>
@@ -369,7 +370,7 @@ export default async function HomePage() {
                     </div>
                   ) : (
                     <div className="aspect-[16/10] bg-gradient-to-br from-navy-500 to-navy-700 flex items-center justify-center">
-                      <span className="text-white/20 font-heading text-6xl font-bold">SM</span>
+                      <span className="text-white/20 font-heading text-6xl font-bold">CLC</span>
                     </div>
                   )}
                   <div className="p-6">
@@ -403,7 +404,7 @@ export default async function HomePage() {
       </section>
 
       {/* ── Sermon / Video ── */}
-      <section className="py-8 md:py-12 px-4 bg-church-light" aria-label="Watch recent sermons from St. Mark Salina">
+      <section className="py-8 md:py-12 px-4 bg-church-light" aria-label="Watch recent sermons from Calvary Lutheran Church">
         <div className="container-wide mx-auto">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="flex-1">
@@ -418,7 +419,7 @@ export default async function HomePage() {
             </div>
             <div className="flex-1 w-full">
               <div className="aspect-video rounded-xl overflow-hidden shadow-xl">
-                <img src="/church-service.webp" alt="Worship service at St. Mark Lutheran Church" className="w-full h-full object-cover" />
+                <img src="/images/worship-service.jpg" alt="Worship service at Calvary Lutheran Church" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>
@@ -426,7 +427,7 @@ export default async function HomePage() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="relative bg-navy-500 text-white py-8 md:py-12 px-4 overflow-hidden" aria-label="Visit St. Mark Lutheran Church in Salina Kansas">
+      <section className="relative bg-navy-500 text-white py-8 md:py-12 px-4 overflow-hidden" aria-label="Visit Calvary Lutheran Church in Chandler Arizona">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-1/2 left-1/2 w-[600px] h-[600px] bg-gold-500 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
         </div>

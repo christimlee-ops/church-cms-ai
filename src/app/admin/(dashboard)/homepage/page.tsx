@@ -284,7 +284,7 @@ export default function AdminHomepagePage() {
                   setHero({ ...hero, welcomeLabel: e.target.value })
                 }
                 className="input-field"
-                placeholder="Welcome to St. Mark"
+                placeholder="Welcome to Calvary"
               />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -299,7 +299,7 @@ export default function AdminHomepagePage() {
                     setHero({ ...hero, title: e.target.value })
                   }
                   className="input-field"
-                  placeholder="Saved by the Cross."
+                  placeholder="Grow in Grace."
                 />
               </div>
               <div>
@@ -313,7 +313,7 @@ export default function AdminHomepagePage() {
                     setHero({ ...hero, titleAccent: e.target.value })
                   }
                   className="input-field"
-                  placeholder="Standing on the Word."
+                  placeholder="Know Your Savior."
                 />
               </div>
             </div>

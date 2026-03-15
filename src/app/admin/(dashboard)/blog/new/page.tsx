@@ -6,6 +6,7 @@ import { FiSave, FiArrowLeft, FiImage, FiShare2, FiUpload } from "react-icons/fi
 import Link from "next/link";
 import RichTextEditor from "@/components/admin/RichTextEditor";
 import ImagePickerModal from "@/components/admin/ImagePickerModal";
+import AIContentGenerator from "@/components/admin/AIContentGenerator";
 
 export default function NewBlogPostPage() {
   const router = useRouter();
@@ -131,7 +132,15 @@ export default function NewBlogPostPage() {
           </div>
 
           <div className="mb-5">
-            <label className="block text-sm font-medium text-secondary-700 mb-1.5">Content</label>
+            <div className="flex items-center gap-3 mb-1.5">
+              <label className="block text-sm font-medium text-secondary-700">Content</label>
+              <AIContentGenerator
+                contentType="blog"
+                onInsert={(content, title, excerpt) => {
+                  setForm(prev => ({ ...prev, content, ...(title && { title, slug: generateSlug(title) }), ...(excerpt && { excerpt }) }));
+                }}
+              />
+            </div>
             <RichTextEditor value={form.content} onChange={(content: string) => setForm({ ...form, content })} className="bg-white rounded-lg" style={{ minHeight: "300px" }} />
           </div>
 

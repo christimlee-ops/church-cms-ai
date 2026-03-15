@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Admin | St. Mark Lutheran Church",
+  title: "Admin | Calvary Lutheran Church",
 };
 
 export default function AdminRootLayout({

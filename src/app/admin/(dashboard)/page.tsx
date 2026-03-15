@@ -37,7 +37,7 @@ export default async function AdminDashboard() {
     <div>
       <div className="mb-8">
         <h1 className="text-3xl font-heading font-bold text-navy-800">Dashboard</h1>
-        <p className="text-secondary-500 mt-1">Welcome to the St. Mark Lutheran Church CMS</p>
+        <p className="text-secondary-500 mt-1">Welcome to the Calvary Lutheran Church CMS</p>
       </div>
 
       {/* Stats Grid */}

@@ -5,6 +5,7 @@ import { useRouter, useParams } from "next/navigation";
 import { FiSave, FiArrowLeft, FiTrash2 } from "react-icons/fi";
 import Link from "next/link";
 import RichTextEditor from "@/components/admin/RichTextEditor";
+import AIContentGenerator from "@/components/admin/AIContentGenerator";
 
 export default function EditPagePage() {
   const router = useRouter();
@@ -126,7 +127,15 @@ export default function EditPagePage() {
           </div>
 
           <div className="mb-5">
-            <label className="block text-sm font-medium text-secondary-700 mb-1.5">Content</label>
+            <div className="flex items-center gap-3 mb-1.5">
+              <label className="block text-sm font-medium text-secondary-700">Content</label>
+              <AIContentGenerator
+                contentType="page"
+                onInsert={(content) => {
+                  setForm(prev => ({ ...prev, content }));
+                }}
+              />
+            </div>
             <RichTextEditor
               value={form.content}
               onChange={(content: string) => setForm({ ...form, content })}

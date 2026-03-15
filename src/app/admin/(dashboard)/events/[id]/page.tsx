@@ -5,6 +5,7 @@ import { useRouter, useParams } from "next/navigation";
 import { FiSave, FiArrowLeft, FiTrash2, FiImage, FiUpload, FiRepeat } from "react-icons/fi";
 import Link from "next/link";
 import ImagePickerModal from "@/components/admin/ImagePickerModal";
+import AIContentGenerator from "@/components/admin/AIContentGenerator";
 
 export default function EditEventPage() {
   const router = useRouter();
@@ -166,7 +167,15 @@ export default function EditEventPage() {
           </div>
 
           <div className="mb-5">
-            <label className="block text-sm font-medium text-secondary-700 mb-1.5">Description</label>
+            <div className="flex items-center gap-3 mb-1.5">
+              <label className="block text-sm font-medium text-secondary-700">Description</label>
+              <AIContentGenerator
+                contentType="event"
+                onInsert={(content) => {
+                  setForm(prev => ({ ...prev, description: content }));
+                }}
+              />
+            </div>
             <textarea rows={4} required value={form.description} onChange={(e) => setForm({ ...form, description: e.target.value })} className="input-field resize-none" />
           </div>
 

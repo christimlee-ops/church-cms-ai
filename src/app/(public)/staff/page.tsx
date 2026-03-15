@@ -4,20 +4,28 @@ export const metadata = { title: "Our Staff" };
 
 const staff = [
   {
-    name: "Pastor Jim Winterstein",
+    name: "Pastor Martin Spaude",
     role: "Pastor",
-    bio: "Pastor Winterstein arrived in Salina in 2023 after serving 24 years in Mesa, Arizona. He and his wife Wendy faithfully preach and teach God's Word at the congregation, caring for the spiritual needs of the church and community.",
-    email: "pastor@stmarksalina.org",
-    phone: "(785) 825-7455",
-    image: "/pastor.webp",
+    bio: "Pastor Spaude faithfully serves at Calvary Lutheran Church, preaching and teaching God's Word to the congregation and caring for the spiritual needs of the church and community in Chandler, Arizona.",
+    email: "pastor@calvarychandler.net",
+    phone: "(480) 963-9397",
+    image: "/images/final_m1624a02d2e54bb2.484022011-edited-1024x1024-1.jpg",
   },
   {
-    name: "Ms. Laurel Coates",
-    role: "Little Lions Preschool Director & Teacher",
-    bio: "Ms. Coates is a graduate of Dr. Martin Luther College in New Ulm, MN with a BS in Elementary Education. She brings 20 years of teaching experience and is passionate about sharing God's love with the children of Little Lions Preschool.",
+    name: "Bridget Spaude",
+    role: "Mornings with Mommy Co-Director",
+    bio: "Bridget helps lead the Mornings with Mommy program, serving young families in the Chandler area with activities and fellowship rooted in God's love.",
     email: "",
-    phone: "(785) 825-7455",
-    image: "/teacher.webp",
+    phone: "(480) 963-9397",
+    image: "",
+  },
+  {
+    name: "Rachel Traudt",
+    role: "Mornings with Mommy Co-Director",
+    bio: "Rachel co-directs the Mornings with Mommy program, creating a welcoming environment for children ages 0-6 and their parents to learn and grow together.",
+    email: "",
+    phone: "(480) 963-9397",
+    image: "",
   },
 ];
 
@@ -28,14 +36,14 @@ export default function StaffPage() {
         <div className="container-wide mx-auto text-center">
           <h1 className="mb-6">Our Staff</h1>
           <p className="text-lg text-secondary-500 leading-relaxed max-w-2xl mx-auto">
-            Meet the people who serve at St. Mark Evangelical Lutheran Church.
+            Meet the people who serve at Calvary Lutheran Church.
           </p>
         </div>
       </section>
 
       <section className="section-padding bg-church-cream">
         <div className="container-wide mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {staff.map((member) => (
               <div key={member.name} className="card p-8 text-center">
                 {member.image ? (
