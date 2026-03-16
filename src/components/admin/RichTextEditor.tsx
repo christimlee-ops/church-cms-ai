@@ -3,11 +3,11 @@
 import { useRef, useState, useMemo, useCallback } from "react";
 import dynamic from "next/dynamic";
 import ImagePickerModal from "./ImagePickerModal";
-import "react-quill/dist/quill.snow.css";
+import "react-quill-new/dist/quill.snow.css";
 
 const ReactQuill = dynamic(
   async () => {
-    const { default: RQ } = await import("react-quill");
+    const { default: RQ } = await import("react-quill-new");
     // eslint-disable-next-line react/display-name, @typescript-eslint/no-explicit-any
     return ({ forwardedRef, ...props }: any) => <RQ ref={forwardedRef} {...props} />;
   },
