@@ -1,6 +1,8 @@
 -- Calvary Lutheran Church - Events Seed Data
 -- Pulled from calvarychandler.net on 2026-03-15
 -- Uses admin user 'clcadmin001' as author
+-- recurringDays = JSON array of JS day numbers (0=Sun, 1=Mon, ..., 6=Sat)
+-- recurringTime/recurringEndTime = "HH:mm" 24-hour format
 
 SET NAMES utf8mb4;
 
@@ -17,7 +19,7 @@ INSERT INTO `events` (`id`, `title`, `slug`, `description`, `location`, `address
 '<p>Join us every Saturday evening for worship centered on Christ and His saving Word. Our Saturday service features Scripture readings, hymns, and pastoral proclamation of the Gospel.</p><p>Whether you''ve been a Lutheran your whole life or are stepping into a church for the first time, you are welcome here. Come as you are and receive God''s grace.</p>',
 'Calvary Lutheran Church', '1270 N Dobson Rd, Chandler, AZ 85224',
 '2026-03-14 18:00:00', '2026-03-14 19:00:00', false,
-'weekly', 'Saturday', '6:00 PM', '7:00 PM',
+'weekly', '[6]', '18:00', '19:00',
 '/images/Saturday-Worship-Service-1.webp', 'UPCOMING', 'Worship',
 'clcadmin001', NOW(), NOW());
 
@@ -27,7 +29,7 @@ INSERT INTO `events` (`id`, `title`, `slug`, `description`, `location`, `address
 '<p>Our Sunday morning worship service proclaims Christ crucified at the center of all we do. Experience Scripture readings, music, and the proclamation of God''s Word.</p><p>All are welcome — whether you''ve been a Lutheran your whole life or are visiting for the first time. Come and receive the gifts God freely gives through His Word and Sacraments.</p>',
 'Calvary Lutheran Church', '1270 N Dobson Rd, Chandler, AZ 85224',
 '2026-03-15 09:00:00', '2026-03-15 10:00:00', false,
-'weekly', 'Sunday', '9:00 AM', '10:00 AM',
+'weekly', '[0]', '09:00', '10:00',
 '/images/Sunday-Worship-Service-2.webp', 'UPCOMING', 'Worship',
 'clcadmin001', NOW(), NOW());
 
@@ -37,7 +39,7 @@ INSERT INTO `events` (`id`, `title`, `slug`, `description`, `location`, `address
 '<p>Grow in the grace and knowledge of our Lord at our weekly Bible Study and Sunday School. Adults dig deeper into Scripture while children enjoy age-appropriate Bible lessons, songs, and crafts.</p><p>Classes are available for all ages — from toddlers to adults. Come ready to learn, ask questions, and grow in your faith.</p>',
 'Calvary Lutheran Church', '1270 N Dobson Rd, Chandler, AZ 85224',
 '2026-03-15 10:30:00', '2026-03-15 11:30:00', false,
-'weekly', 'Sunday', '10:30 AM', '11:30 AM',
+'weekly', '[0]', '10:30', '11:30',
 '/images/bible-class-creative.webp', 'UPCOMING', 'Education',
 'clcadmin001', NOW(), NOW());
 
@@ -47,7 +49,7 @@ INSERT INTO `events` (`id`, `title`, `slug`, `description`, `location`, `address
 '<p>The Men''s Group is a place for Christian brothers to strengthen their faith, support one another, and grow in godly leadership.</p><p>We gather for Bible study, prayer, service projects, and meaningful conversation designed to help us walk in Christ''s footsteps both in our homes and in the world.</p><p>Whether you''re new or have been part of the group for years, there''s a space for you to share life''s challenges and victories with other men rooted in Scripture and fellowship.</p>',
 'Calvary Lutheran Church', '1270 N Dobson Rd, Chandler, AZ 85224',
 '2026-03-21 08:00:00', '2026-03-21 09:00:00', false,
-'monthly', 'Saturday', '8:00 AM', '9:00 AM',
+'monthly', '[6]', '08:00', '09:00',
 '/images/Mens-Group.webp', 'UPCOMING', 'Fellowship',
 'clcadmin001', NOW(), NOW());
 
@@ -57,7 +59,7 @@ INSERT INTO `events` (`id`, `title`, `slug`, `description`, `location`, `address
 '<p>Mornings with Mommy is a fun, faith-based program where caregivers and children ages 0–6 enjoy themed educational playdates filled with crafts, music, and storytime on the first Tuesday of each month.</p><p>This free program is open to the community and provides a wonderful opportunity for young families in the Chandler area to connect with one another in a warm, welcoming environment.</p>',
 'Calvary Lutheran Church', '1270 N Dobson Rd, Chandler, AZ 85224',
 '2026-04-07 10:00:00', '2026-04-07 11:00:00', false,
-'monthly', 'Tuesday', '10:00 AM', '11:00 AM',
+'monthly', '[2]', '10:00', '11:00',
 '/images/MMWLogo-RGB-300ppi-01.jpg', 'UPCOMING', 'Children',
 'clcadmin001', NOW(), NOW());
 
@@ -155,7 +157,7 @@ INSERT INTO `events` (`id`, `title`, `slug`, `description`, `location`, `address
 '<p>Join us for fellowship and a shared meal followed by a midweek Lenten worship service. These special Wednesday gatherings during the Lenten season provide time for reflection, community, and spiritual growth as we journey toward Easter.</p><p>Dinner is provided — just come and be fed, body and soul.</p>',
 'Calvary Lutheran Church', '1270 N Dobson Rd, Chandler, AZ 85224',
 '2026-02-25 17:30:00', '2026-02-25 19:30:00', false,
-'weekly', 'Wednesday', '5:30 PM', '7:30 PM',
+'weekly', '[3]', '17:30', '19:30',
 '/images/Lent-Dinner.webp', 'UPCOMING', 'Worship',
 'clcadmin001', NOW(), NOW());
 
@@ -175,6 +177,6 @@ INSERT INTO `events` (`id`, `title`, `slug`, `description`, `location`, `address
 '<p>Monthly meeting of the Calvary Lutheran Church Council to discuss church business, ministry planning, and congregational matters. All council members are expected to attend.</p>',
 'Calvary Lutheran Church', '1270 N Dobson Rd, Chandler, AZ 85224',
 '2026-04-14 19:00:00', '2026-04-14 20:30:00', false,
-'monthly', 'Tuesday', '7:00 PM', '8:30 PM',
+'monthly', '[2]', '19:00', '20:30',
 '/images/church-council-meeting-2.webp', 'UPCOMING', 'Administration',
 'clcadmin001', NOW(), NOW());
