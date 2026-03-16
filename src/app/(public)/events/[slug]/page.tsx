@@ -1,6 +1,7 @@
 import { prisma } from "@/lib/prisma";
 import { notFound } from "next/navigation";
 import { format } from "date-fns";
+import Image from "next/image";
 import { FiCalendar, FiClock, FiMapPin, FiArrowLeft, FiRepeat } from "react-icons/fi";
 import Link from "next/link";
 import { formatRecurringSchedule } from "@/lib/recurrence";
@@ -19,9 +20,10 @@ async function getEvent(slug: string) {
 export default async function EventDetailPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const event = await getEvent(params.slug);
+  const { slug } = await params;
+  const event = await getEvent(slug);
 
   if (!event) notFound();
 
@@ -67,7 +69,7 @@ export default async function EventDetailPage({
       <section className="section-padding bg-church-cream">
         <div className="container-wide mx-auto">
           {event.featuredImage && (
-            <img src={event.featuredImage} alt={event.title} className="w-full rounded-xl mb-10" />
+            <Image src={event.featuredImage} alt={event.title} width={1200} height={630} className="w-full rounded-xl mb-10" sizes="100vw" />
           )}
           <div className="prose-church" dangerouslySetInnerHTML={{ __html: event.description }} />
         </div>

@@ -5,11 +5,12 @@ import { prisma } from "@/lib/prisma";
 
 export async function GET(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
+  const { id } = await params;
   try {
     const event = await prisma.event.findUnique({
-      where: { id: params.id },
+      where: { id },
       include: { author: { select: { name: true } } },
     });
     if (!event) return NextResponse.json({ error: "Not found" }, { status: 404 });
@@ -21,15 +22,16 @@ export async function GET(
 
 export async function PUT(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
+  const { id } = await params;
   const session = await getServerSession(authOptions);
   if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
   try {
     const body = await req.json();
     const event = await prisma.event.update({
-      where: { id: params.id },
+      where: { id },
       data: {
         title: body.title,
         slug: body.slug,
@@ -56,13 +58,14 @@ export async function PUT(
 
 export async function DELETE(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
+  const { id } = await params;
   const session = await getServerSession(authOptions);
   if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
   try {
-    await prisma.event.delete({ where: { id: params.id } });
+    await prisma.event.delete({ where: { id } });
     return NextResponse.json({ success: true });
   } catch {
     return NextResponse.json({ error: "Failed to delete event" }, { status: 500 });

@@ -5,14 +5,15 @@ import { prisma } from "@/lib/prisma";
 
 export async function GET(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
+  const { id } = await params;
   const session = await getServerSession(authOptions);
   const userRole = (session?.user as { role?: string })?.role;
 
   try {
     const document = await prisma.document.findUnique({
-      where: { id: params.id },
+      where: { id },
       include: { author: { select: { name: true } } },
     });
 
@@ -34,8 +35,9 @@ export async function GET(
 
 export async function PUT(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
+  const { id } = await params;
   const session = await getServerSession(authOptions);
   if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
@@ -47,7 +49,7 @@ export async function PUT(
   try {
     const body = await req.json();
     const document = await prisma.document.update({
-      where: { id: params.id },
+      where: { id },
       data: {
         title: body.title,
         description: body.description,
@@ -63,8 +65,9 @@ export async function PUT(
 
 export async function DELETE(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
+  const { id } = await params;
   const session = await getServerSession(authOptions);
   if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
@@ -74,7 +77,7 @@ export async function DELETE(
   }
 
   try {
-    await prisma.document.delete({ where: { id: params.id } });
+    await prisma.document.delete({ where: { id } });
     return NextResponse.json({ success: true });
   } catch {
     return NextResponse.json({ error: "Failed to delete document" }, { status: 500 });

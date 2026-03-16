@@ -6,14 +6,15 @@ import bcrypt from "bcryptjs";
 
 export async function GET(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
+  const { id } = await params;
   const session = await getServerSession(authOptions);
   if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
   try {
     const user = await prisma.user.findUnique({
-      where: { id: params.id },
+      where: { id },
       select: { id: true, name: true, email: true, role: true, createdAt: true },
     });
     if (!user) return NextResponse.json({ error: "User not found" }, { status: 404 });
@@ -25,8 +26,9 @@ export async function GET(
 
 export async function PUT(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
+  const { id } = await params;
   const session = await getServerSession(authOptions);
   if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
@@ -41,7 +43,7 @@ export async function PUT(
     if (password) data.password = await bcrypt.hash(password, 10);
 
     const user = await prisma.user.update({
-      where: { id: params.id },
+      where: { id },
       data,
       select: { id: true, name: true, email: true, role: true, createdAt: true },
     });
@@ -54,18 +56,19 @@ export async function PUT(
 
 export async function DELETE(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
+  const { id } = await params;
   const session = await getServerSession(authOptions);
   if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
   // Prevent deleting yourself
-  if ((session.user as { id: string }).id === params.id) {
+  if ((session.user as { id: string }).id === id) {
     return NextResponse.json({ error: "You cannot delete your own account" }, { status: 400 });
   }
 
   try {
-    await prisma.user.delete({ where: { id: params.id } });
+    await prisma.user.delete({ where: { id } });
     return NextResponse.json({ message: "User deleted" });
   } catch {
     return NextResponse.json({ error: "Failed to delete user" }, { status: 500 });

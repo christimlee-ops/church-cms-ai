@@ -6,8 +6,9 @@ import { prisma } from "@/lib/prisma";
 // GET /api/members/[id] - Get single member
 export async function GET(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
+  const { id } = await params;
   try {
     const session = await getServerSession(authOptions);
     if (!session?.user) {
@@ -18,8 +19,6 @@ export async function GET(
     if (!["ADMIN", "EDITOR", "MEMBER"].includes(role)) {
       return NextResponse.json({ error: "Forbidden" }, { status: 403 });
     }
-
-    const { id } = params;
 
     const member = await prisma.user.findUnique({
       where: { id },
@@ -50,8 +49,9 @@ export async function GET(
 // PUT /api/members/[id] - Update member (ADMIN only)
 export async function PUT(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
+  const { id } = await params;
   try {
     const session = await getServerSession(authOptions);
     if (!session?.user) {
@@ -63,7 +63,6 @@ export async function PUT(
       return NextResponse.json({ error: "Forbidden" }, { status: 403 });
     }
 
-    const { id } = params;
     const body = await req.json();
     const { name, email, phone, address, birthday, bio, family, photoUrl, isVisible } = body;
 
@@ -134,8 +133,9 @@ export async function PUT(
 // DELETE /api/members/[id] - Delete member (ADMIN only)
 export async function DELETE(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
+  const { id } = await params;
   try {
     const session = await getServerSession(authOptions);
     if (!session?.user) {
@@ -146,8 +146,6 @@ export async function DELETE(
     if (role !== "ADMIN") {
       return NextResponse.json({ error: "Forbidden" }, { status: 403 });
     }
-
-    const { id } = params;
 
     const existing = await prisma.user.findUnique({ where: { id } });
     if (!existing || existing.role !== "MEMBER") {

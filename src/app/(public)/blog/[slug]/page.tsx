@@ -1,6 +1,7 @@
 import { prisma } from "@/lib/prisma";
 import { notFound } from "next/navigation";
 import { format } from "date-fns";
+import Image from "next/image";
 import { FiCalendar, FiUser, FiArrowLeft } from "react-icons/fi";
 import Link from "next/link";
 
@@ -18,9 +19,10 @@ async function getPost(slug: string) {
 export default async function BlogPostPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const post = await getPost(params.slug);
+  const { slug } = await params;
+  const post = await getPost(slug);
 
   if (!post) notFound();
 
@@ -50,7 +52,7 @@ export default async function BlogPostPage({
       <section className="section-padding bg-church-cream">
         <div className="container-wide mx-auto">
           {post.featuredImage && (
-            <img src={post.featuredImage} alt={post.title} className="w-full rounded-xl mb-10" />
+            <Image src={post.featuredImage} alt={post.title} width={1200} height={630} className="w-full rounded-xl mb-10" sizes="100vw" />
           )}
           <div className="prose-church" dangerouslySetInnerHTML={{ __html: post.content }} />
         </div>
