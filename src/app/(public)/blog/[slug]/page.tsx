@@ -19,10 +19,9 @@ async function getPost(slug: string) {
 export default async function BlogPostPage({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: { slug: string };
 }) {
-  const { slug } = await params;
-  const post = await getPost(slug);
+  const post = await getPost(params.slug);
 
   if (!post) notFound();
 

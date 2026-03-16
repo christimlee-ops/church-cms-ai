@@ -20,10 +20,9 @@ async function getEvent(slug: string) {
 export default async function EventDetailPage({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: { slug: string };
 }) {
-  const { slug } = await params;
-  const event = await getEvent(slug);
+  const event = await getEvent(params.slug);
 
   if (!event) notFound();
 

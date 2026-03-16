@@ -6,9 +6,8 @@ import { prisma } from "@/lib/prisma";
 // GET /api/members/[id] - Get single member
 export async function GET(
   req: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
+  { params }: { params: { id: string } }
 ) {
-  const { id } = await params;
   try {
     const session = await getServerSession(authOptions);
     if (!session?.user) {
@@ -20,6 +19,8 @@ export async function GET(
       return NextResponse.json({ error: "Forbidden" }, { status: 403 });
     }
 
+    const { id } = params;
+
     const member = await prisma.user.findUnique({
       where: { id },
       include: { memberProfile: true },
@@ -29,7 +30,6 @@ export async function GET(
       return NextResponse.json({ error: "Member not found" }, { status: 404 });
     }
 
-    // Non-admins can only see visible profiles
     if (role !== "ADMIN" && member.memberProfile && !member.memberProfile.isVisible) {
       return NextResponse.json({ error: "Member not found" }, { status: 404 });
     }
@@ -49,9 +49,8 @@ export async function GET(
 // PUT /api/members/[id] - Update member (ADMIN only)
 export async function PUT(
   req: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
+  { params }: { params: { id: string } }
 ) {
-  const { id } = await params;
   try {
     const session = await getServerSession(authOptions);
     if (!session?.user) {
@@ -63,10 +62,10 @@ export async function PUT(
       return NextResponse.json({ error: "Forbidden" }, { status: 403 });
     }
 
+    const { id } = params;
     const body = await req.json();
     const { name, email, phone, address, birthday, bio, family, photoUrl, isVisible } = body;
 
-    // Check that the member exists
     const existing = await prisma.user.findUnique({
       where: { id },
       include: { memberProfile: true },
@@ -76,7 +75,6 @@ export async function PUT(
       return NextResponse.json({ error: "Member not found" }, { status: 404 });
     }
 
-    // If email is changing, check for uniqueness
     if (email && email !== existing.email) {
       const emailTaken = await prisma.user.findUnique({ where: { email } });
       if (emailTaken) {
@@ -133,9 +131,8 @@ export async function PUT(
 // DELETE /api/members/[id] - Delete member (ADMIN only)
 export async function DELETE(
   req: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
+  { params }: { params: { id: string } }
 ) {
-  const { id } = await params;
   try {
     const session = await getServerSession(authOptions);
     if (!session?.user) {
@@ -146,6 +143,8 @@ export async function DELETE(
     if (role !== "ADMIN") {
       return NextResponse.json({ error: "Forbidden" }, { status: 403 });
     }
+
+    const { id } = params;
 
     const existing = await prisma.user.findUnique({ where: { id } });
     if (!existing || existing.role !== "MEMBER") {

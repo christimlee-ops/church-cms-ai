@@ -5,21 +5,19 @@ import { prisma } from "@/lib/prisma";
 
 export async function GET(
   req: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
+  { params }: { params: { id: string } }
 ) {
-  const { id } = await params;
   const session = await getServerSession(authOptions);
   const userRole = (session?.user as { role?: string })?.role;
 
   try {
     const document = await prisma.document.findUnique({
-      where: { id },
+      where: { id: params.id },
       include: { author: { select: { name: true } } },
     });
 
     if (!document) return NextResponse.json({ error: "Not found" }, { status: 404 });
 
-    // Check visibility permissions
     if (document.visibility === "ADMIN_ONLY" && userRole !== "ADMIN" && userRole !== "EDITOR") {
       return NextResponse.json({ error: "Forbidden" }, { status: 403 });
     }
@@ -35,9 +33,8 @@ export async function GET(
 
 export async function PUT(
   req: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
+  { params }: { params: { id: string } }
 ) {
-  const { id } = await params;
   const session = await getServerSession(authOptions);
   if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
@@ -49,7 +46,7 @@ export async function PUT(
   try {
     const body = await req.json();
     const document = await prisma.document.update({
-      where: { id },
+      where: { id: params.id },
       data: {
         title: body.title,
         description: body.description,
@@ -65,9 +62,8 @@ export async function PUT(
 
 export async function DELETE(
   req: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
+  { params }: { params: { id: string } }
 ) {
-  const { id } = await params;
   const session = await getServerSession(authOptions);
   if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
@@ -77,7 +73,7 @@ export async function DELETE(
   }
 
   try {
-    await prisma.document.delete({ where: { id } });
+    await prisma.document.delete({ where: { id: params.id } });
     return NextResponse.json({ success: true });
   } catch {
     return NextResponse.json({ error: "Failed to delete document" }, { status: 500 });
