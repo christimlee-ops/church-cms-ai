@@ -1,10 +1,11 @@
+import Image from "next/image";
 import { FiHeart, FiBookOpen, FiUsers, FiBook } from "react-icons/fi";
 
 const values = [
-  { icon: FiBookOpen, title: "God's Word", description: "We believe Scripture is the inspired, inerrant Word of God -- 100% flawless and the sole authority for faith and life." },
-  { icon: FiHeart, title: "Worship", description: "Christ crucified is at the center of all we do. Our worship proclaims the saving grace of Jesus for all people." },
-  { icon: FiBook, title: "Education", description: "From Mornings with Mommy and Sunday School to adult Bible Classes, we nurture faith at every age." },
-  { icon: FiUsers, title: "Community", description: "We are a caring congregation united in fellowship, supporting one another through every season of life." },
+  { icon: FiHeart, title: "Leading Sinners to Know Their Savior", description: "We share the good news of Jesus Christ so that all may know His saving grace (John 3:16)." },
+  { icon: FiBookOpen, title: "Strengthening Believers in Their Faith", description: "Through faithful preaching, teaching, and the Sacraments, we nurture the faith of every member (2 Peter 3:18)." },
+  { icon: FiBook, title: "Encouraging Lifelong Study of God's Word", description: "We believe the Bible is the inspired, inerrant Word of God and encourage every member to be in the Word regularly (2 Timothy 3:16-17)." },
+  { icon: FiUsers, title: "Equipping Disciples to Share the Gospel", description: "We train and equip members to share the saving message of Christ in their homes, workplaces, and communities (Matthew 28:19-20)." },
 ];
 
 export const metadata = { title: "About Us" };
@@ -14,7 +15,7 @@ export default function AboutPage() {
     <>
       <section className="relative bg-navy-500 text-white overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/images/Chruch-Empty-Photo.jpg" alt="Inside Calvary Lutheran Church" className="w-full h-full object-cover" />
+          <Image src="/images/books-1.jpg" alt="Calvary Lutheran Church" fill className="object-cover" priority sizes="100vw" />
           <div className="absolute inset-0 bg-navy-900/30" />
         </div>
         <div className="relative section-padding">
@@ -32,7 +33,7 @@ export default function AboutPage() {
 
       <section className="section-padding bg-church-cream">
         <div className="container-wide mx-auto">
-          <h2 className="text-center mb-12">Our Values</h2>
+          <h2 className="text-center mb-12">Our Mission</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value) => (
               <div key={value.title} className="card p-8 text-center">
@@ -50,7 +51,7 @@ export default function AboutPage() {
           <h2 className="text-center mb-8">Our Story</h2>
           <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="flex-1">
-            <img src="/images/Calvary-Front-Yard-scaled.jpg" alt="Calvary Lutheran Church building" className="rounded-xl shadow-lg w-full object-cover" />
+            <Image src="/images/Calvary-Front-Yard-scaled.jpg" alt="Calvary Lutheran Church building" width={800} height={533} className="rounded-xl shadow-lg w-full object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
           </div>
           <div className="flex-1 prose-church">
             <p>

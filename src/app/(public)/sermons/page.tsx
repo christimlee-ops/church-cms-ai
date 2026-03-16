@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { prisma } from "@/lib/prisma";
 import { FiPlay, FiVideo } from "react-icons/fi";
 import { format } from "date-fns";
@@ -22,7 +23,7 @@ export default async function SermonsPage() {
     <>
       <section className="relative bg-navy-500 text-white overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/images/Sunday-Worship-Service-2.webp" alt="Worship service at Calvary Lutheran Church" className="w-full h-full object-cover" />
+          <Image src="/images/Piano.jpg" alt="Worship at Calvary Lutheran Church" fill className="object-cover" priority sizes="100vw" />
           <div className="absolute inset-0 bg-navy-900/30" />
         </div>
         <div className="relative section-padding">
@@ -78,7 +79,7 @@ export default async function SermonsPage() {
                     >
                       <div className="aspect-video bg-secondary-800 relative overflow-hidden">
                         {video.thumbnail ? (
-                          <img src={video.thumbnail} alt={video.title} className="w-full h-full object-cover" />
+                          <Image src={video.thumbnail} alt={video.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                         ) : (
                           <div className="flex items-center justify-center h-full">
                             <FiVideo className="w-12 h-12 text-gray-500" />

@@ -1,5 +1,6 @@
 import { prisma } from "@/lib/prisma";
 import Link from "next/link";
+import Image from "next/image";
 import { FiCalendar, FiUser, FiArrowRight } from "react-icons/fi";
 import { format } from "date-fns";
 
@@ -44,8 +45,8 @@ export default async function BlogPage() {
               {posts.map((post) => (
                 <Link key={post.id} href={`/blog/${post.slug}`} className="card group">
                   {post.featuredImage ? (
-                    <div className="aspect-video bg-church-light overflow-hidden">
-                      <img src={post.featuredImage} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                    <div className="aspect-video bg-church-light overflow-hidden relative">
+                      <Image src={post.featuredImage} alt={post.title} fill className="object-cover group-hover:scale-105 transition-transform duration-300" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                     </div>
                   ) : (
                     <div className="aspect-video bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center">

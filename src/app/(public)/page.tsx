@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { prisma } from "@/lib/prisma";
 import { format } from "date-fns";
 import {
@@ -152,7 +153,7 @@ export default async function HomePage() {
       {/* ── Hero Section ── */}
       <section className="relative bg-navy-500 text-white overflow-hidden" aria-label="Welcome to Calvary Lutheran Church">
         <div className="absolute inset-0">
-          <img src="/images/Calvary-Front-Yard-scaled.jpg" alt="Calvary Lutheran Church" className="w-full h-full object-cover object-[center_25%]" />
+          <Image src="/images/Calvary-Front-Yard-scaled.jpg" alt="Calvary Lutheran Church" fill className="object-cover object-[center_25%]" priority sizes="100vw" />
           <div className="absolute inset-0 bg-navy-900/30" />
         </div>
 
@@ -291,7 +292,7 @@ export default async function HomePage() {
                 <Link key={event.id} href={`/events/${event.slug}`} className="card group">
                   <div className="aspect-[16/10] bg-gradient-to-br from-navy-500 to-navy-700 flex items-center justify-center relative overflow-hidden">
                     {event.featuredImage ? (
-                      <img src={event.featuredImage} alt={event.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                      <Image src={event.featuredImage} alt={event.title} fill className="object-cover group-hover:scale-105 transition-transform duration-300" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                     ) : (
                       <div className="text-center">
                         <FiCalendar className="w-10 h-10 text-navy-300 mx-auto mb-2" />
@@ -365,8 +366,8 @@ export default async function HomePage() {
               {posts.map((post) => (
                 <Link key={post.id} href={`/blog/${post.slug}`} className="card group">
                   {post.featuredImage ? (
-                    <div className="aspect-[16/10] bg-church-light overflow-hidden">
-                      <img src={post.featuredImage} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                    <div className="aspect-[16/10] bg-church-light overflow-hidden relative">
+                      <Image src={post.featuredImage} alt={post.title} fill className="object-cover group-hover:scale-105 transition-transform duration-300" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                     </div>
                   ) : (
                     <div className="aspect-[16/10] bg-gradient-to-br from-navy-500 to-navy-700 flex items-center justify-center">
@@ -418,8 +419,8 @@ export default async function HomePage() {
               </Link>
             </div>
             <div className="flex-1 w-full">
-              <div className="aspect-video rounded-xl overflow-hidden shadow-xl">
-                <img src="/images/worship-service.jpg" alt="Worship service at Calvary Lutheran Church" className="w-full h-full object-cover" />
+              <div className="aspect-video rounded-xl overflow-hidden shadow-xl relative">
+                <Image src="/images/worship-service.jpg" alt="Worship service at Calvary Lutheran Church" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
               </div>
             </div>
           </div>

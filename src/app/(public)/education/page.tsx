@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { FiBookOpen, FiBook, FiStar, FiUsers, FiArrowRight } from "react-icons/fi";
+import Image from "next/image";
+import { FiBookOpen, FiBook, FiStar, FiUsers, FiArrowRight, FiGlobe, FiHeart } from "react-icons/fi";
 
 export const metadata = { title: "Ministries" };
 
@@ -30,12 +31,35 @@ const programs = [
   },
 ];
 
+const additionalMinistries = [
+  {
+    icon: FiBookOpen,
+    title: "Adult Information Class",
+    description: "An in-depth study of the Christian faith for those interested in learning what Lutherans believe and teach. Led by Pastor Spaude.",
+  },
+  {
+    icon: FiUsers,
+    title: "ChrisTEENS",
+    description: "A youth group for students in grades 8-12, meeting for fellowship, Bible study, and fun activities.",
+  },
+  {
+    icon: FiGlobe,
+    title: "ASU Campus Ministry",
+    description: "Reaching out to college students at Arizona State University with the message of Christ's love and forgiveness.",
+  },
+  {
+    icon: FiHeart,
+    title: "Columbarium",
+    description: "Calvary offers a columbarium on our church grounds — a peaceful and dignified resting place for cremated remains of loved ones.",
+  },
+];
+
 export default function EducationPage() {
   return (
     <>
       <section className="relative bg-navy-500 text-white overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/images/childrens-message.webp" alt="Children's message at Calvary" className="w-full h-full object-cover" />
+          <Image src="/images/Hymn.jpg" alt="Ministries at Calvary Lutheran Church" fill className="object-cover" priority sizes="100vw" />
           <div className="absolute inset-0 bg-navy-900/30" />
         </div>
         <div className="relative section-padding">
@@ -70,9 +94,26 @@ export default function EducationPage() {
 
       <section className="section-padding bg-church-light">
         <div className="container-wide mx-auto">
+          <h2 className="text-center mb-10">More Ministries</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {additionalMinistries.map((ministry) => (
+              <div key={ministry.title} className="card p-8 text-center">
+                <div className="w-14 h-14 bg-navy-500/10 rounded-xl flex items-center justify-center mb-5 mx-auto">
+                  <ministry.icon className="w-7 h-7 text-navy-500" />
+                </div>
+                <h3 className="text-xl mb-3">{ministry.title}</h3>
+                <p className="text-secondary-400 text-sm leading-relaxed">{ministry.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding bg-church-cream">
+        <div className="container-wide mx-auto">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="flex-1">
-              <img src="/images/family-bible-hour-1-1024x683.webp" alt="Family Bible hour at Calvary" className="rounded-xl shadow-lg w-full object-cover" />
+              <Image src="/images/family-bible-hour-1-1024x683.webp" alt="Family Bible hour at Calvary" width={1024} height={683} className="rounded-xl shadow-lg w-full object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
             </div>
             <div className="flex-1 text-center lg:text-left">
               <h2 className="mb-4">Our Commitment to Christian Education</h2>

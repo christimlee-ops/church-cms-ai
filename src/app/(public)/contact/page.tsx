@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { FiSend, FiMapPin, FiPhone, FiMail, FiClock } from "react-icons/fi";
 
 export default function ContactPage() {
@@ -31,7 +32,7 @@ export default function ContactPage() {
     <>
       <section className="relative bg-navy-500 text-white overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/images/cross-front.jpg" alt="Calvary Lutheran Church" className="w-full h-full object-cover" />
+          <Image src="/images/church.jpg" alt="Calvary Lutheran Church" fill className="object-cover" priority sizes="100vw" />
           <div className="absolute inset-0 bg-navy-900/30" />
         </div>
         <div className="relative section-padding">
@@ -102,7 +103,18 @@ export default function ContactPage() {
                   </li>
                   <li className="flex items-center gap-3">
                     <FiMail className="w-5 h-5 text-primary-500 shrink-0" />
+                    <span className="text-secondary-500 text-sm">office@calvarychandler.net</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <FiMail className="w-5 h-5 text-primary-500 shrink-0" />
                     <span className="text-secondary-500 text-sm">pastor@calvarychandler.net</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <FiClock className="w-5 h-5 text-primary-500 mt-0.5 shrink-0" />
+                    <div>
+                      <p className="font-medium text-secondary-700 text-sm">Office Hours</p>
+                      <p className="text-secondary-400 text-sm">Mon–Fri, 9:00 AM – 3:00 PM</p>
+                    </div>
                   </li>
                 </ul>
               </div>
