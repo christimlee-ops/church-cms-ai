@@ -25,6 +25,5 @@ jobs:
             mkdir -p assets/_next
             rm -rf assets/_next/static
             cp -r .next/static assets/_next/static
-            # Restart Node.js app via Passenger
             mkdir -p tmp
             touch tmp/restart.txt
