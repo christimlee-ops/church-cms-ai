@@ -2,7 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { FiBookOpen, FiHeart, FiUsers, FiStar } from "react-icons/fi";
 
-export const metadata = { title: "What We Believe" };
+export const metadata = {
+  title: "What We Believe | WELS Lutheran Church Chandler AZ",
+  description: "Calvary Lutheran Church holds to the Bible as God's inerrant Word and the Lutheran Confessions. Learn what WELS Lutherans believe about salvation, Scripture, and the Sacraments.",
+};
 
 const missionPoints = [
   {

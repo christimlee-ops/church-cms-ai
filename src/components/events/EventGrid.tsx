@@ -11,9 +11,6 @@ interface Event {
   allDay: boolean;
   location: string | null;
   featuredImage: string | null;
-  recurring?: string | null;
-  recurringDays?: string | null;
-  recurringTime?: string | null;
 }
 
 interface EventGridProps {
@@ -39,9 +36,6 @@ export default function EventGrid({ events, perPage = 8 }: EventGridProps) {
             allDay={event.allDay}
             location={event.location}
             featuredImage={event.featuredImage}
-            recurring={event.recurring}
-            recurringDays={event.recurringDays}
-            recurringTime={event.recurringTime}
           />
         ))}
       </div>

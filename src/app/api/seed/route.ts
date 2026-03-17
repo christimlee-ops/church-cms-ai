@@ -360,6 +360,64 @@ const seedBlogPosts = [
 <p>Join us for worship Saturday at 6:00 PM or Sunday at 9:00 AM at <strong>1270 N Dobson Rd, Chandler, AZ 85224</strong>, or call Pastor Spaude at <strong>(480) 963-9397</strong>. We'd love to welcome you.</p>`,
     tags: ["lutheran", "faith", "wels", "chandler"],
   },
+  {
+    title: "Looking for a Church Near Me in Chandler, Gilbert, or Mesa?",
+    slug: "church-near-me-chandler-gilbert-mesa-arizona",
+    excerpt: "If you're searching for a church near me in Chandler, Gilbert, Mesa, or the East Valley, Calvary Lutheran Church welcomes you with open arms.",
+    content: `<p>Moving to a new area — or simply searching for a <strong>church near me</strong> — can feel overwhelming. With so many options in the East Valley, how do you find a church that feels like home? If you're in <strong>Chandler, Gilbert, Mesa, Tempe</strong>, or anywhere in the Phoenix East Valley, Calvary Lutheran Church might be exactly what you're looking for.</p>
+
+<h2>Why Calvary Lutheran Church?</h2>
+<p>Calvary is a <strong>WELS Lutheran church in Chandler, AZ</strong> that has been serving the community since 1977. We're located at <strong>1270 N Dobson Rd, Chandler, AZ 85224</strong> — easily accessible from Gilbert, Mesa, Tempe, and surrounding areas.</p>
+<p>What sets us apart is our commitment to teaching the Bible faithfully and creating a welcoming environment for everyone — singles, couples, families, and seniors alike.</p>
+
+<h3>Convenient Worship Times</h3>
+<p>We know schedules are busy, so we offer two worship services each week:</p>
+<ul>
+<li><strong>Saturday at 6:00 PM</strong> — Perfect if your Sundays are packed</li>
+<li><strong>Sunday at 9:00 AM</strong> — Traditional Sunday morning worship</li>
+</ul>
+<p>After Sunday worship, Bible Study and Sunday School begin at 10:30 AM for all ages.</p>
+
+<h2>Programs for Every Stage of Life</h2>
+<ul>
+<li><strong>Mornings with Mommy</strong> — For children ages 0-6 and caregivers (1st Tuesday monthly)</li>
+<li><strong>Sunday School</strong> — Ages 2-18, Sundays at 10:30 AM</li>
+<li><strong>Confirmation</strong> — 7th and 8th graders, Sundays at 11:30 AM</li>
+<li><strong>Adult Bible Study</strong> — Sundays at 10:30 AM</li>
+<li><strong>Bible Information Class</strong> — For anyone exploring the faith</li>
+</ul>
+
+<h2>Serving the East Valley Community</h2>
+<p>Whether you live in <strong>Chandler, Gilbert, Mesa, Tempe, Queen Creek, or San Tan Valley</strong>, Calvary is just a short drive away. We're proud to be a welcoming <strong>Christian church near you</strong> that puts God's Word at the center of everything we do.</p>
+<p>Stop searching for a "<strong>church near me</strong>" and come see for yourself. Visit us this weekend or call <strong>(480) 963-9397</strong>. We'd love to meet you!</p>`,
+    tags: ["church-near-me", "chandler", "gilbert", "mesa", "east-valley"],
+  },
+  {
+    title: "5 Reasons to Visit a Lutheran Church This Weekend in Chandler AZ",
+    slug: "5-reasons-visit-lutheran-church-weekend-chandler-az",
+    excerpt: "Thinking about visiting a Lutheran church? Here are five reasons to try Calvary Lutheran Church in Chandler, Arizona this weekend.",
+    content: `<p>Maybe you've driven past a <strong>Lutheran church in Chandler</strong> and wondered what it's like inside. Maybe you've been meaning to find a new church home but haven't taken the first step. Here are five reasons this weekend is the perfect time to visit Calvary Lutheran Church.</p>
+
+<h2>1. You'll Hear the Gospel — Not Opinions</h2>
+<p>At Calvary, every sermon is rooted in Scripture. Pastor Martin Spaude faithfully preaches God's Word — not pop psychology, not political commentary, not self-help advice. You'll hear the timeless message of Jesus Christ crucified and risen for you.</p>
+
+<h2>2. Everyone Is Welcome — No Exceptions</h2>
+<p>Whether you've been a Christian your whole life or you're walking into a church for the first time, you belong at Calvary. There's no dress code, no pressure, and no judgment. Come as you are.</p>
+
+<h2>3. There's Something for Every Age</h2>
+<p>From <strong>Mornings with Mommy</strong> (ages 0-6) to Sunday School, Confirmation, and adult Bible study, Calvary has programs for every member of your family. Your kids will love it, and so will you.</p>
+
+<h2>4. Two Services to Fit Your Schedule</h2>
+<p>Can't make it Sunday morning? Join us <strong>Saturday at 6:00 PM</strong>. Prefer the traditional Sunday experience? We worship at <strong>9:00 AM</strong>. Either way, you'll experience the same Christ-centered worship.</p>
+
+<h2>5. A Caring Community Since 1977</h2>
+<p>Calvary has been part of the <strong>Chandler community</strong> for nearly 50 years. When you walk through our doors, you're not just visiting a building — you're joining a family that cares about you and your spiritual well-being.</p>
+
+<h2>Come This Weekend</h2>
+<p>Calvary Lutheran Church is located at <strong>1270 N Dobson Rd, Chandler, AZ 85224</strong>. Parking is free, the coffee is hot, and the welcome is genuine. We can't wait to meet you.</p>
+<p>Questions? Call <strong>(480) 963-9397</strong> or visit our <a href="/visit">Plan Your Visit</a> page.</p>`,
+    tags: ["visit", "lutheran", "chandler", "worship", "newcomers"],
+  },
 ];
 
 const seedEvents = [

@@ -2,7 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { FiArrowLeft, FiClock, FiMapPin, FiUsers, FiHeart, FiBookOpen, FiStar } from "react-icons/fi";
 
-export const metadata = { title: "Mornings with Mommy" };
+export const metadata = {
+  title: "Mornings with Mommy | Calvary Lutheran Church Chandler AZ",
+  description: "Free program for children ages 0-6 and caregivers at Calvary Lutheran Church in Chandler, AZ. 1st Tuesday of each month. Bible stories, crafts, and play.",
+};
 
 const features = [
   {

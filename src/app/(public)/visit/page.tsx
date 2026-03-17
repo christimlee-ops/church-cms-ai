@@ -2,7 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { FiMapPin, FiClock, FiHeart, FiUsers, FiBookOpen, FiMusic } from "react-icons/fi";
 
-export const metadata = { title: "Plan Your Visit" };
+export const metadata = {
+  title: "Plan Your Visit | Calvary Lutheran Church Chandler AZ",
+  description: "Visit Calvary Lutheran Church at 1270 N Dobson Rd, Chandler, AZ 85224. Saturday worship 6 PM, Sunday worship 9 AM. Come as you are — all are welcome!",
+};
 
 const faqs = [
   {

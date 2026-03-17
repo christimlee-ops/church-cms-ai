@@ -1,7 +1,10 @@
 import Image from "next/image";
 import { FiMail, FiPhone } from "react-icons/fi";
 
-export const metadata = { title: "Our Staff" };
+export const metadata = {
+  title: "Our Staff | Calvary Lutheran Church Chandler AZ",
+  description: "Meet the staff of Calvary Lutheran Church in Chandler, AZ. Led by Pastor Martin Spaude and dedicated ministry leaders serving the East Valley community.",
+};
 
 const staff = [
   {

@@ -2,7 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { FiArrowLeft, FiClock, FiMapPin, FiUsers, FiBookOpen, FiCheckCircle, FiHeart, FiStar } from "react-icons/fi";
 
-export const metadata = { title: "Confirmation" };
+export const metadata = {
+  title: "Confirmation Classes | Calvary Lutheran Church Chandler AZ",
+  description: "Two-year confirmation program for 7th and 8th graders at Calvary Lutheran Church in Chandler, AZ. Sundays at 11:30 AM.",
+};
 
 const topics = [
   {

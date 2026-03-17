@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { prisma } from "@/lib/prisma";
-import { format } from "date-fns";
+import { format, startOfDay, addMonths } from "date-fns";
+import { generateOccurrences } from "@/lib/recurrence";
 import {
   FiCalendar,
   FiBookOpen,
@@ -111,11 +112,41 @@ async function getHomepageContent() {
 }
 
 async function getFeaturedEvents() {
+  const today = startOfDay(new Date());
+  const rangeEnd = addMonths(today, 3);
   try {
-    return await prisma.event.findMany({
-      where: { status: "UPCOMING" },
-      orderBy: { startDate: "asc" },
-    });
+    const [oneTime, recurring] = await Promise.all([
+      prisma.event.findMany({
+        where: {
+          status: "UPCOMING",
+          recurring: null,
+          OR: [
+            { endDate: { gte: today } },
+            { endDate: null, startDate: { gte: today } },
+          ],
+        },
+        orderBy: { startDate: "asc" },
+      }),
+      prisma.event.findMany({
+        where: { status: "UPCOMING", recurring: { not: null } },
+      }),
+    ]);
+
+    const expandedRecurring = recurring.flatMap((event) =>
+      generateOccurrences(event, today, rangeEnd).map((occ) => ({
+        ...event,
+        id: occ.id,
+        startDate: new Date(occ.startDate),
+        endDate: occ.endDate ? new Date(occ.endDate) : null,
+        recurring: null,
+        recurringDays: null,
+        recurringTime: null,
+      }))
+    );
+
+    return [...oneTime, ...expandedRecurring].sort(
+      (a, b) => new Date(a.startDate).getTime() - new Date(b.startDate).getTime()
+    );
   } catch {
     return [];
   }

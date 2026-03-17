@@ -1,4 +1,7 @@
-export const metadata = { title: "Privacy Policy" };
+export const metadata = {
+  title: "Privacy Policy | Calvary Lutheran Church Chandler AZ",
+  description: "Privacy policy for Calvary Lutheran Church in Chandler, AZ. Learn how we collect, use, and protect your personal information.",
+};
 
 export default function PrivacyPage() {
   return (

@@ -3,7 +3,10 @@ import { prisma } from "@/lib/prisma";
 import { FiPlay, FiVideo } from "react-icons/fi";
 import { format } from "date-fns";
 
-export const metadata = { title: "Sermons" };
+export const metadata = {
+  title: "Sermons & Worship Videos | Calvary Lutheran Church Chandler AZ",
+  description: "Watch sermons and worship services from Calvary Lutheran Church in Chandler, AZ. WELS Lutheran preaching grounded in Scripture — available online anytime.",
+};
 
 async function getVideos() {
   try {

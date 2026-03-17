@@ -1,7 +1,10 @@
 import { prisma } from "@/lib/prisma";
 import { FiDownload, FiFile, FiFileText } from "react-icons/fi";
 
-export const metadata = { title: "Resources" };
+export const metadata = {
+  title: "Church Resources | Calvary Lutheran Church Chandler AZ",
+  description: "Download Bible study materials, bulletins, sermon notes, and newsletters from Calvary Lutheran Church in Chandler, AZ.",
+};
 
 const CATEGORY_LABELS: Record<string, string> = {
   BIBLE_STUDY: "Bible Study",

@@ -4,7 +4,10 @@ import Image from "next/image";
 import { FiCalendar, FiUser, FiArrowRight } from "react-icons/fi";
 import { format } from "date-fns";
 
-export const metadata = { title: "Blog" };
+export const metadata = {
+  title: "Blog | Calvary Lutheran Church Chandler AZ",
+  description: "Devotionals, faith insights, and community updates from Calvary Lutheran Church in Chandler, Arizona. Grow in God's Word with us.",
+};
 
 async function getPosts() {
   try {

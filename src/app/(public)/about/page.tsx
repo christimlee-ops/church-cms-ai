@@ -8,7 +8,10 @@ const values = [
   { icon: FiUsers, title: "Equipping Disciples to Share the Gospel", description: "We train and equip members to share the saving message of Christ in their homes, workplaces, and communities (Matthew 28:19-20)." },
 ];
 
-export const metadata = { title: "About Us" };
+export const metadata = {
+  title: "About Us | Calvary Lutheran Church Chandler AZ",
+  description: "Learn about Calvary Lutheran Church, a WELS congregation in Chandler, Arizona since 1977. Discover our mission, history, and community of believers.",
+};
 
 export default function AboutPage() {
   return (

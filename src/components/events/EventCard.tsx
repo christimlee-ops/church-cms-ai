@@ -1,7 +1,6 @@
 import Link from "next/link";
-import { FiCalendar, FiMapPin, FiClock, FiRepeat } from "react-icons/fi";
+import { FiCalendar, FiMapPin, FiClock } from "react-icons/fi";
 import { format } from "date-fns";
-import { formatRecurringSchedule } from "@/lib/recurrence";
 
 interface EventCardProps {
   slug: string;
@@ -10,12 +9,9 @@ interface EventCardProps {
   allDay: boolean;
   location: string | null;
   featuredImage: string | null;
-  recurring?: string | null;
-  recurringDays?: string | null;
-  recurringTime?: string | null;
 }
 
-export default function EventCard({ slug, title, startDate, allDay, location, featuredImage, recurring, recurringDays, recurringTime }: EventCardProps) {
+export default function EventCard({ slug, title, startDate, allDay, location, featuredImage }: EventCardProps) {
   return (
     <Link href={`/events/${slug}`} className="card group">
       {featuredImage && (
@@ -28,24 +24,15 @@ export default function EventCard({ slug, title, startDate, allDay, location, fe
         </div>
       )}
       <div className="p-6">
-        {recurring ? (
-          <div className="flex items-center gap-2 text-secondary-500 text-sm font-medium mb-2">
-            <FiRepeat className="w-4 h-4" />
-            {formatRecurringSchedule(recurring, recurringDays ?? null, recurringTime ?? null)}
+        <div className="flex items-center gap-2 text-secondary-500 text-sm font-medium mb-1">
+          <FiCalendar className="w-4 h-4" />
+          {format(new Date(startDate), "EEEE, MMMM d, yyyy")}
+        </div>
+        {!allDay && (
+          <div className="flex items-center gap-2 text-secondary-400 text-sm mb-2">
+            <FiClock className="w-4 h-4" />
+            {format(new Date(startDate), "h:mm a")}
           </div>
-        ) : (
-          <>
-            <div className="flex items-center gap-2 text-secondary-500 text-sm font-medium mb-1">
-              <FiCalendar className="w-4 h-4" />
-              {format(new Date(startDate), "EEEE, MMMM d, yyyy")}
-            </div>
-            {!allDay && (
-              <div className="flex items-center gap-2 text-secondary-400 text-sm mb-2">
-                <FiClock className="w-4 h-4" />
-                {format(new Date(startDate), "h:mm a")}
-              </div>
-            )}
-          </>
         )}
         <h3 className="text-xl mb-2 group-hover:text-gold-600 transition-colors">{title}</h3>
         {location && (

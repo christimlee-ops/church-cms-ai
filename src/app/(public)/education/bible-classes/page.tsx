@@ -2,7 +2,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { FiArrowLeft, FiClock, FiMapPin, FiBookOpen, FiMonitor } from "react-icons/fi";
 
-export const metadata = { title: "Bible Classes" };
+export const metadata = {
+  title: "Bible Study & Bible Classes | Calvary Lutheran Church Chandler AZ",
+  description: "Join weekly Bible study classes at Calvary Lutheran Church in Chandler, AZ. Sunday at 10:30 AM and Wednesday evenings. All are welcome.",
+};
 
 const studies = [
   {

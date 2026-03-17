@@ -2,7 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { FiArrowLeft, FiClock, FiMapPin, FiUsers } from "react-icons/fi";
 
-export const metadata = { title: "Sunday School" };
+export const metadata = {
+  title: "Sunday School for Kids | Calvary Lutheran Church Chandler AZ",
+  description: "Sunday school for children of all ages at Calvary Lutheran Church in Chandler, AZ. Bible stories, songs, and crafts every Sunday at 10:30 AM.",
+};
 
 const classes = [
   {

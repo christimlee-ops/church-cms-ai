@@ -2,7 +2,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { FiBookOpen, FiBook, FiStar, FiUsers, FiArrowRight, FiGlobe, FiHeart } from "react-icons/fi";
 
-export const metadata = { title: "Ministries" };
+export const metadata = {
+  title: "Ministries & Programs | Calvary Lutheran Church Chandler AZ",
+  description: "Bible classes, Sunday school, confirmation, and Mornings with Mommy at Calvary Lutheran Church in Chandler, AZ. Programs for all ages.",
+};
 
 const programs = [
   {
