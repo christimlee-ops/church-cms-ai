@@ -4,7 +4,7 @@ import { FiFacebook, FiInstagram, FiYoutube, FiMail, FiPhone, FiMapPin } from "r
 
 const quickLinks = [
   { name: "About Us", href: "/about" },
-  { name: "What We Believe", href: "/what-we-believe" },
+  { name: "What We Believe", href: "/about/what-we-believe" },
   { name: "Worship", href: "/sermons" },
   { name: "Ministries", href: "/education" },
   { name: "Events", href: "/events" },

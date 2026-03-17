@@ -12,8 +12,8 @@ const navigation = [
     href: "/about",
     children: [
       { name: "Our Congregation", href: "/about" },
-      { name: "What We Believe", href: "/what-we-believe" },
-      { name: "Our Staff", href: "/staff" },
+      { name: "What We Believe", href: "/about/what-we-believe" },
+      { name: "Our Staff", href: "/about/staff" },
     ],
   },
   {
@@ -24,6 +24,8 @@ const navigation = [
       { name: "Sunday School", href: "/education/sunday-school" },
       { name: "Confirmation", href: "/education/confirmation" },
       { name: "Mornings with Mommy", href: "/education/mornings-with-mommy" },
+      { name: "Adult Instruction", href: "/education/adult-instruction" },
+      { name: "Columbarium", href: "/education/columbarium" },
     ],
   },
   { name: "Worship", href: "/sermons" },
