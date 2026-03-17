@@ -55,7 +55,7 @@ export default async function ResourcesPage() {
             alt="Church resources"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-navy-900/50" />
+          <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative section-padding w-full">
           <div className="container-wide mx-auto text-center">

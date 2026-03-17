@@ -182,10 +182,10 @@ export default async function HomePage() {
   return (
     <>
       {/* ── Hero Section ── */}
-      <section className="relative bg-navy-500 text-white overflow-hidden" aria-label="Welcome to Calvary Lutheran Church">
+      <section className="relative bg-black text-white overflow-hidden" aria-label="Welcome to Calvary Lutheran Church">
         <div className="absolute inset-0">
           <Image src="/images/Calvary-Front-Yard-scaled.jpg" alt="Calvary Lutheran Church building on Dobson Road in Chandler AZ" fill className="object-cover object-right" priority sizes="100vw" />
-          <div className="absolute inset-0 bg-navy-900/50" />
+          <div className="absolute inset-0 bg-black/50" />
         </div>
 
         <div className="relative container-wide mx-auto px-4 pt-14 pb-28 md:pt-20 md:pb-40">
@@ -281,6 +281,21 @@ export default async function HomePage() {
               {hl.description}
             </p>
           </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-14">
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-md">
+              <Image src="/images/worship-service.jpg" alt="Worship service at Calvary Lutheran Church Chandler" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
+            </div>
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-md">
+              <Image src="/images/childrens-message.webp" alt="Children's message at Calvary Lutheran Church" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
+            </div>
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-md">
+              <Image src="/images/bible-study.jpg" alt="Bible study group at Calvary Lutheran Church Chandler AZ" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
+            </div>
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-md">
+              <Image src="/images/church-event.webp" alt="Fellowship event at Calvary Lutheran Church" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {hl.items.map((item: { title: string; description: string; link: string; icon: string }) => {
               const Icon = iconMap[item.icon] || FiBookOpen;

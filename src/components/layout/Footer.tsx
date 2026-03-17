@@ -34,7 +34,7 @@ export default function Footer() {
                 alt="Calvary Lutheran Church"
                 width={200}
                 height={60}
-                className="h-16 w-auto object-contain"
+                className="h-20 w-auto object-contain"
               />
             </div>
             <p className="text-sm leading-relaxed mb-3 text-gold-400 font-medium italic">

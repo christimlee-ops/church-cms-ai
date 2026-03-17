@@ -87,7 +87,7 @@ export default async function EventsPage() {
       <section className="page-hero">
         <div className="absolute inset-0">
           <Image src="/images/church-event.webp" alt="Events at Calvary Lutheran Church Chandler AZ" fill className="object-cover" priority sizes="100vw" />
-          <div className="absolute inset-0 bg-navy-900/50" />
+          <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative section-padding w-full">
           <div className="container-wide mx-auto text-center">

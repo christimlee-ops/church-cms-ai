@@ -42,15 +42,15 @@ export default function Header() {
       <div className="h-1 bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400" />
 
       <div className="container-wide mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-24">
           {/* Logo */}
           <Link href="/" className="flex items-center group" aria-label="Calvary Lutheran Church — Home">
             <Image
               src="/images/calvary-lutheren-chruch-white-logo.png"
               alt="Calvary Lutheran Church"
-              width={160}
-              height={48}
-              className="h-16 w-auto object-contain"
+              width={220}
+              height={64}
+              className="h-20 w-auto object-contain"
             />
           </Link>
 
@@ -65,7 +65,7 @@ export default function Header() {
               >
                 <Link
                   href={item.href}
-                  className="px-4 py-2 text-navy-100 hover:text-gold-400 font-medium text-sm transition-colors rounded-lg hover:bg-white/10 inline-flex items-center gap-1"
+                  className="px-4 py-2 text-navy-100 hover:text-gold-400 font-medium text-base transition-colors rounded-lg hover:bg-white/10 inline-flex items-center gap-1"
                 >
                   {item.name}
                   {item.children && <FiChevronDown className="w-3.5 h-3.5" />}

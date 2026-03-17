@@ -63,7 +63,7 @@ export default function EducationPage() {
       <section className="page-hero">
         <div className="absolute inset-0">
           <Image src="/images/Hymn.jpg" alt="Ministries at Calvary Lutheran Church" fill className="object-cover" priority sizes="100vw" />
-          <div className="absolute inset-0 bg-navy-900/50" />
+          <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative section-padding w-full">
           <div className="container-wide mx-auto text-center">

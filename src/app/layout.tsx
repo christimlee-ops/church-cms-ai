@@ -78,9 +78,9 @@ export const metadata: Metadata = {
     images: ["https://calvarychandler.net/images/Calvary-Front-Yard-scaled.jpg"],
   },
   robots: {
-    index: true,
-    follow: true,
-    googleBot: { index: true, follow: true },
+    index: false,
+    follow: false,
+    googleBot: { index: false, follow: false },
   },
   alternates: {
     canonical: "https://calvarychandler.net",
