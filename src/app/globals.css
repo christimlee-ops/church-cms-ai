@@ -44,6 +44,14 @@
     @apply py-16 md:py-24 px-4;
   }
 
+  .page-hero {
+    @apply relative bg-navy-500 text-white overflow-hidden min-h-[280px] md:min-h-[340px] flex items-center;
+  }
+
+  .page-hero-gradient {
+    @apply bg-gradient-to-b from-church-light to-church-cream min-h-[200px] md:min-h-[260px] flex items-center section-padding;
+  }
+
   .container-narrow {
     @apply max-w-4xl mx-auto;
   }

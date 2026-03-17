@@ -105,6 +105,7 @@ async function getHomepageContent() {
       highlight: { ...defaultHighlight, ...(content.highlightSection as Record<string, unknown>) },
       sermon: { ...defaultSermon, ...(content.sermonSection as Record<string, unknown>) },
       cta: { ...defaultCta, ...(content.ctaSection as Record<string, unknown>) },
+      customSections: (content.customSections as { id: string; title: string; content: string; bgColor: string }[]) || [],
     };
   } catch {
     return null;
@@ -147,6 +148,7 @@ export default async function HomePage() {
   const hl = (homepage?.highlight ?? defaultHighlight) as typeof defaultHighlight;
   const sermonData = (homepage?.sermon ?? defaultSermon) as typeof defaultSermon;
   const cta = (homepage?.cta ?? defaultCta) as typeof defaultCta;
+  const customSections = homepage?.customSections ?? [];
 
   return (
     <>
@@ -426,6 +428,16 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ── Custom Sections ── */}
+      {customSections.map((section: { id: string; title: string; content: string; bgColor: string }) => (
+        <section key={section.id} className={`section-padding ${section.bgColor}`}>
+          <div className="container-wide mx-auto">
+            {section.title && <h2 className="text-center mb-8">{section.title}</h2>}
+            <div className="prose-church max-w-4xl mx-auto" dangerouslySetInnerHTML={{ __html: section.content }} />
+          </div>
+        </section>
+      ))}
 
       {/* ── CTA ── */}
       <section className="relative bg-navy-500 text-white py-8 md:py-12 px-4 overflow-hidden" aria-label="Visit Calvary Lutheran Church in Chandler Arizona">

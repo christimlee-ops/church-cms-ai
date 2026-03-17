@@ -3,7 +3,7 @@ export const metadata = { title: "Privacy Policy" };
 export default function PrivacyPage() {
   return (
     <>
-      <section className="bg-gradient-to-b from-church-light to-church-cream section-padding">
+      <section className="page-hero-gradient">
         <div className="container-wide mx-auto text-center">
           <h1>Privacy Policy</h1>
         </div>

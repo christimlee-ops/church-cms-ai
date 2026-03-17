@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { FiFacebook, FiInstagram, FiYoutube, FiMail, FiPhone, FiMapPin } from "react-icons/fi";
 
 const quickLinks = [
@@ -28,9 +29,13 @@ export default function Footer() {
           {/* Church Info */}
           <div>
             <div className="flex items-center gap-3 mb-5">
-              <div className="w-11 h-11 bg-gold-500 rounded-lg flex items-center justify-center">
-                <span className="text-navy-900 font-heading font-bold text-lg">CLC</span>
-              </div>
+              <Image
+                src="/images/calvary-lutheren-chruch-white-logo.png"
+                alt="Calvary Lutheran Church logo"
+                width={44}
+                height={44}
+                className="w-11 h-11 object-contain"
+              />
               <div>
                 <span className="font-heading font-bold text-lg text-white">
                   Calvary

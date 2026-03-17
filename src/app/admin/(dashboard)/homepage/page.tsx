@@ -7,7 +7,10 @@ import {
   FiTrash2,
   FiChevronDown,
   FiChevronUp,
+  FiArrowUp,
+  FiArrowDown,
 } from "react-icons/fi";
+import RichTextEditor from "@/components/admin/RichTextEditor";
 
 interface ServiceTime {
   name: string;
@@ -62,6 +65,13 @@ interface CtaSection {
   primaryBtnLink: string;
   secondaryBtnText: string;
   secondaryBtnLink: string;
+}
+
+interface CustomSection {
+  id: string;
+  title: string;
+  content: string;
+  bgColor: string;
 }
 
 const ICON_OPTIONS = [
@@ -147,6 +157,8 @@ export default function AdminHomepagePage() {
     secondaryBtnLink: "",
   });
 
+  const [customSections, setCustomSections] = useState<CustomSection[]>([]);
+
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -161,6 +173,7 @@ export default function AdminHomepagePage() {
         if (data.highlightSection) setHighlight(data.highlightSection);
         if (data.sermonSection) setSermon(data.sermonSection);
         if (data.ctaSection) setCta(data.ctaSection);
+        if (data.customSections) setCustomSections(data.customSections);
       })
       .catch(() => setError("Failed to load homepage content"))
       .finally(() => setLoading(false));
@@ -182,6 +195,7 @@ export default function AdminHomepagePage() {
           highlightSection: highlight,
           sermonSection: sermon,
           ctaSection: cta,
+          customSections,
         }),
       });
 
@@ -242,6 +256,29 @@ export default function AdminHomepagePage() {
     const updated = [...highlight.items];
     updated[index] = { ...updated[index], [field]: value };
     setHighlight({ ...highlight, items: updated });
+  };
+
+  // Custom sections helpers
+  const addCustomSection = () => {
+    setCustomSections([
+      ...customSections,
+      { id: Date.now().toString(), title: "", content: "", bgColor: "bg-church-cream" },
+    ]);
+  };
+  const removeCustomSection = (index: number) => {
+    setCustomSections(customSections.filter((_, i) => i !== index));
+  };
+  const updateCustomSection = (index: number, field: keyof CustomSection, value: string) => {
+    const updated = [...customSections];
+    updated[index] = { ...updated[index], [field]: value };
+    setCustomSections(updated);
+  };
+  const moveCustomSection = (index: number, direction: "up" | "down") => {
+    const updated = [...customSections];
+    const target = direction === "up" ? index - 1 : index + 1;
+    if (target < 0 || target >= updated.length) return;
+    [updated[index], updated[target]] = [updated[target], updated[index]];
+    setCustomSections(updated);
   };
 
   if (loading) {
@@ -785,6 +822,103 @@ export default function AdminHomepagePage() {
               </div>
             </div>
           </div>
+        </CollapsibleSection>
+
+        {/* Custom HTML Sections */}
+        <CollapsibleSection title="Custom HTML Sections">
+          <p className="text-sm text-secondary-400 mb-4">
+            Add, remove, and reorder custom content sections on the homepage. Each section includes a rich text editor for full HTML control.
+          </p>
+          <div className="space-y-6">
+            {customSections.map((section, i) => (
+              <div key={section.id} className="bg-gray-50 rounded-lg p-4 space-y-4 border border-gray-200">
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-medium text-secondary-600">
+                    Section {i + 1}
+                  </span>
+                  <div className="flex items-center gap-1">
+                    <button
+                      type="button"
+                      onClick={() => moveCustomSection(i, "up")}
+                      disabled={i === 0}
+                      className="p-1.5 text-secondary-400 hover:text-navy-500 disabled:opacity-30"
+                      title="Move up"
+                    >
+                      <FiArrowUp className="w-4 h-4" />
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => moveCustomSection(i, "down")}
+                      disabled={i === customSections.length - 1}
+                      className="p-1.5 text-secondary-400 hover:text-navy-500 disabled:opacity-30"
+                      title="Move down"
+                    >
+                      <FiArrowDown className="w-4 h-4" />
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => removeCustomSection(i)}
+                      className="p-1.5 text-red-400 hover:text-red-600"
+                      title="Remove section"
+                    >
+                      <FiTrash2 className="w-4 h-4" />
+                    </button>
+                  </div>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-secondary-700 mb-1.5">
+                      Section Title (optional)
+                    </label>
+                    <input
+                      type="text"
+                      value={section.title}
+                      onChange={(e) => updateCustomSection(i, "title", e.target.value)}
+                      className="input-field"
+                      placeholder="e.g. Welcome Message"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-secondary-700 mb-1.5">
+                      Background Color
+                    </label>
+                    <select
+                      value={section.bgColor}
+                      onChange={(e) => updateCustomSection(i, "bgColor", e.target.value)}
+                      className="input-field"
+                    >
+                      <option value="bg-church-cream">Cream</option>
+                      <option value="bg-church-light">Light</option>
+                      <option value="bg-white">White</option>
+                      <option value="bg-navy-500 text-white">Navy</option>
+                    </select>
+                  </div>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-secondary-700 mb-1.5">
+                    Content
+                  </label>
+                  <RichTextEditor
+                    value={section.content}
+                    onChange={(val) => updateCustomSection(i, "content", val)}
+                    style={{ minHeight: "200px" }}
+                  />
+                </div>
+              </div>
+            ))}
+            {customSections.length === 0 && (
+              <p className="text-sm text-secondary-400 italic">
+                No custom sections. Click &quot;Add Section&quot; to create one.
+              </p>
+            )}
+          </div>
+          <button
+            type="button"
+            onClick={addCustomSection}
+            className="mt-4 text-sm text-gold-600 hover:text-gold-700 font-medium inline-flex items-center gap-1"
+          >
+            <FiPlus className="w-4 h-4" /> Add Section
+          </button>
         </CollapsibleSection>
 
         {/* Save Button */}

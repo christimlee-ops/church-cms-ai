@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { FiMenu, FiX, FiChevronDown } from "react-icons/fi";
 
@@ -44,9 +45,13 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group" aria-label="Calvary Lutheran Church — Home">
-            <div className="w-11 h-11 bg-gold-500 rounded-lg flex items-center justify-center shadow-md group-hover:bg-gold-400 transition-colors">
-              <span className="text-navy-900 font-heading font-bold text-lg">CLC</span>
-            </div>
+            <Image
+              src="/images/calvary-lutheren-chruch-white-logo.png"
+              alt="Calvary Lutheran Church logo"
+              width={48}
+              height={48}
+              className="w-12 h-12 object-contain"
+            />
             <div>
               <span className="font-heading font-bold text-xl text-white">
                 Calvary

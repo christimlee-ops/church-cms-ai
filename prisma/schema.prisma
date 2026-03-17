@@ -218,6 +218,7 @@ model HomepageContent {
   highlightSection Json     @default("{}")
   sermonSection    Json     @default("{}")
   ctaSection       Json     @default("{}")
+  customSections   Json     @default("[]")
   updatedAt        DateTime @updatedAt
 
   @@map("homepage_content")

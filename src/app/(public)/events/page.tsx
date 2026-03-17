@@ -49,7 +49,7 @@ export default async function EventsPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-b from-church-light to-church-cream section-padding">
+      <section className="page-hero-gradient">
         <div className="container-wide mx-auto text-center">
           <h1 className="mb-4">Upcoming Events</h1>
           <p className="text-lg text-secondary-500 max-w-2xl mx-auto">

@@ -45,7 +45,7 @@ export default async function ResourcesPage() {
 
   return (
     <>
-      <section className="relative bg-navy-500 text-white overflow-hidden">
+      <section className="page-hero">
         <div className="absolute inset-0">
           <img
             src="/images/multiple-bibles.jpg"

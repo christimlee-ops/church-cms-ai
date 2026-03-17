@@ -41,7 +41,7 @@ const staff = [
 export default function StaffPage() {
   return (
     <>
-      <section className="relative bg-navy-500 text-white overflow-hidden">
+      <section className="page-hero">
         <div className="absolute inset-0">
           <Image src="/images/alter.jpg" alt="Inside Calvary Lutheran Church" fill className="object-cover" priority sizes="100vw" />
           <div className="absolute inset-0 bg-navy-900/30" />

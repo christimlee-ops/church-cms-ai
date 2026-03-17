@@ -113,6 +113,7 @@ export async function GET() {
           highlightSection: defaults.highlightSection,
           sermonSection: defaults.sermonSection,
           ctaSection: defaults.ctaSection,
+          customSections: [],
         },
       });
     }
@@ -143,6 +144,7 @@ export async function PUT(req: NextRequest) {
         highlightSection: body.highlightSection,
         sermonSection: body.sermonSection,
         ctaSection: body.ctaSection,
+        customSections: body.customSections ?? [],
       },
       create: {
         id: "default",
@@ -151,6 +153,7 @@ export async function PUT(req: NextRequest) {
         highlightSection: body.highlightSection ?? defaults.highlightSection,
         sermonSection: body.sermonSection ?? defaults.sermonSection,
         ctaSection: body.ctaSection ?? defaults.ctaSection,
+        customSections: body.customSections ?? [],
       },
     });
 

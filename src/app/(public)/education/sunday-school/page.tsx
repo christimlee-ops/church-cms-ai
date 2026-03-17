@@ -25,7 +25,7 @@ const classes = [
 export default function SundaySchoolPage() {
   return (
     <>
-      <section className="bg-gradient-to-b from-church-light to-church-cream section-padding">
+      <section className="page-hero-gradient">
         <div className="container-wide mx-auto text-center">
           <Link href="/education" className="inline-flex items-center gap-2 text-gold-600 hover:text-gold-700 font-semibold text-sm mb-6 transition-colors">
             <FiArrowLeft className="w-4 h-4" /> Back to Ministries
