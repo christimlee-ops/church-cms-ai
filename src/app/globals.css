@@ -45,11 +45,15 @@
   }
 
   .page-hero {
-    @apply relative bg-navy-500 text-white overflow-hidden h-[220px] md:h-[260px] flex items-center -mb-px;
+    @apply relative bg-navy-500 text-white overflow-hidden h-[220px] md:h-[260px] flex items-center;
+    margin-bottom: -2px;
   }
 
   .page-hero img {
-    @apply block align-bottom;
+    @apply block;
+    vertical-align: bottom;
+    line-height: 0;
+    font-size: 0;
   }
 
   .page-hero .section-padding {
