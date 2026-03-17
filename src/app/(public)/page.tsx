@@ -184,7 +184,7 @@ export default async function HomePage() {
       {/* ── Hero Section ── */}
       <section className="relative bg-navy-500 text-white overflow-hidden" aria-label="Welcome to Calvary Lutheran Church">
         <div className="absolute inset-0">
-          <Image src="/images/Calvary-Front-Yard-scaled.jpg" alt="Calvary Lutheran Church" fill className="object-cover object-right" priority sizes="100vw" />
+          <Image src="/images/Calvary-Front-Yard-scaled.jpg" alt="Calvary Lutheran Church building on Dobson Road in Chandler AZ" fill className="object-cover object-right" priority sizes="100vw" />
           <div className="absolute inset-0 bg-navy-900/50" />
         </div>
 
@@ -401,7 +401,7 @@ export default async function HomePage() {
             </div>
             <div className="flex-1 w-full">
               <div className="aspect-video rounded-xl overflow-hidden shadow-xl relative">
-                <Image src="/images/worship-service.jpg" alt="Worship service at Calvary Lutheran Church" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
+                <Image src="/images/worship-service.jpg" alt="Sunday worship service at Calvary Lutheran Church Chandler AZ" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
               </div>
             </div>
           </div>

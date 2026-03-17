@@ -41,8 +41,25 @@ const faqs = [
 ];
 
 export default function VisitPage() {
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <section className="page-hero">
         <div className="absolute inset-0">
           <Image src="/images/seats.jpg" alt="Seating inside Calvary Lutheran Church" fill className="object-cover" priority sizes="100vw" />

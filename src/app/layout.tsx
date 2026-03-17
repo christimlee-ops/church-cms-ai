@@ -61,12 +61,21 @@ export const metadata: Metadata = {
     siteName: "Calvary Lutheran Church",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "https://calvarychandler.net/images/Calvary-Front-Yard-scaled.jpg",
+        width: 2560,
+        height: 1920,
+        alt: "Calvary Lutheran Church building on Dobson Road in Chandler AZ",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Calvary Lutheran Church — Chandler, AZ",
     description:
       "A WELS congregation in Chandler, Arizona. Worship Saturdays at 6 PM and Sundays at 9 AM. Come as you are.",
+    images: ["https://calvarychandler.net/images/Calvary-Front-Yard-scaled.jpg"],
   },
   robots: {
     index: true,
@@ -85,7 +94,7 @@ export default function RootLayout({
 }>) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Church",
+    "@type": ["Church", "PlaceOfWorship"],
     name: "Calvary Lutheran Church",
     alternateName: "Calvary Lutheran Church Chandler",
     url: "https://calvarychandler.net",
@@ -94,6 +103,8 @@ export default function RootLayout({
     foundingDate: "1977",
     description:
       "Calvary Lutheran Church is a WELS congregation in Chandler, Arizona. Grow in the grace and knowledge of our Lord and Savior Jesus Christ.",
+    image: "https://calvarychandler.net/images/Calvary-Front-Yard-scaled.jpg",
+    logo: "https://calvarychandler.net/images/calvary-lutheren-chruch-blue-logo.png",
     address: {
       "@type": "PostalAddress",
       streetAddress: "1270 N Dobson Rd",
@@ -107,6 +118,13 @@ export default function RootLayout({
       latitude: 33.3425,
       longitude: -111.8781,
     },
+    areaServed: [
+      { "@type": "City", name: "Chandler", "@id": "https://en.wikipedia.org/wiki/Chandler,_Arizona" },
+      { "@type": "City", name: "Gilbert" },
+      { "@type": "City", name: "Mesa" },
+      { "@type": "City", name: "Tempe" },
+      { "@type": "City", name: "Queen Creek" },
+    ],
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
@@ -133,6 +151,7 @@ export default function RootLayout({
       name: "Wisconsin Evangelical Lutheran Synod (WELS)",
       url: "https://wels.net",
     },
+    priceRange: "Free",
   };
 
   return (
