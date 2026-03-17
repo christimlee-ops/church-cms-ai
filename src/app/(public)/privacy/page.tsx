@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export const metadata = {
   title: "Privacy Policy | Calvary Lutheran Church Chandler AZ",
   description: "Privacy policy for Calvary Lutheran Church in Chandler, AZ. Learn how we collect, use, and protect your personal information.",
@@ -6,9 +8,18 @@ export const metadata = {
 export default function PrivacyPage() {
   return (
     <>
-      <section className="page-hero-gradient">
-        <div className="container-wide mx-auto text-center">
-          <h1>Privacy Policy</h1>
+      <section className="page-hero">
+        <div className="absolute inset-0">
+          <Image src="/images/headers/church.jpg" alt="Calvary Lutheran Church" fill className="object-cover" priority sizes="100vw" />
+          <div className="absolute inset-0 bg-black/50" />
+        </div>
+        <div className="relative section-padding w-full">
+          <div className="container-wide mx-auto text-center">
+            <h1 className="text-white mb-4">Privacy Policy</h1>
+            <p className="text-lg text-navy-100 max-w-2xl mx-auto">
+              How we collect, use, and protect your information.
+            </p>
+          </div>
         </div>
       </section>
 

@@ -37,23 +37,27 @@ const programs = [
 const additionalMinistries = [
   {
     icon: FiBookOpen,
-    title: "Adult Information Class",
+    title: "Adult Bible Instruction",
     description: "An in-depth study of the Christian faith for those interested in learning what Lutherans believe and teach. Led by Pastor Spaude.",
+    href: "/education/adult-instruction",
   },
   {
     icon: FiUsers,
     title: "ChrisTEENS",
     description: "A youth group for students in grades 8-12, meeting for fellowship, Bible study, and fun activities.",
+    href: "",
   },
   {
     icon: FiGlobe,
     title: "ASU Campus Ministry",
     description: "Reaching out to college students at Arizona State University with the message of Christ's love and forgiveness.",
+    href: "/education/asu-campus-ministry",
   },
   {
     icon: FiHeart,
     title: "Columbarium",
     description: "Calvary offers a columbarium on our church grounds — a peaceful and dignified resting place for cremated remains of loved ones.",
+    href: "/education/columbarium",
   },
 ];
 
@@ -98,15 +102,28 @@ export default function EducationPage() {
         <div className="container-wide mx-auto">
           <h2 className="text-center mb-10">More Ministries</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {additionalMinistries.map((ministry) => (
-              <div key={ministry.title} className="card p-8 text-center">
-                <div className="w-14 h-14 bg-navy-500/10 rounded-xl flex items-center justify-center mb-5 mx-auto">
-                  <ministry.icon className="w-7 h-7 text-navy-500" />
+            {additionalMinistries.map((ministry) =>
+              ministry.href ? (
+                <Link key={ministry.title} href={ministry.href} className="card p-8 text-center group border-b-4 border-transparent hover:border-gold-500 transition-all">
+                  <div className="w-14 h-14 bg-navy-500/10 rounded-xl flex items-center justify-center mb-5 mx-auto group-hover:bg-gold-500/10 transition-colors">
+                    <ministry.icon className="w-7 h-7 text-navy-500 group-hover:text-gold-600 transition-colors" />
+                  </div>
+                  <h3 className="text-xl mb-3 group-hover:text-navy-500 transition-colors">{ministry.title}</h3>
+                  <p className="text-secondary-400 text-sm leading-relaxed mb-4">{ministry.description}</p>
+                  <span className="inline-flex items-center gap-1 text-gold-600 text-sm font-semibold group-hover:gap-2 transition-all">
+                    Learn More <FiArrowRight className="w-4 h-4" />
+                  </span>
+                </Link>
+              ) : (
+                <div key={ministry.title} className="card p-8 text-center">
+                  <div className="w-14 h-14 bg-navy-500/10 rounded-xl flex items-center justify-center mb-5 mx-auto">
+                    <ministry.icon className="w-7 h-7 text-navy-500" />
+                  </div>
+                  <h3 className="text-xl mb-3">{ministry.title}</h3>
+                  <p className="text-secondary-400 text-sm leading-relaxed">{ministry.description}</p>
                 </div>
-                <h3 className="text-xl mb-3">{ministry.title}</h3>
-                <p className="text-secondary-400 text-sm leading-relaxed">{ministry.description}</p>
-              </div>
-            ))}
+              )
+            )}
           </div>
         </div>
       </section>
