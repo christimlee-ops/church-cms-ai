@@ -44,22 +44,14 @@ export default function Header() {
       <div className="container-wide mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group" aria-label="Calvary Lutheran Church — Home">
+          <Link href="/" className="flex items-center group" aria-label="Calvary Lutheran Church — Home">
             <Image
               src="/images/calvary-lutheren-chruch-white-logo.png"
-              alt="Calvary Lutheran Church logo"
-              width={48}
+              alt="Calvary Lutheran Church"
+              width={160}
               height={48}
-              className="w-12 h-12 object-contain"
+              className="h-12 w-auto object-contain"
             />
-            <div>
-              <span className="font-heading font-bold text-xl text-white">
-                Calvary
-              </span>
-              <span className="block text-xs text-gold-400 -mt-0.5 tracking-wider uppercase">
-                Lutheran Church
-              </span>
-            </div>
           </Link>
 
           {/* Desktop Navigation */}

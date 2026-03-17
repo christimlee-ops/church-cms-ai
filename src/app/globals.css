@@ -45,11 +45,15 @@
   }
 
   .page-hero {
-    @apply relative bg-navy-500 text-white overflow-hidden min-h-[280px] md:min-h-[340px] flex items-center;
+    @apply relative bg-navy-500 text-white overflow-hidden min-h-[200px] md:min-h-[240px] flex items-center;
+  }
+
+  .page-hero img {
+    @apply block;
   }
 
   .page-hero-gradient {
-    @apply bg-gradient-to-b from-church-light to-church-cream min-h-[200px] md:min-h-[260px] flex items-center section-padding;
+    @apply bg-gradient-to-b from-church-light to-church-cream min-h-[200px] md:min-h-[240px] flex items-center section-padding;
   }
 
   .container-narrow {

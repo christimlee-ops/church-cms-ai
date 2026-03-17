@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { FiArrowLeft, FiClock, FiMapPin, FiUsers } from "react-icons/fi";
 
@@ -25,16 +26,22 @@ const classes = [
 export default function SundaySchoolPage() {
   return (
     <>
-      <section className="page-hero-gradient">
-        <div className="container-wide mx-auto text-center">
-          <Link href="/education" className="inline-flex items-center gap-2 text-gold-600 hover:text-gold-700 font-semibold text-sm mb-6 transition-colors">
-            <FiArrowLeft className="w-4 h-4" /> Back to Ministries
-          </Link>
-          <h1 className="mb-6">Sunday School</h1>
-          <p className="text-lg text-secondary-500 leading-relaxed max-w-2xl mx-auto">
-            Sunday School at Calvary provides Bible-based instruction for children and teens
-            of all ages, helping them grow in their faith and knowledge of God&apos;s Word.
-          </p>
+      <section className="page-hero">
+        <div className="absolute inset-0">
+          <Image src="/images/sunday-school.webp" alt="Sunday School" fill className="object-cover" priority sizes="100vw" />
+          <div className="absolute inset-0 bg-navy-900/50" />
+        </div>
+        <div className="relative section-padding">
+          <div className="container-wide mx-auto text-center">
+            <Link href="/education" className="inline-flex items-center gap-2 text-gold-400 hover:text-gold-300 font-semibold text-sm mb-6 transition-colors">
+              <FiArrowLeft className="w-4 h-4" /> Back to Ministries
+            </Link>
+            <h1 className="text-white mb-4">Sunday School</h1>
+            <p className="text-lg text-navy-100 leading-relaxed max-w-2xl mx-auto">
+              Sunday School at Calvary provides Bible-based instruction for children and teens
+              of all ages, helping them grow in their faith and knowledge of God&apos;s Word.
+            </p>
+          </div>
         </div>
       </section>
 

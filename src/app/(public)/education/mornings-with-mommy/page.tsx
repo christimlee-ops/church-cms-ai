@@ -30,17 +30,23 @@ const features = [
 export default function MorningsWithMommyPage() {
   return (
     <>
-      <section className="page-hero-gradient">
-        <div className="container-wide mx-auto text-center">
-          <Link href="/education" className="inline-flex items-center gap-2 text-gold-600 hover:text-gold-700 font-semibold text-sm mb-6 transition-colors">
-            <FiArrowLeft className="w-4 h-4" /> Back to Education
-          </Link>
-          <h1 className="mb-6">Mornings with Mommy</h1>
-          <p className="text-lg text-secondary-500 leading-relaxed max-w-2xl mx-auto">
-            A ministry for children ages 0-6 and their caregivers. Held the 1st Tuesday
-            of each month at Calvary Lutheran Church, Mornings with Mommy offers
-            Christ-centered activities, play, and fellowship for families in Chandler.
-          </p>
+      <section className="page-hero">
+        <div className="absolute inset-0">
+          <Image src="/images/childrens-message.webp" alt="Mornings with Mommy" fill className="object-cover" priority sizes="100vw" />
+          <div className="absolute inset-0 bg-navy-900/50" />
+        </div>
+        <div className="relative section-padding">
+          <div className="container-wide mx-auto text-center">
+            <Link href="/education" className="inline-flex items-center gap-2 text-gold-400 hover:text-gold-300 font-semibold text-sm mb-6 transition-colors">
+              <FiArrowLeft className="w-4 h-4" /> Back to Ministries
+            </Link>
+            <h1 className="text-white mb-4">Mornings with Mommy</h1>
+            <p className="text-lg text-navy-100 leading-relaxed max-w-2xl mx-auto">
+              A ministry for children ages 0-6 and their caregivers. Held the 1st Tuesday
+              of each month at Calvary Lutheran Church, Mornings with Mommy offers
+              Christ-centered activities, play, and fellowship for families in Chandler.
+            </p>
+          </div>
         </div>
       </section>
 

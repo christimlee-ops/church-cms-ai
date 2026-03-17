@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { FiArrowLeft, FiClock, FiMapPin, FiUsers, FiBookOpen, FiCheckCircle, FiHeart, FiStar } from "react-icons/fi";
 
@@ -29,17 +30,23 @@ const topics = [
 export default function ConfirmationPage() {
   return (
     <>
-      <section className="page-hero-gradient">
-        <div className="container-wide mx-auto text-center">
-          <Link href="/education" className="inline-flex items-center gap-2 text-gold-600 hover:text-gold-700 font-semibold text-sm mb-6 transition-colors">
-            <FiArrowLeft className="w-4 h-4" /> Back to Education
-          </Link>
-          <h1 className="mb-6">Confirmation</h1>
-          <p className="text-lg text-secondary-500 leading-relaxed max-w-2xl mx-auto">
-            A 2-year catechism series for 7th and 8th graders at Calvary Lutheran Church.
-            Confirmation prepares young members to make a public confession of their
-            Christian faith rooted in God&apos;s Word and the Lutheran Confessions.
-          </p>
+      <section className="page-hero">
+        <div className="absolute inset-0">
+          <Image src="/images/sacrament.jpg" alt="Confirmation" fill className="object-cover" priority sizes="100vw" />
+          <div className="absolute inset-0 bg-navy-900/50" />
+        </div>
+        <div className="relative section-padding">
+          <div className="container-wide mx-auto text-center">
+            <Link href="/education" className="inline-flex items-center gap-2 text-gold-400 hover:text-gold-300 font-semibold text-sm mb-6 transition-colors">
+              <FiArrowLeft className="w-4 h-4" /> Back to Ministries
+            </Link>
+            <h1 className="text-white mb-4">Confirmation</h1>
+            <p className="text-lg text-navy-100 leading-relaxed max-w-2xl mx-auto">
+              A 2-year catechism series for 7th and 8th graders at Calvary Lutheran Church.
+              Confirmation prepares young members to make a public confession of their
+              Christian faith rooted in God&apos;s Word and the Lutheran Confessions.
+            </p>
+          </div>
         </div>
       </section>
 

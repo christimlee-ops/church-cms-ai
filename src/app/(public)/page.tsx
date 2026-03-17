@@ -57,7 +57,6 @@ const defaultService = {
     { name: "Saturday Worship", time: "6:00 PM", subtitle: "Scripture, music & proclamation" },
     { name: "Sunday Worship", time: "9:00 AM", subtitle: "Scripture, music & proclamation" },
     { name: "Bible Study & Sunday School", time: "10:30 AM", subtitle: "All ages — toddlers to adults" },
-    { name: "Confirmation", time: "11:30 AM", subtitle: "7th & 8th grade instruction" },
   ],
 };
 
