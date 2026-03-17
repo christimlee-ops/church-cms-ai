@@ -45,13 +45,13 @@ export default function AboutPage() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="relative aspect-square rounded-xl overflow-hidden shadow-md">
-              <Image src="/images/cross-front.jpg" alt="Cross at Calvary Lutheran Church Chandler" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
+              <Image src="/images/christmas.jpg" alt="Christmas celebration at Calvary Lutheran Church Chandler" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
             </div>
             <div className="relative aspect-square rounded-xl overflow-hidden shadow-md">
-              <Image src="/images/church-council-meeting-2.webp" alt="Church council at Calvary Lutheran Church" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
+              <Image src="/images/church-event.webp" alt="Church event at Calvary Lutheran Church" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
             </div>
             <div className="relative aspect-square rounded-xl overflow-hidden shadow-md">
-              <Image src="/images/stain.jpg" alt="Stained glass at Calvary Lutheran Church Chandler AZ" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
+              <Image src="/images/childrens-message.webp" alt="Children's message at Calvary Lutheran Church" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
             </div>
             <div className="relative aspect-square rounded-xl overflow-hidden shadow-md">
               <Image src="/images/playground.jpg" alt="Playground at Calvary Lutheran Church" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
