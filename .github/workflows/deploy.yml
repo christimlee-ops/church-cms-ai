@@ -18,17 +18,20 @@ jobs:
           script: |
             set -e
             APP_DIR="/var/www/vhosts/webcraftgroup.com/calvary.webcraftgroup.com/httpdocs"
-            echo "Checking directory..."
-            ls -la "$APP_DIR/.git" || echo "NO .git found at $APP_DIR"
-            echo "Current user: $(whoami)"
-            echo "Home: $HOME"
-            echo "Trying cd..."
-            cd "$APP_DIR" || { echo "FAILED to cd to $APP_DIR"; exit 1; }
-            echo "Now in: $(pwd)"
-            echo "Git status:"
-            git status --short || echo "git status failed"
-            echo "Pulling..."
-            git pull origin main
+            cd "$APP_DIR"
+
+            # Initialize git if not present (Plesk stores .git elsewhere)
+            if [ ! -d ".git" ]; then
+              echo "Initializing git repo..."
+              git init
+              git remote add origin https://github.com/christimlee-ops/church-cms-ai.git
+              git fetch origin main
+              git reset --hard origin/main
+            else
+              git pull origin main
+            fi
+
+            echo "Now at commit: $(git rev-parse --short HEAD)"
             npm install --production=false
             npx prisma generate
             npm run build
@@ -37,4 +40,4 @@ jobs:
             cp -r .next/static assets/_next/static
             mkdir -p tmp
             touch tmp/restart.txt
-            echo "Deploy complete. Commit: $(git rev-parse HEAD)"
+            echo "Deploy complete."
