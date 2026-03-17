@@ -18,7 +18,7 @@ export default function AboutPage() {
     <>
       <section className="page-hero">
         <div className="absolute inset-0">
-          <Image src="/images/Chruch-Empty-Photo.jpg" alt="Inside Calvary Lutheran Church sanctuary Chandler AZ" fill className="object-cover" priority sizes="100vw" />
+          <Image src="/images/church.jpg" alt="Inside Calvary Lutheran Church sanctuary Chandler AZ" fill className="object-cover" priority sizes="100vw" />
           <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative section-padding w-full">

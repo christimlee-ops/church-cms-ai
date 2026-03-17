@@ -35,7 +35,7 @@ export default function MorningsWithMommyPage() {
     <>
       <section className="page-hero">
         <div className="absolute inset-0">
-          <Image src="/images/childrens-message.webp" alt="Mornings with Mommy" fill className="object-cover" priority sizes="100vw" />
+          <Image src="/images/Flowers.jpg" alt="Mornings with Mommy at Calvary Lutheran Church" fill className="object-cover" priority sizes="100vw" />
           <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative section-padding w-full">

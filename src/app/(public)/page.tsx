@@ -295,7 +295,7 @@ export default async function HomePage() {
               <Image src="/images/playground.jpg" alt="Playground at Calvary Lutheran Church" fill className="object-cover" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw" />
             </div>
             <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg ring-4 ring-gold-500/30 hover:ring-gold-500/60 transition-all hover:scale-105">
-              <Image src="/images/Lent-Dinner.webp" alt="Fellowship dinner at Calvary Lutheran Church" fill className="object-cover" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw" />
+              <Image src="/images/bible-study.jpg" alt="Bible study at Calvary Lutheran Church" fill className="object-cover" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw" />
             </div>
             <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg ring-4 ring-gold-500/30 hover:ring-gold-500/60 transition-all hover:scale-105">
               <Image src="/images/sunday-school.webp" alt="Sunday school at Calvary Lutheran Church" fill className="object-cover" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw" />

@@ -75,7 +75,7 @@ export default async function EventDetailPage({
       ) : (
         <section className="page-hero">
           <div className="absolute inset-0">
-            <Image src="/images/church-event.webp" alt="Events at Calvary Lutheran Church" fill className="object-cover" priority sizes="100vw" />
+            <Image src="/images/candles.jpg" alt="Events at Calvary Lutheran Church" fill className="object-cover" priority sizes="100vw" />
             <div className="absolute inset-0 bg-black/50" />
           </div>
           <div className="relative section-padding w-full">

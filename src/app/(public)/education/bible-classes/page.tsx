@@ -35,7 +35,7 @@ export default function BibleClassesPage() {
     <>
       <section className="page-hero">
         <div className="absolute inset-0">
-          <Image src="/images/bible-class-creative.webp" alt="Bible study class at Calvary Lutheran Church Chandler AZ" fill className="object-cover" priority sizes="100vw" />
+          <Image src="/images/brass.jpg" alt="Bible study class at Calvary Lutheran Church Chandler AZ" fill className="object-cover" priority sizes="100vw" />
           <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative section-padding w-full">
