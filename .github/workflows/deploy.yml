@@ -33,6 +33,15 @@ jobs:
             echo "Now at commit: $(git rev-parse --short HEAD)"
             npm install --production=false
             npx prisma generate
+
+            # One-time: fix image paths and seed media library
+            if [ ! -f ".seed-media-done" ]; then
+              echo "Running seed-media script..."
+              npx tsx scripts/seed-media.ts
+              touch .seed-media-done
+              echo "Seed media complete."
+            fi
+
             npm run build
             mkdir -p assets/_next
             rm -rf assets/_next/static
