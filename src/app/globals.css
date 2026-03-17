@@ -69,7 +69,8 @@
   }
 
   .container-wide {
-    @apply max-w-7xl mx-auto;
+    @apply mx-auto;
+    max-width: 1600px;
   }
 
   .input-field {
