@@ -91,7 +91,7 @@ export default function Header() {
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-3">
-            <Link href="/members/login" className="text-sm text-navy-100 hover:text-gold-400 font-medium transition-colors">
+            <Link href="/members/login" className="text-base text-navy-100 hover:text-gold-400 font-medium transition-colors">
               Members Login
             </Link>
             <Link href="/visit" className="btn-primary text-sm">

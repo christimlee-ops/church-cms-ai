@@ -282,20 +282,17 @@ export default async function HomePage() {
             </p>
           </div>
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 mb-14">
-            <div className="relative w-32 h-32 md:w-44 md:h-44 rounded-full overflow-hidden shadow-lg ring-4 ring-gold-500/30 hover:ring-gold-500/60 transition-all hover:scale-105">
-              <Image src="/images/Saturday-Worship-Service-1.webp" alt="Saturday worship at Calvary Lutheran Church Chandler" fill className="object-cover" sizes="176px" />
+            <div className="relative w-32 h-32 md:w-44 md:h-44 rounded-lg overflow-hidden shadow-lg ring-4 ring-gold-500/30 hover:ring-gold-500/60 transition-all hover:scale-105">
+              <Image src="/images/christmas.jpg" alt="Christmas celebration at Calvary Lutheran Church Chandler" fill className="object-cover" sizes="176px" />
             </div>
-            <div className="relative w-32 h-32 md:w-44 md:h-44 rounded-full overflow-hidden shadow-lg ring-4 ring-gold-500/30 hover:ring-gold-500/60 transition-all hover:scale-105 md:mt-8">
+            <div className="relative w-32 h-32 md:w-44 md:h-44 rounded-lg overflow-hidden shadow-lg ring-4 ring-gold-500/30 hover:ring-gold-500/60 transition-all hover:scale-105 md:mt-8">
+              <Image src="/images/church-event.webp" alt="Church event at Calvary Lutheran Church" fill className="object-cover" sizes="176px" />
+            </div>
+            <div className="relative w-32 h-32 md:w-44 md:h-44 rounded-lg overflow-hidden shadow-lg ring-4 ring-gold-500/30 hover:ring-gold-500/60 transition-all hover:scale-105">
               <Image src="/images/childrens-message.webp" alt="Children's message at Calvary Lutheran Church" fill className="object-cover" sizes="176px" />
             </div>
-            <div className="relative w-32 h-32 md:w-44 md:h-44 rounded-full overflow-hidden shadow-lg ring-4 ring-gold-500/30 hover:ring-gold-500/60 transition-all hover:scale-105">
-              <Image src="/images/bible-class-creative.webp" alt="Bible study class at Calvary Lutheran Church Chandler AZ" fill className="object-cover" sizes="176px" />
-            </div>
-            <div className="relative w-32 h-32 md:w-44 md:h-44 rounded-full overflow-hidden shadow-lg ring-4 ring-gold-500/30 hover:ring-gold-500/60 transition-all hover:scale-105 md:mt-8">
-              <Image src="/images/Lent-Dinner.webp" alt="Fellowship dinner at Calvary Lutheran Church" fill className="object-cover" sizes="176px" />
-            </div>
-            <div className="relative w-32 h-32 md:w-44 md:h-44 rounded-full overflow-hidden shadow-lg ring-4 ring-gold-500/30 hover:ring-gold-500/60 transition-all hover:scale-105">
-              <Image src="/images/Mens-Group.webp" alt="Men's group at Calvary Lutheran Church Chandler" fill className="object-cover" sizes="176px" />
+            <div className="relative w-32 h-32 md:w-44 md:h-44 rounded-lg overflow-hidden shadow-lg ring-4 ring-gold-500/30 hover:ring-gold-500/60 transition-all hover:scale-105 md:mt-8">
+              <Image src="/images/playground.jpg" alt="Playground at Calvary Lutheran Church" fill className="object-cover" sizes="176px" />
             </div>
           </div>
 
@@ -419,7 +416,7 @@ export default async function HomePage() {
             </div>
             <div className="flex-1 w-full">
               <div className="aspect-video rounded-xl overflow-hidden shadow-xl relative">
-                <Image src="/images/worship-service.jpg" alt="Sunday worship service at Calvary Lutheran Church Chandler AZ" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
+                <Image src="/images/Chruch-Empty-Photo.jpg" alt="Inside Calvary Lutheran Church sanctuary in Chandler AZ" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
               </div>
             </div>
           </div>

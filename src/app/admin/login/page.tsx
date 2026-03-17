@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -41,10 +42,14 @@ export default function LoginPage() {
 
       <div className="w-full max-w-md relative">
         <div className="text-center mb-8">
-          <div className="w-16 h-16 bg-gold-500 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-gold-500/25">
-            <span className="text-navy-900 font-heading font-bold text-xl">CLC</span>
-          </div>
-          <h1 className="text-2xl font-heading font-bold text-white">Calvary CMS</h1>
+          <Image
+            src="/images/calvary-lutheren-chruch-white-logo.png"
+            alt="Calvary Lutheran Church"
+            width={220}
+            height={64}
+            className="h-16 w-auto object-contain mx-auto mb-4"
+          />
+          <p className="text-gold-400 font-heading text-lg mt-1">Admin Dashboard</p>
           <p className="text-navy-200 mt-1">Sign in to your admin dashboard</p>
         </div>
 
