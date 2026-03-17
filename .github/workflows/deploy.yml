@@ -16,7 +16,8 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           port: ${{ secrets.SERVER_PORT }}
           script: |
-            cd /var/www/vhosts/webcraftgroup.com/calvary.webcraftgroup.com/httpdocs
+            export APP_DIR="/var/www/vhosts/webcraftgroup.com/calvary.webcraftgroup.com/httpdocs"
+            cd "$APP_DIR"
             git pull origin main
             npm install --production=false
             npx prisma generate
@@ -27,6 +28,3 @@ jobs:
             # Restart Node.js app via Passenger
             mkdir -p tmp
             touch tmp/restart.txt
-            # Also try killing node to force Passenger restart
-            pkill -f "node app.js" || true
-            sleep 2
