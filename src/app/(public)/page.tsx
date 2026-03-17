@@ -18,10 +18,8 @@ import {
   FiHome,
   FiCoffee,
   FiGlobe,
-  FiRepeat,
 } from "react-icons/fi";
 import { IconType } from "react-icons";
-import { formatRecurringSchedule } from "@/lib/recurrence";
 import EventGrid from "@/components/events/EventGrid";
 
 const iconMap: Record<string, IconType> = {
