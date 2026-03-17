@@ -283,22 +283,22 @@ export default async function HomePage() {
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 mb-14">
             <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg ring-4 ring-gold-500/30 hover:ring-gold-500/60 transition-all hover:scale-105">
-              <Image src="/images/christmas.jpg" alt="Christmas celebration at Calvary Lutheran Church Chandler" fill className="object-cover" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw" />
+              <Image src="/images/pages/christmas.jpg" alt="Christmas celebration at Calvary Lutheran Church Chandler" fill className="object-cover" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw" />
             </div>
             <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg ring-4 ring-gold-500/30 hover:ring-gold-500/60 transition-all hover:scale-105">
-              <Image src="/images/church-event.webp" alt="Church event at Calvary Lutheran Church" fill className="object-cover" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw" />
+              <Image src="/images/pages/church-event.webp" alt="Church event at Calvary Lutheran Church" fill className="object-cover" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw" />
             </div>
             <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg ring-4 ring-gold-500/30 hover:ring-gold-500/60 transition-all hover:scale-105">
-              <Image src="/images/childrens-message.webp" alt="Children's message at Calvary Lutheran Church" fill className="object-cover" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw" />
+              <Image src="/images/pages/childrens-message.webp" alt="Children's message at Calvary Lutheran Church" fill className="object-cover" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw" />
             </div>
             <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg ring-4 ring-gold-500/30 hover:ring-gold-500/60 transition-all hover:scale-105">
-              <Image src="/images/playground.jpg" alt="Playground at Calvary Lutheran Church" fill className="object-cover" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw" />
+              <Image src="/images/pages/playground.jpg" alt="Playground at Calvary Lutheran Church" fill className="object-cover" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw" />
             </div>
             <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg ring-4 ring-gold-500/30 hover:ring-gold-500/60 transition-all hover:scale-105">
-              <Image src="/images/bible-study.jpg" alt="Bible study at Calvary Lutheran Church" fill className="object-cover" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw" />
+              <Image src="/images/pages/bible-study.jpg" alt="Bible study at Calvary Lutheran Church" fill className="object-cover" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw" />
             </div>
             <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg ring-4 ring-gold-500/30 hover:ring-gold-500/60 transition-all hover:scale-105">
-              <Image src="/images/sunday-school.webp" alt="Sunday school at Calvary Lutheran Church" fill className="object-cover" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw" />
+              <Image src="/images/pages/sunday-school.webp" alt="Sunday school at Calvary Lutheran Church" fill className="object-cover" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw" />
             </div>
           </div>
 
@@ -424,11 +424,11 @@ export default async function HomePage() {
               <div className="relative">
                 {/* Main image with rounded corners */}
                 <div className="aspect-video rounded-xl overflow-hidden shadow-xl relative">
-                  <Image src="/images/Chruch-Empty-Photo.jpg" alt="Inside Calvary Lutheran Church sanctuary in Chandler AZ" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
+                  <Image src="/images/pages/Chruch-Empty-Photo.jpg" alt="Inside Calvary Lutheran Church sanctuary in Chandler AZ" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
                 </div>
                 {/* Decorative circular cutout overlay */}
                 <div className="absolute -bottom-6 -right-6 w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-gold-500/40 overflow-hidden shadow-2xl">
-                  <Image src="/images/stained-glass.jpg" alt="Stained glass at Calvary Lutheran Church" fill className="object-cover" sizes="160px" />
+                  <Image src="/images/headers/stained-glass.jpg" alt="Stained glass at Calvary Lutheran Church" fill className="object-cover" sizes="160px" />
                 </div>
                 <div className="absolute -top-4 -left-4 w-20 h-20 md:w-24 md:h-24 rounded-full border-4 border-navy-500/30 bg-navy-500/20 backdrop-blur-sm flex items-center justify-center">
                   <FiPlay className="w-8 h-8 md:w-10 md:h-10 text-white drop-shadow-lg" />

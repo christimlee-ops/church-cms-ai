@@ -51,7 +51,7 @@ export default async function ResourcesPage() {
       <section className="page-hero">
         <div className="absolute inset-0">
           <img
-            src="/images/multiple-bibles.jpg"
+            src="/images/headers/multiple-bibles.jpg"
             alt="Church resources"
             className="w-full h-full object-cover"
           />

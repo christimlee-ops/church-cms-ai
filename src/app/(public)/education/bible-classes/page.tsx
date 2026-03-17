@@ -35,7 +35,7 @@ export default function BibleClassesPage() {
     <>
       <section className="page-hero">
         <div className="absolute inset-0">
-          <Image src="/images/brass.jpg" alt="Bible study class at Calvary Lutheran Church Chandler AZ" fill className="object-cover" priority sizes="100vw" />
+          <Image src="/images/headers/brass.jpg" alt="Bible study class at Calvary Lutheran Church Chandler AZ" fill className="object-cover" priority sizes="100vw" />
           <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative section-padding w-full">
@@ -112,7 +112,7 @@ export default function BibleClassesPage() {
         <div className="container-wide mx-auto">
           <div className="flex flex-col lg:flex-row items-center gap-12 max-w-5xl mx-auto">
             <div className="flex-1 relative aspect-[4/3] w-full rounded-xl overflow-hidden shadow-lg">
-              <Image src="/images/bible-study.jpg" alt="Bible study group at Calvary Lutheran Church" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
+              <Image src="/images/pages/bible-study.jpg" alt="Bible study group at Calvary Lutheran Church" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
             </div>
             <div className="flex-1 text-center lg:text-left">
               <h2 className="mb-4">Why Study the Bible?</h2>

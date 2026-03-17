@@ -13,7 +13,7 @@ const staff = [
     bio: "Pastor Spaude was born and raised in Aberdeen, South Dakota. He attended Northwestern College in Watertown, Wisconsin, and graduated from Wisconsin Lutheran Seminary in 1986. He has served congregations in the WELS throughout his ministry and has been faithfully serving at Calvary Lutheran Church in Chandler, Arizona. Pastor Spaude is married to Debbie (née Sprain), and together they have four children and six grandchildren.",
     email: "pastor@calvarychandler.net",
     phone: "(602) 903-0035",
-    image: "/images/Pastor.jpg",
+    image: "/images/staff/Pastor.jpg",
   },
   {
     name: "Pastor Roger Sprain",
@@ -21,7 +21,7 @@ const staff = [
     bio: "Pastor Sprain was born in Kenosha, Wisconsin. He graduated from Wisconsin Lutheran Seminary and served in pastoral ministry for decades, with extensive experience in Spanish-language ministry throughout the United States. Pastor Sprain and his wife have been blessed with a large family, including eleven grandchildren. Though retired, he continues to serve and support the ministry at Calvary.",
     email: "",
     phone: "",
-    image: "/images/PastorSprain.jpg",
+    image: "/images/staff/PastorSprain.jpg",
   },
 ];
 
@@ -30,7 +30,7 @@ export default function StaffPage() {
     <>
       <section className="page-hero">
         <div className="absolute inset-0">
-          <Image src="/images/alter.jpg" alt="Inside Calvary Lutheran Church" fill className="object-cover" priority sizes="100vw" />
+          <Image src="/images/headers/alter.jpg" alt="Inside Calvary Lutheran Church" fill className="object-cover" priority sizes="100vw" />
           <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative section-padding w-full">

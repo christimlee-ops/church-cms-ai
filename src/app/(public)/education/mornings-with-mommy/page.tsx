@@ -35,7 +35,7 @@ export default function MorningsWithMommyPage() {
     <>
       <section className="page-hero">
         <div className="absolute inset-0">
-          <Image src="/images/Flowers.jpg" alt="Mornings with Mommy at Calvary Lutheran Church" fill className="object-cover" priority sizes="100vw" />
+          <Image src="/images/headers/Flowers.jpg" alt="Mornings with Mommy at Calvary Lutheran Church" fill className="object-cover" priority sizes="100vw" />
           <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative section-padding w-full">
@@ -96,7 +96,7 @@ export default function MorningsWithMommyPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center max-w-5xl mx-auto">
             <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
               <Image
-                src="/images/classroom-smaller-kids.jpg"
+                src="/images/headers/classroom-smaller-kids.jpg"
                 alt="Children at Mornings with Mommy"
                 fill
                 className="object-cover"

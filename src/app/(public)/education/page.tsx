@@ -62,7 +62,7 @@ export default function EducationPage() {
     <>
       <section className="page-hero">
         <div className="absolute inset-0">
-          <Image src="/images/Hymn.jpg" alt="Ministries at Calvary Lutheran Church" fill className="object-cover" priority sizes="100vw" />
+          <Image src="/images/headers/Hymn.jpg" alt="Ministries at Calvary Lutheran Church" fill className="object-cover" priority sizes="100vw" />
           <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative section-padding w-full">
@@ -115,7 +115,7 @@ export default function EducationPage() {
         <div className="container-wide mx-auto">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="flex-1">
-              <Image src="/images/family-bible-hour-1-1024x683.webp" alt="Family Bible hour at Calvary" width={1024} height={683} className="rounded-xl shadow-lg w-full object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
+              <Image src="/images/events/family-bible-hour-1-1024x683.webp" alt="Family Bible hour at Calvary" width={1024} height={683} className="rounded-xl shadow-lg w-full object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
             </div>
             <div className="flex-1 text-center lg:text-left">
               <h2 className="mb-4">Our Commitment to Christian Education</h2>

@@ -18,7 +18,7 @@ export default function AboutPage() {
     <>
       <section className="page-hero">
         <div className="absolute inset-0">
-          <Image src="/images/church.jpg" alt="Inside Calvary Lutheran Church sanctuary Chandler AZ" fill className="object-cover" priority sizes="100vw" />
+          <Image src="/images/headers/church.jpg" alt="Inside Calvary Lutheran Church sanctuary Chandler AZ" fill className="object-cover" priority sizes="100vw" />
           <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative section-padding w-full">
@@ -45,16 +45,16 @@ export default function AboutPage() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="relative aspect-square rounded-xl overflow-hidden shadow-md">
-              <Image src="/images/christmas.jpg" alt="Christmas celebration at Calvary Lutheran Church Chandler" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
+              <Image src="/images/pages/christmas.jpg" alt="Christmas celebration at Calvary Lutheran Church Chandler" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
             </div>
             <div className="relative aspect-square rounded-xl overflow-hidden shadow-md">
-              <Image src="/images/church-event.webp" alt="Church event at Calvary Lutheran Church" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
+              <Image src="/images/pages/church-event.webp" alt="Church event at Calvary Lutheran Church" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
             </div>
             <div className="relative aspect-square rounded-xl overflow-hidden shadow-md">
-              <Image src="/images/childrens-message.webp" alt="Children's message at Calvary Lutheran Church" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
+              <Image src="/images/pages/childrens-message.webp" alt="Children's message at Calvary Lutheran Church" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
             </div>
             <div className="relative aspect-square rounded-xl overflow-hidden shadow-md">
-              <Image src="/images/playground.jpg" alt="Playground at Calvary Lutheran Church" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
+              <Image src="/images/pages/playground.jpg" alt="Playground at Calvary Lutheran Church" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
             </div>
           </div>
         </div>
