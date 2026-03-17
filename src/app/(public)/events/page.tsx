@@ -1,4 +1,5 @@
 import { prisma } from "@/lib/prisma";
+import Image from "next/image";
 import { FiCalendar, FiRepeat } from "react-icons/fi";
 import { startOfDay } from "date-fns";
 import EventsCalendar from "@/components/events/EventsCalendar";
@@ -49,12 +50,18 @@ export default async function EventsPage() {
   return (
     <>
       {/* Hero */}
-      <section className="page-hero-gradient">
-        <div className="container-wide mx-auto text-center">
-          <h1 className="mb-4">Upcoming Events</h1>
-          <p className="text-lg text-secondary-500 max-w-2xl mx-auto">
-            Stay connected with what&apos;s happening at Calvary Lutheran Church.
-          </p>
+      <section className="page-hero">
+        <div className="absolute inset-0">
+          <Image src="/images/church-event.webp" alt="Events at Calvary Lutheran Church" fill className="object-cover" priority sizes="100vw" />
+          <div className="absolute inset-0 bg-navy-900/50" />
+        </div>
+        <div className="relative section-padding w-full">
+          <div className="container-wide mx-auto text-center">
+            <h1 className="text-white mb-4">Upcoming Events</h1>
+            <p className="text-lg text-navy-100 max-w-2xl mx-auto">
+              Stay connected with what&apos;s happening at Calvary Lutheran Church.
+            </p>
+          </div>
         </div>
       </section>
 

@@ -24,12 +24,18 @@ export default async function BlogPage() {
 
   return (
     <>
-      <section className="page-hero-gradient">
-        <div className="container-wide mx-auto text-center">
-          <h1 className="mb-4">Blog</h1>
-          <p className="text-lg text-secondary-500 max-w-2xl mx-auto">
-            Thoughts, devotionals, and updates from our church family.
-          </p>
+      <section className="page-hero">
+        <div className="absolute inset-0">
+          <Image src="/images/bible-study.jpg" alt="Blog at Calvary Lutheran Church" fill className="object-cover" priority sizes="100vw" />
+          <div className="absolute inset-0 bg-navy-900/50" />
+        </div>
+        <div className="relative section-padding w-full">
+          <div className="container-wide mx-auto text-center">
+            <h1 className="text-white mb-4">Blog</h1>
+            <p className="text-lg text-navy-100 max-w-2xl mx-auto">
+              Thoughts, devotionals, and updates from our church family.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -49,8 +55,8 @@ export default async function BlogPage() {
                       <Image src={post.featuredImage} alt={post.title} fill className="object-cover group-hover:scale-105 transition-transform duration-300" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                     </div>
                   ) : (
-                    <div className="aspect-video bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center">
-                      <span className="text-white/30 font-heading text-6xl font-bold">CC</span>
+                    <div className="aspect-video bg-gradient-to-br from-navy-500 to-navy-700 flex items-center justify-center">
+                      <span className="text-white/20 font-heading text-6xl font-bold">CLC</span>
                     </div>
                   )}
                   <div className="p-6">
@@ -66,11 +72,11 @@ export default async function BlogPage() {
                         {post.author.name}
                       </span>
                     </div>
-                    <h3 className="text-xl mb-2 group-hover:text-primary-500 transition-colors">{post.title}</h3>
+                    <h3 className="text-xl mb-2 group-hover:text-navy-500 transition-colors">{post.title}</h3>
                     {post.excerpt && (
                       <p className="text-secondary-400 text-sm line-clamp-3">{post.excerpt}</p>
                     )}
-                    <span className="inline-flex items-center gap-1 text-primary-500 text-sm font-medium mt-4">
+                    <span className="inline-flex items-center gap-1 text-gold-600 text-sm font-semibold mt-4">
                       Read More <FiArrowRight className="w-4 h-4" />
                     </span>
                   </div>

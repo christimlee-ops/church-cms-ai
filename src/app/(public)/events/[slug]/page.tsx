@@ -30,7 +30,7 @@ export default async function EventDetailPage({
     <>
       <section className="bg-gradient-to-b from-church-light to-church-cream section-padding">
         <div className="container-wide mx-auto">
-          <Link href="/events" className="inline-flex items-center gap-2 text-primary-500 hover:text-primary-600 mb-6">
+          <Link href="/events" className="inline-flex items-center gap-2 text-gold-600 hover:text-gold-700 font-semibold text-sm mb-6 transition-colors">
             <FiArrowLeft /> Back to Events
           </Link>
           <h1 className="mb-4">{event.title}</h1>
@@ -67,10 +67,20 @@ export default async function EventDetailPage({
 
       <section className="section-padding bg-church-cream">
         <div className="container-wide mx-auto">
-          {event.featuredImage && (
-            <Image src={event.featuredImage} alt={event.title} width={1200} height={630} className="w-full rounded-xl mb-10" sizes="100vw" />
-          )}
-          <div className="prose-church" dangerouslySetInnerHTML={{ __html: event.description }} />
+          <div className="max-w-4xl">
+            {event.featuredImage && (
+              <Image
+                src={event.featuredImage}
+                alt={event.title}
+                width={400}
+                height={300}
+                className="float-right ml-8 mb-6 rounded-xl shadow-lg w-full sm:w-[320px] md:w-[400px] object-cover"
+                sizes="(max-width: 640px) 100vw, 400px"
+              />
+            )}
+            <div className="prose-church" dangerouslySetInnerHTML={{ __html: event.description }} />
+            <div className="clear-both" />
+          </div>
         </div>
       </section>
     </>

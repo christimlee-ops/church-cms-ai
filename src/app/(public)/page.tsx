@@ -156,7 +156,7 @@ export default async function HomePage() {
       <section className="relative bg-navy-500 text-white overflow-hidden" aria-label="Welcome to Calvary Lutheran Church">
         <div className="absolute inset-0">
           <Image src="/images/Calvary-Front-Yard-scaled.jpg" alt="Calvary Lutheran Church" fill className="object-cover object-[center_25%]" priority sizes="100vw" />
-          <div className="absolute inset-0 bg-navy-900/30" />
+          <div className="absolute inset-0 bg-navy-900/50" />
         </div>
 
         <div className="relative container-wide mx-auto px-4 pt-14 pb-28 md:pt-20 md:pb-40">
