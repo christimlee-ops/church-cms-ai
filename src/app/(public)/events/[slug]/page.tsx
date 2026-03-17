@@ -28,59 +28,98 @@ export default async function EventDetailPage({
 
   return (
     <>
-      <section className="bg-gradient-to-b from-church-light to-church-cream section-padding">
-        <div className="container-wide mx-auto">
-          <Link href="/events" className="inline-flex items-center gap-2 text-gold-600 hover:text-gold-700 font-semibold text-sm mb-6 transition-colors">
-            <FiArrowLeft /> Back to Events
-          </Link>
-          <h1 className="mb-4">{event.title}</h1>
-          <div className="flex flex-wrap items-center gap-4 text-secondary-400">
-            {event.recurring ? (
-              <span className="flex items-center gap-2">
-                <FiRepeat className="w-4 h-4" />
-                {formatRecurringSchedule(event.recurring, event.recurringDays, event.recurringTime)}
-              </span>
-            ) : (
-              <>
-                <span className="flex items-center gap-2">
-                  <FiCalendar className="w-4 h-4" />
-                  {format(new Date(event.startDate), "EEEE, MMMM d, yyyy")}
-                </span>
-                {!event.allDay && (
+      {/* Hero with event image or gradient */}
+      {event.featuredImage ? (
+        <section className="relative bg-black text-white overflow-hidden h-[280px] md:h-[360px] flex items-end">
+          <div className="absolute inset-0">
+            <Image src={event.featuredImage} alt={event.title} fill className="object-cover" priority sizes="100vw" />
+            <div className="absolute inset-0 bg-black/50" />
+          </div>
+          <div className="relative w-full px-4 pb-8 pt-4">
+            <div className="container-wide mx-auto">
+              <Link href="/events" className="inline-flex items-center gap-2 text-gold-400 hover:text-gold-300 font-semibold text-sm mb-4 transition-colors">
+                <FiArrowLeft /> Back to Events
+              </Link>
+              <h1 className="text-white mb-3">{event.title}</h1>
+              <div className="flex flex-wrap items-center gap-4 text-navy-100">
+                {event.recurring ? (
                   <span className="flex items-center gap-2">
-                    <FiClock className="w-4 h-4" />
-                    {format(new Date(event.startDate), "h:mm a")}
-                    {event.endDate && ` – ${format(new Date(event.endDate), "h:mm a")}`}
+                    <FiRepeat className="w-4 h-4" />
+                    {formatRecurringSchedule(event.recurring, event.recurringDays, event.recurringTime)}
+                  </span>
+                ) : (
+                  <>
+                    <span className="flex items-center gap-2">
+                      <FiCalendar className="w-4 h-4" />
+                      {format(new Date(event.startDate), "EEEE, MMMM d, yyyy")}
+                    </span>
+                    {!event.allDay && (
+                      <span className="flex items-center gap-2">
+                        <FiClock className="w-4 h-4" />
+                        {format(new Date(event.startDate), "h:mm a")}
+                        {event.endDate && ` – ${format(new Date(event.endDate), "h:mm a")}`}
+                      </span>
+                    )}
+                  </>
+                )}
+                {event.location && (
+                  <span className="flex items-center gap-2">
+                    <FiMapPin className="w-4 h-4" />
+                    {event.location}
                   </span>
                 )}
-              </>
-            )}
-            {event.location && (
-              <span className="flex items-center gap-2">
-                <FiMapPin className="w-4 h-4" />
-                {event.location}
-              </span>
-            )}
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      ) : (
+        <section className="page-hero">
+          <div className="absolute inset-0">
+            <Image src="/images/church-event.webp" alt="Events at Calvary Lutheran Church" fill className="object-cover" priority sizes="100vw" />
+            <div className="absolute inset-0 bg-black/50" />
+          </div>
+          <div className="relative section-padding w-full">
+            <div className="container-wide mx-auto">
+              <Link href="/events" className="inline-flex items-center gap-2 text-gold-400 hover:text-gold-300 font-semibold text-sm mb-4 transition-colors">
+                <FiArrowLeft /> Back to Events
+              </Link>
+              <h1 className="text-white mb-3">{event.title}</h1>
+              <div className="flex flex-wrap items-center gap-4 text-navy-100">
+                {event.recurring ? (
+                  <span className="flex items-center gap-2">
+                    <FiRepeat className="w-4 h-4" />
+                    {formatRecurringSchedule(event.recurring, event.recurringDays, event.recurringTime)}
+                  </span>
+                ) : (
+                  <>
+                    <span className="flex items-center gap-2">
+                      <FiCalendar className="w-4 h-4" />
+                      {format(new Date(event.startDate), "EEEE, MMMM d, yyyy")}
+                    </span>
+                    {!event.allDay && (
+                      <span className="flex items-center gap-2">
+                        <FiClock className="w-4 h-4" />
+                        {format(new Date(event.startDate), "h:mm a")}
+                        {event.endDate && ` – ${format(new Date(event.endDate), "h:mm a")}`}
+                      </span>
+                    )}
+                  </>
+                )}
+                {event.location && (
+                  <span className="flex items-center gap-2">
+                    <FiMapPin className="w-4 h-4" />
+                    {event.location}
+                  </span>
+                )}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="section-padding bg-church-cream">
         <div className="container-wide mx-auto">
-          <div className="max-w-4xl">
-            {event.featuredImage && (
-              <Image
-                src={event.featuredImage}
-                alt={event.title}
-                width={400}
-                height={300}
-                className="float-right ml-8 mb-6 rounded-xl shadow-lg w-full sm:w-[320px] md:w-[400px] object-cover"
-                sizes="(max-width: 640px) 100vw, 400px"
-              />
-            )}
-            <div className="prose-church" dangerouslySetInnerHTML={{ __html: event.description }} />
-            <div className="clear-both" />
-          </div>
+          <div className="prose-church max-w-none" dangerouslySetInnerHTML={{ __html: event.description }} />
         </div>
       </section>
     </>

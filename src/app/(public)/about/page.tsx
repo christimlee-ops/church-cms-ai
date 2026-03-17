@@ -18,7 +18,7 @@ export default function AboutPage() {
     <>
       <section className="page-hero">
         <div className="absolute inset-0">
-          <Image src="/images/books-1.jpg" alt="Calvary Lutheran Church" fill className="object-cover" priority sizes="100vw" />
+          <Image src="/images/Chruch-Empty-Photo.jpg" alt="Inside Calvary Lutheran Church sanctuary Chandler AZ" fill className="object-cover" priority sizes="100vw" />
           <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative section-padding w-full">
@@ -34,14 +34,28 @@ export default function AboutPage() {
       <section className="section-padding bg-church-cream">
         <div className="container-wide mx-auto">
           <h2 className="text-center mb-12">Our Mission</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {values.map((value) => (
               <div key={value.title} className="card p-8 text-center">
-                <value.icon className="w-12 h-12 text-primary-500 mx-auto mb-4" />
+                <value.icon className="w-12 h-12 text-gold-500 mx-auto mb-4" />
                 <h3 className="text-xl mb-3">{value.title}</h3>
                 <p className="text-secondary-400 text-sm leading-relaxed">{value.description}</p>
               </div>
             ))}
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="relative aspect-square rounded-xl overflow-hidden shadow-md">
+              <Image src="/images/cross-front.jpg" alt="Cross at Calvary Lutheran Church Chandler" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
+            </div>
+            <div className="relative aspect-square rounded-xl overflow-hidden shadow-md">
+              <Image src="/images/church-council-meeting-2.webp" alt="Church council at Calvary Lutheran Church" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
+            </div>
+            <div className="relative aspect-square rounded-xl overflow-hidden shadow-md">
+              <Image src="/images/stain.jpg" alt="Stained glass at Calvary Lutheran Church Chandler AZ" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
+            </div>
+            <div className="relative aspect-square rounded-xl overflow-hidden shadow-md">
+              <Image src="/images/playground.jpg" alt="Playground at Calvary Lutheran Church" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
+            </div>
           </div>
         </div>
       </section>

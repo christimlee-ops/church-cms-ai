@@ -29,7 +29,7 @@ export default async function BlogPage() {
     <>
       <section className="page-hero">
         <div className="absolute inset-0">
-          <Image src="/images/bible-study.jpg" alt="Blog at Calvary Lutheran Church" fill className="object-cover" priority sizes="100vw" />
+          <Image src="/images/closed-book.jpg" alt="Blog at Calvary Lutheran Church Chandler AZ" fill className="object-cover" priority sizes="100vw" />
           <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative section-padding w-full">

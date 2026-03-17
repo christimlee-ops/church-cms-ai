@@ -281,18 +281,21 @@ export default async function HomePage() {
               {hl.description}
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-14">
-            <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-md">
-              <Image src="/images/worship-service.jpg" alt="Worship service at Calvary Lutheran Church Chandler" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
+          <div className="flex flex-wrap justify-center gap-6 md:gap-10 mb-14">
+            <div className="relative w-32 h-32 md:w-44 md:h-44 rounded-full overflow-hidden shadow-lg ring-4 ring-gold-500/30 hover:ring-gold-500/60 transition-all hover:scale-105">
+              <Image src="/images/Saturday-Worship-Service-1.webp" alt="Saturday worship at Calvary Lutheran Church Chandler" fill className="object-cover" sizes="176px" />
             </div>
-            <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-md">
-              <Image src="/images/childrens-message.webp" alt="Children's message at Calvary Lutheran Church" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
+            <div className="relative w-32 h-32 md:w-44 md:h-44 rounded-full overflow-hidden shadow-lg ring-4 ring-gold-500/30 hover:ring-gold-500/60 transition-all hover:scale-105 md:mt-8">
+              <Image src="/images/childrens-message.webp" alt="Children's message at Calvary Lutheran Church" fill className="object-cover" sizes="176px" />
             </div>
-            <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-md">
-              <Image src="/images/bible-study.jpg" alt="Bible study group at Calvary Lutheran Church Chandler AZ" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
+            <div className="relative w-32 h-32 md:w-44 md:h-44 rounded-full overflow-hidden shadow-lg ring-4 ring-gold-500/30 hover:ring-gold-500/60 transition-all hover:scale-105">
+              <Image src="/images/bible-class-creative.webp" alt="Bible study class at Calvary Lutheran Church Chandler AZ" fill className="object-cover" sizes="176px" />
             </div>
-            <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-md">
-              <Image src="/images/church-event.webp" alt="Fellowship event at Calvary Lutheran Church" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
+            <div className="relative w-32 h-32 md:w-44 md:h-44 rounded-full overflow-hidden shadow-lg ring-4 ring-gold-500/30 hover:ring-gold-500/60 transition-all hover:scale-105 md:mt-8">
+              <Image src="/images/Lent-Dinner.webp" alt="Fellowship dinner at Calvary Lutheran Church" fill className="object-cover" sizes="176px" />
+            </div>
+            <div className="relative w-32 h-32 md:w-44 md:h-44 rounded-full overflow-hidden shadow-lg ring-4 ring-gold-500/30 hover:ring-gold-500/60 transition-all hover:scale-105">
+              <Image src="/images/Mens-Group.webp" alt="Men's group at Calvary Lutheran Church Chandler" fill className="object-cover" sizes="176px" />
             </div>
           </div>
 

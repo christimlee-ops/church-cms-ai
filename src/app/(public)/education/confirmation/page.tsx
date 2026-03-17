@@ -93,7 +93,11 @@ export default function ConfirmationPage() {
       <section className="section-padding bg-church-light">
         <div className="container-wide mx-auto">
           <h2 className="text-center mb-8">About Our Confirmation Program</h2>
-          <div className="prose-church max-w-3xl mx-auto">
+          <div className="flex flex-col lg:flex-row items-center gap-12 max-w-5xl mx-auto">
+            <div className="flex-1 relative aspect-[4/3] w-full rounded-xl overflow-hidden shadow-lg">
+              <Image src="/images/cross-752x1024.jpg" alt="Cross at Calvary Lutheran Church Chandler" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
+            </div>
+          <div className="flex-1 prose-church">
             <p>
               Confirmation at Calvary Lutheran Church is a two-year program that walks
               7th and 8th grade students through Luther&apos;s Small Catechism and the
@@ -114,6 +118,7 @@ export default function ConfirmationPage() {
               Scripture and committing to a life of faithfulness to God&apos;s Word and
               the Sacraments.
             </p>
+          </div>
           </div>
         </div>
       </section>
