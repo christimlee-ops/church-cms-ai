@@ -29,25 +29,28 @@ export default function EventCard({ slug, title, startDate, allDay, location, fe
       )}
       <div className="p-6">
         {recurring ? (
-          <div className="flex items-center gap-2 text-primary-500 text-sm font-medium mb-2">
+          <div className="flex items-center gap-2 text-secondary-500 text-sm font-medium mb-2">
             <FiRepeat className="w-4 h-4" />
             {formatRecurringSchedule(recurring, recurringDays ?? null, recurringTime ?? null)}
           </div>
         ) : (
-          <div className="flex items-center gap-2 text-primary-500 text-sm font-medium mb-2">
-            <FiCalendar className="w-4 h-4" />
-            {format(new Date(startDate), "EEEE, MMMM d, yyyy")}
-          </div>
+          <>
+            <div className="flex items-center gap-2 text-secondary-500 text-sm font-medium mb-1">
+              <FiCalendar className="w-4 h-4" />
+              {format(new Date(startDate), "EEEE, MMMM d, yyyy")}
+            </div>
+            {!allDay && (
+              <div className="flex items-center gap-2 text-secondary-400 text-sm mb-2">
+                <FiClock className="w-4 h-4" />
+                {format(new Date(startDate), "h:mm a")}
+              </div>
+            )}
+          </>
         )}
-        <h3 className="text-xl mb-2 group-hover:text-primary-500 transition-colors">{title}</h3>
+        <h3 className="text-xl mb-2 group-hover:text-gold-600 transition-colors">{title}</h3>
         {location && (
           <p className="flex items-center gap-2 text-secondary-400 text-sm">
             <FiMapPin className="w-4 h-4" /> {location}
-          </p>
-        )}
-        {!recurring && !allDay && (
-          <p className="flex items-center gap-2 text-secondary-400 text-sm mt-1">
-            <FiClock className="w-4 h-4" /> {format(new Date(startDate), "h:mm a")}
           </p>
         )}
       </div>

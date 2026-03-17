@@ -22,6 +22,7 @@ import {
 } from "react-icons/fi";
 import { IconType } from "react-icons";
 import { formatRecurringSchedule } from "@/lib/recurrence";
+import EventGrid from "@/components/events/EventGrid";
 
 const iconMap: Record<string, IconType> = {
   FiBookOpen,
@@ -288,58 +289,8 @@ export default async function HomePage() {
               <p className="text-secondary-400">Check back soon or follow us on Facebook for announcements.</p>
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {events.map((event) => (
-                <Link key={event.id} href={`/events/${event.slug}`} className="card group">
-                  <div className="aspect-[16/10] bg-gradient-to-br from-navy-500 to-navy-700 flex items-center justify-center relative overflow-hidden">
-                    {event.featuredImage ? (
-                      <Image src={event.featuredImage} alt={event.title} fill className="object-cover group-hover:scale-105 transition-transform duration-300" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
-                    ) : (
-                      <div className="text-center">
-                        <FiCalendar className="w-10 h-10 text-navy-300 mx-auto mb-2" />
-                        <span className="text-navy-200 text-sm">{event.category || "Event"}</span>
-                      </div>
-                    )}
-                    {event.recurring ? (
-                      <div className="absolute top-4 left-4 bg-gold-500 text-navy-900 rounded-lg px-3 py-1.5 text-center shadow-lg">
-                        <FiRepeat className="w-4 h-4 mx-auto" />
-                      </div>
-                    ) : (
-                      <div className="absolute top-4 left-4 bg-gold-500 text-navy-900 rounded-lg px-3 py-1.5 text-center shadow-lg">
-                        <span className="block text-xs font-bold uppercase">{format(new Date(event.startDate), "MMM")}</span>
-                        <span className="block text-lg font-bold leading-none">{format(new Date(event.startDate), "d")}</span>
-                      </div>
-                    )}
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-lg mb-2 group-hover:text-navy-500 transition-colors">{event.title}</h3>
-                    <div className="space-y-1.5 text-secondary-400 text-sm">
-                      {event.recurring ? (
-                        <p className="flex items-center gap-2">
-                          <FiRepeat className="w-4 h-4 text-gold-500" />
-                          {formatRecurringSchedule(event.recurring, event.recurringDays, event.recurringTime)}
-                        </p>
-                      ) : (
-                        <p className="flex items-center gap-2">
-                          <FiClock className="w-4 h-4 text-gold-500" />
-                          {event.allDay ? "All Day" : format(new Date(event.startDate), "h:mm a")}
-                        </p>
-                      )}
-                      {event.location && (
-                        <p className="flex items-center gap-2">
-                          <FiMapPin className="w-4 h-4 text-gold-500" /> {event.location}
-                        </p>
-                      )}
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
+            <EventGrid events={events} perPage={8} />
           )}
-
-          <div className="text-center mt-8 md:hidden">
-            <Link href="/events" className="btn-outline">View All Events <FiArrowRight /></Link>
-          </div>
         </div>
       </section>
 

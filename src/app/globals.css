@@ -82,11 +82,11 @@
   }
 
   .prose-church h2 {
-    @apply text-2xl font-heading font-semibold text-navy-800 mt-8 mb-4;
+    @apply text-2xl font-heading font-semibold text-black mt-8 mb-4;
   }
 
   .prose-church h3 {
-    @apply text-xl font-heading font-semibold text-navy-800 mt-6 mb-3;
+    @apply text-xl font-heading font-semibold text-black mt-6 mb-3;
   }
 
   .prose-church p {
