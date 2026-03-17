@@ -102,7 +102,7 @@ export default function WhatWeBelievePage() {
         <div className="container-wide mx-auto">
           <div className="flex flex-col lg:flex-row items-center gap-12 max-w-5xl mx-auto">
             <div className="flex-1">
-              <Image src="/images/pages/Synod2-1024x1024-1.png" alt="Wisconsin Evangelical Lutheran Synod" width={400} height={400} className="rounded-xl shadow-lg w-full object-cover" sizes="(max-width: 1024px) 100vw, 40vw" />
+              <Image src="/images/pages/Synod2-1024x1024-1.png" alt="Wisconsin Evangelical Lutheran Synod" width={1024} height={1024} className="rounded-xl shadow-lg w-full h-auto" sizes="(max-width: 1024px) 100vw, 40vw" />
             </div>
             <div className="flex-1 prose-church">
               <h2>Wisconsin Evangelical Lutheran Synod</h2>

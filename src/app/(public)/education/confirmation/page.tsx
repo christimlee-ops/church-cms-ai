@@ -94,8 +94,8 @@ export default function ConfirmationPage() {
         <div className="container-wide mx-auto">
           <h2 className="text-center mb-8">About Our Confirmation Program</h2>
           <div className="flex flex-col lg:flex-row items-center gap-12 max-w-5xl mx-auto">
-            <div className="flex-1 relative aspect-[4/3] w-full rounded-xl overflow-hidden shadow-lg">
-              <Image src="/images/pages/cross-inside.jpg" alt="Cross at Calvary Lutheran Church Chandler" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
+            <div className="flex-1">
+              <Image src="/images/pages/cross-inside.jpg" alt="Cross at Calvary Lutheran Church Chandler" width={752} height={1024} className="rounded-xl shadow-lg w-full h-auto" sizes="(max-width: 1024px) 100vw, 50vw" />
             </div>
           <div className="flex-1 prose-church">
             <p>

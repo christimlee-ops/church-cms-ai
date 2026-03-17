@@ -33,9 +33,7 @@ export default function ColumbariumPage() {
 
           <div className="flex flex-col lg:flex-row items-start gap-12 max-w-5xl mx-auto">
             <div className="flex-1">
-              <div className="relative aspect-[4/3] w-full rounded-xl overflow-hidden shadow-lg">
-                <Image src="/images/pages/columbarium.jpg" alt="Columbarium at Calvary Lutheran Church" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
-              </div>
+              <Image src="/images/pages/columbarium.jpg" alt="Columbarium at Calvary Lutheran Church" width={768} height={1024} className="rounded-xl shadow-lg w-full h-auto" sizes="(max-width: 1024px) 100vw, 50vw" />
             </div>
             <div className="flex-1 prose-church">
               <h2>A Place of Peace and Hope</h2>

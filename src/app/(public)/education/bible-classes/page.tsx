@@ -111,8 +111,8 @@ export default function BibleClassesPage() {
       <section className="section-padding bg-church-cream">
         <div className="container-wide mx-auto">
           <div className="flex flex-col lg:flex-row items-center gap-12 max-w-5xl mx-auto">
-            <div className="flex-1 relative aspect-[4/3] w-full rounded-xl overflow-hidden shadow-lg">
-              <Image src="/images/pages/bible-study.jpg" alt="Bible study group at Calvary Lutheran Church" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
+            <div className="flex-1">
+              <Image src="/images/pages/bible-study.jpg" alt="Bible study group at Calvary Lutheran Church" width={400} height={400} className="rounded-xl shadow-lg w-full h-auto" sizes="(max-width: 1024px) 100vw, 50vw" />
             </div>
             <div className="flex-1 text-center lg:text-left">
               <h2 className="mb-4">Why Study the Bible?</h2>
