@@ -21,16 +21,14 @@ jobs:
             git config --global --add safe.directory "$APP_DIR"
             cd "$APP_DIR"
 
-            # Initialize git if not present (Plesk stores .git elsewhere)
+            # Ensure git repo with correct remote
             if [ ! -d ".git" ]; then
-              echo "Initializing git repo..."
               git init
-              git remote add origin https://github.com/christimlee-ops/church-cms-ai.git
-              git fetch origin main
-              git reset --hard origin/main
-            else
-              git pull origin main
             fi
+            git remote remove origin 2>/dev/null || true
+            git remote add origin https://github.com/christimlee-ops/church-cms-ai.git
+            git fetch origin main
+            git reset --hard origin/main
 
             echo "Now at commit: $(git rev-parse --short HEAD)"
             npm install --production=false
