@@ -65,9 +65,8 @@ export default function EducationPage() {
         <div className="relative section-padding w-full">
           <div className="container-wide mx-auto text-center">
             <h1 className="text-white mb-4">Ministries at Calvary</h1>
-            <p className="text-lg text-navy-100 leading-relaxed max-w-2xl mx-auto">
-              From our youngest learners to lifelong students of the Bible, Calvary offers
-              opportunities to grow in the grace and knowledge of our Lord Jesus Christ.
+            <p className="text-lg text-navy-100 max-w-2xl mx-auto">
+              Growing in the grace and knowledge of our Lord Jesus Christ.
             </p>
           </div>
         </div>

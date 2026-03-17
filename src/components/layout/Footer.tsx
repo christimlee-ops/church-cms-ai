@@ -28,22 +28,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Church Info */}
           <div>
-            <div className="flex items-center gap-3 mb-5">
+            <div className="mb-5">
               <Image
                 src="/images/calvary-lutheren-chruch-white-logo.png"
-                alt="Calvary Lutheran Church logo"
-                width={44}
-                height={44}
-                className="w-11 h-11 object-contain"
+                alt="Calvary Lutheran Church"
+                width={200}
+                height={60}
+                className="h-16 w-auto object-contain"
               />
-              <div>
-                <span className="font-heading font-bold text-lg text-white">
-                  Calvary
-                </span>
-                <span className="block text-xs text-gold-400 -mt-0.5 tracking-wider uppercase">
-                  Lutheran Church
-                </span>
-              </div>
             </div>
             <p className="text-sm leading-relaxed mb-3 text-gold-400 font-medium italic">
               &ldquo;Grow in the grace and knowledge of our Lord and Savior Jesus Christ.&rdquo;

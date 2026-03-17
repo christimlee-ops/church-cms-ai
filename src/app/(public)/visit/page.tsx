@@ -48,9 +48,8 @@ export default function VisitPage() {
         <div className="relative section-padding w-full">
           <div className="container-wide mx-auto text-center">
             <h1 className="text-white mb-4">Plan Your Visit</h1>
-            <p className="text-lg text-navy-100 leading-relaxed max-w-2xl mx-auto">
-              Whether you&apos;ve been a Lutheran your whole life or are stepping into a church
-              for the first time, we&apos;d love to welcome you to Calvary.
+            <p className="text-lg text-navy-100 max-w-2xl mx-auto">
+              We&apos;d love to welcome you to Calvary Lutheran Church.
             </p>
           </div>
         </div>

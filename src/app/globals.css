@@ -45,11 +45,15 @@
   }
 
   .page-hero {
-    @apply relative bg-navy-500 text-white overflow-hidden min-h-[200px] md:min-h-[240px] flex items-center;
+    @apply relative bg-navy-500 text-white overflow-hidden h-[220px] md:h-[260px] flex items-center;
   }
 
   .page-hero img {
     @apply block;
+  }
+
+  .page-hero .section-padding {
+    @apply py-8 md:py-12 px-4;
   }
 
   .page-hero-gradient {

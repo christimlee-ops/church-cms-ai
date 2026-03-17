@@ -50,7 +50,7 @@ export default function Header() {
               alt="Calvary Lutheran Church"
               width={160}
               height={48}
-              className="h-12 w-auto object-contain"
+              className="h-16 w-auto object-contain"
             />
           </Link>
 

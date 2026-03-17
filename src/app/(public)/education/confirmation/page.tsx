@@ -37,14 +37,9 @@ export default function ConfirmationPage() {
         </div>
         <div className="relative section-padding w-full">
           <div className="container-wide mx-auto text-center">
-            <Link href="/education" className="inline-flex items-center gap-2 text-gold-400 hover:text-gold-300 font-semibold text-sm mb-6 transition-colors">
-              <FiArrowLeft className="w-4 h-4" /> Back to Ministries
-            </Link>
             <h1 className="text-white mb-4">Confirmation</h1>
-            <p className="text-lg text-navy-100 leading-relaxed max-w-2xl mx-auto">
-              A 2-year catechism series for 7th and 8th graders at Calvary Lutheran Church.
-              Confirmation prepares young members to make a public confession of their
-              Christian faith rooted in God&apos;s Word and the Lutheran Confessions.
+            <p className="text-lg text-navy-100 max-w-2xl mx-auto">
+              A 2-year catechism series for 7th and 8th graders.
             </p>
           </div>
         </div>
@@ -52,6 +47,9 @@ export default function ConfirmationPage() {
 
       <section className="section-padding bg-church-cream">
         <div className="container-wide mx-auto">
+          <Link href="/education" className="inline-flex items-center gap-2 text-gold-600 hover:text-gold-700 font-semibold text-sm mb-8 transition-colors">
+            <FiArrowLeft className="w-4 h-4" /> Back to Ministries
+          </Link>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             <div className="card p-6 text-center border-t-4 border-gold-500">
               <FiClock className="w-8 h-8 text-gold-500 mx-auto mb-3" />

@@ -57,9 +57,8 @@ export default async function ResourcesPage() {
         <div className="relative section-padding w-full">
           <div className="container-wide mx-auto text-center">
             <h1 className="text-white mb-4">Resources</h1>
-            <p className="text-lg text-navy-100 leading-relaxed max-w-2xl mx-auto">
-              Download bulletins, Bible study materials, sermon notes, newsletters,
-              and other resources from Calvary Lutheran Church.
+            <p className="text-lg text-navy-100 max-w-2xl mx-auto">
+              Bulletins, Bible studies, sermon notes, and newsletters.
             </p>
           </div>
         </div>

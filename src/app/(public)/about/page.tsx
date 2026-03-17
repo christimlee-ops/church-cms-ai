@@ -21,11 +21,8 @@ export default function AboutPage() {
         <div className="relative section-padding w-full">
           <div className="container-wide mx-auto text-center">
             <h1 className="text-white mb-4">About Calvary Lutheran Church</h1>
-            <p className="text-lg text-navy-100 leading-relaxed max-w-2xl mx-auto">
-              Calvary Lutheran Church is a congregation of the Wisconsin Evangelical
-              Lutheran Synod (WELS), founded in 1977 in Chandler, Arizona. We are a community of
-              believers grounded in God&apos;s Word, united in worship, and dedicated to sharing
-              the saving message of Jesus Christ.
+            <p className="text-lg text-navy-100 max-w-2xl mx-auto">
+              A WELS congregation in Chandler, Arizona since 1977.
             </p>
           </div>
         </div>

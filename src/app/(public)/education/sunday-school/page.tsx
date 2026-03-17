@@ -33,13 +33,9 @@ export default function SundaySchoolPage() {
         </div>
         <div className="relative section-padding w-full">
           <div className="container-wide mx-auto text-center">
-            <Link href="/education" className="inline-flex items-center gap-2 text-gold-400 hover:text-gold-300 font-semibold text-sm mb-6 transition-colors">
-              <FiArrowLeft className="w-4 h-4" /> Back to Ministries
-            </Link>
             <h1 className="text-white mb-4">Sunday School</h1>
-            <p className="text-lg text-navy-100 leading-relaxed max-w-2xl mx-auto">
-              Sunday School at Calvary provides Bible-based instruction for children and teens
-              of all ages, helping them grow in their faith and knowledge of God&apos;s Word.
+            <p className="text-lg text-navy-100 max-w-2xl mx-auto">
+              Bible-based instruction for children and teens of all ages.
             </p>
           </div>
         </div>
@@ -47,6 +43,9 @@ export default function SundaySchoolPage() {
 
       <section className="section-padding bg-church-cream">
         <div className="container-wide mx-auto">
+          <Link href="/education" className="inline-flex items-center gap-2 text-gold-600 hover:text-gold-700 font-semibold text-sm mb-8 transition-colors">
+            <FiArrowLeft className="w-4 h-4" /> Back to Ministries
+          </Link>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             <div className="card p-6 text-center border-t-4 border-gold-500">
               <FiClock className="w-8 h-8 text-gold-500 mx-auto mb-3" />

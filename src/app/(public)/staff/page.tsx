@@ -49,7 +49,7 @@ export default function StaffPage() {
         <div className="relative section-padding w-full">
           <div className="container-wide mx-auto text-center">
             <h1 className="text-white mb-4">Our Staff</h1>
-            <p className="text-lg text-navy-100 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-lg text-navy-100 max-w-2xl mx-auto">
               Meet the people who serve at Calvary Lutheran Church.
             </p>
           </div>
