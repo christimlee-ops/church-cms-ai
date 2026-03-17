@@ -288,7 +288,7 @@ export default async function HomePage() {
               <p className="text-secondary-400">Check back soon or follow us on Facebook for announcements.</p>
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {events.map((event) => (
                 <Link key={event.id} href={`/events/${event.slug}`} className="card group">
                   <div className="aspect-[16/10] bg-gradient-to-br from-navy-500 to-navy-700 flex items-center justify-center relative overflow-hidden">
