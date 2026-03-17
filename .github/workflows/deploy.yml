@@ -22,6 +22,11 @@ jobs:
             npx prisma generate
             npm run build
             mkdir -p assets/_next
+            rm -rf assets/_next/static
             cp -r .next/static assets/_next/static
-            # Restart Node.js app via Plesk
+            # Restart Node.js app via Passenger
+            mkdir -p tmp
             touch tmp/restart.txt
+            # Also try killing node to force Passenger restart
+            pkill -f "node app.js" || true
+            sleep 2
