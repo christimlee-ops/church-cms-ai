@@ -33,14 +33,14 @@ export default function BibleClassesPage() {
       <section className="page-hero">
         <div className="absolute inset-0">
           <Image src="/images/multiple-bibles.jpg" alt="Bibles at Calvary Lutheran Church" fill className="object-cover" priority sizes="100vw" />
-          <div className="absolute inset-0 bg-navy-900/30" />
+          <div className="absolute inset-0 bg-navy-900/50" />
         </div>
-        <div className="relative section-padding">
+        <div className="relative section-padding w-full">
           <div className="container-wide mx-auto text-center">
             <Link href="/education" className="inline-flex items-center gap-2 text-gold-400 hover:text-gold-300 font-semibold text-sm mb-6 transition-colors">
               <FiArrowLeft className="w-4 h-4" /> Back to Ministries
             </Link>
-            <h1 className="text-white mb-6">Bible Classes</h1>
+            <h1 className="text-white mb-4">Bible Classes</h1>
             <p className="text-lg text-navy-100 leading-relaxed max-w-2xl mx-auto">
               Grow in the grace and knowledge of our Lord through weekly Bible classes at Calvary.
               Whether you&apos;re new to the faith or a lifelong student of Scripture, you&apos;re welcome here.

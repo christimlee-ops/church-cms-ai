@@ -60,11 +60,11 @@ export default function EducationPage() {
       <section className="page-hero">
         <div className="absolute inset-0">
           <Image src="/images/Hymn.jpg" alt="Ministries at Calvary Lutheran Church" fill className="object-cover" priority sizes="100vw" />
-          <div className="absolute inset-0 bg-navy-900/30" />
+          <div className="absolute inset-0 bg-navy-900/50" />
         </div>
-        <div className="relative section-padding">
+        <div className="relative section-padding w-full">
           <div className="container-wide mx-auto text-center">
-            <h1 className="text-white mb-6">Ministries at Calvary</h1>
+            <h1 className="text-white mb-4">Ministries at Calvary</h1>
             <p className="text-lg text-navy-100 leading-relaxed max-w-2xl mx-auto">
               From our youngest learners to lifelong students of the Bible, Calvary offers
               opportunities to grow in the grace and knowledge of our Lord Jesus Christ.

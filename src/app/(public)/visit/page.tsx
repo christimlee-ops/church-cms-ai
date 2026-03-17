@@ -43,11 +43,11 @@ export default function VisitPage() {
       <section className="page-hero">
         <div className="absolute inset-0">
           <Image src="/images/seats.jpg" alt="Seating inside Calvary Lutheran Church" fill className="object-cover" priority sizes="100vw" />
-          <div className="absolute inset-0 bg-navy-900/30" />
+          <div className="absolute inset-0 bg-navy-900/50" />
         </div>
-        <div className="relative section-padding">
+        <div className="relative section-padding w-full">
           <div className="container-wide mx-auto text-center">
-            <h1 className="text-white mb-6">Plan Your Visit</h1>
+            <h1 className="text-white mb-4">Plan Your Visit</h1>
             <p className="text-lg text-navy-100 leading-relaxed max-w-2xl mx-auto">
               Whether you&apos;ve been a Lutheran your whole life or are stepping into a church
               for the first time, we&apos;d love to welcome you to Calvary.

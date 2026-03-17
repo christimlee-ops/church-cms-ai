@@ -24,9 +24,9 @@ export default async function SermonsPage() {
       <section className="page-hero">
         <div className="absolute inset-0">
           <Image src="/images/Piano.jpg" alt="Worship at Calvary Lutheran Church" fill className="object-cover" priority sizes="100vw" />
-          <div className="absolute inset-0 bg-navy-900/30" />
+          <div className="absolute inset-0 bg-navy-900/50" />
         </div>
-        <div className="relative section-padding">
+        <div className="relative section-padding w-full">
           <div className="container-wide mx-auto text-center">
             <h1 className="text-white mb-4">Sermons</h1>
             <p className="text-lg text-navy-100 max-w-2xl mx-auto">

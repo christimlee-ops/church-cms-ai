@@ -35,7 +35,7 @@ export default function MorningsWithMommyPage() {
           <Image src="/images/childrens-message.webp" alt="Mornings with Mommy" fill className="object-cover" priority sizes="100vw" />
           <div className="absolute inset-0 bg-navy-900/50" />
         </div>
-        <div className="relative section-padding">
+        <div className="relative section-padding w-full">
           <div className="container-wide mx-auto text-center">
             <Link href="/education" className="inline-flex items-center gap-2 text-gold-400 hover:text-gold-300 font-semibold text-sm mb-6 transition-colors">
               <FiArrowLeft className="w-4 h-4" /> Back to Ministries

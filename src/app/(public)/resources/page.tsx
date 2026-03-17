@@ -52,11 +52,11 @@ export default async function ResourcesPage() {
             alt="Church resources"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-navy-900/30" />
+          <div className="absolute inset-0 bg-navy-900/50" />
         </div>
-        <div className="relative section-padding">
+        <div className="relative section-padding w-full">
           <div className="container-wide mx-auto text-center">
-            <h1 className="text-white mb-6">Resources</h1>
+            <h1 className="text-white mb-4">Resources</h1>
             <p className="text-lg text-navy-100 leading-relaxed max-w-2xl mx-auto">
               Download bulletins, Bible study materials, sermon notes, newsletters,
               and other resources from Calvary Lutheran Church.
